@@ -1,0 +1,36 @@
+{
+  "name": "oss-w3c",
+  "description": "List of open-source software developed by W3C or used for progressing specifications at W3C",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tidoust/oss-w3c.git"
+  },
+  "type": "module",
+  "main": "index.ts",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "schematypes": "sh -c \"npx quicktype --lang='typescript' --src-lang schema --src ./schemas/data.schema.json --just-types --prefer-unions --prefer-const-values --top-level=ProjectData | prettier --stdin-filepath ./scripts/types.quicktype.ts\"",
+    "schematypes:write": "npm run --silent schematypes > ./scripts/types.quicktype.ts",
+    "dist": "tsx scripts/dist.ts && prettier --write dist/data.json",
+    "format": "prettier --write .",
+    "test:format": "prettier --check .",
+    "test": "tsx --test && npm run test:format"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "hast-util-to-string": "^3.0.1",
+    "prettier": "^3.8.3",
+    "quicktype": "^23.2.6",
+    "rehype-parse": "^9.0.1",
+    "rehype-stringify": "^10.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "tsx": "^4.21.0",
+    "unified": "^11.0.5",
+    "yaml": "^2.8.4"
+  }
+}

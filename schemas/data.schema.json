@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "Indexed list of open-source projects",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/definitions/ProjectData"
+  },
+  "definitions": {
+    "ProjectData": {
+      "description": "An open-source project data entry",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Project name",
+          "$ref": "#/definitions/NonEmptyString"
+        },
+        "description": {
+          "description": "Short description of the project, as a plain text string",
+          "$ref": "#/definitions/NonEmptyString"
+        },
+        "description_html": {
+          "description": "Short description of the project, as an HTML string",
+          "$ref": "#/definitions/NonEmptyString"
+        },
+        "logo": {
+          "description": "URL of the project's logo, when one exists",
+          "$ref": "#/definitions/Url"
+        },
+        "owner": {
+          "description": "Name of the organization that hosts the project when there is one (e.g., \"W3C\"), the username of the owner for projects that are hosted on GitHub or other source forges (e.g., \"tobie\"), or the name of the copyright owner",
+          "$ref": "#/definitions/NonEmptyString"
+        },
+        "homepage": {
+          "description": "URL of the project's home page",
+          "$ref": "#/definitions/Url"
+        },
+        "source": {
+          "description": "URL of the repository that contains the source code",
+          "$ref": "#/definitions/Url"
+        },
+        "license": {
+          "description": "Open-source license for the project, using an SPDX license ID. Use an SPDX license expression syntax version 2.0 string if the project is licensed under multiple common licenses. Use \"SEE LICENSE IN <url>\" if the project uses a custom license.",
+          "$ref": "#/definitions/NonEmptyString"
+        },
+        "purposes": {
+          "description": "Main purposes that the project addresses",
+          "type": "array",
+          "items": {
+            "description": "Project purpose",
+            "type": "string",
+            "enum": [
+              "authoring",
+              "data",
+              "library",
+              "meeting tool",
+              "backend",
+              "frontend",
+              "test suite",
+              "validation"
+            ]
+          },
+          "minItems": 1
+        },
+        "categories": {
+          "description": "Main categories for the project within W3C",
+          "type": "array",
+          "items": {
+            "description": "Project category within W3C",
+            "type": "string",
+            "enum": ["adoption", "implementation", "incubation", "tool"]
+          },
+          "minItems": 1
+        },
+        "status": {
+          "description": "Some indication of the activity level",
+          "type": "string",
+          "enum": ["active", "maintained", "dormant"]
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "owner",
+        "homepage",
+        "source",
+        "license",
+        "purposes",
+        "categories",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "NonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Strings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/NonEmptyString"
+      },
+      "minItems": 1
+    },
+    "Url": {
+      "type": "string",
+      "format": "url",
+      "pattern": "^https?:\/\/.+"
+    }
+  }
+}
