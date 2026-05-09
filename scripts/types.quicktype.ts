@@ -19,6 +19,10 @@ export interface ProjectData {
    */
   homepage: string;
   /**
+   * Project ID
+   */
+  id?: string;
+  /**
    * Open-source license for the project, using an SPDX license ID. Use an SPDX license
    * expression syntax version 2.0 string if the project is licensed under multiple common
    * licenses. Use "SEE LICENSE IN <url>" if the project uses a custom license.

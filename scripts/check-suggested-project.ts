@@ -49,6 +49,7 @@ if (what.match(/^\d+$/)) {
   }
 
   const issue = JSON.parse(issueStr);
+  project.name = issue.title.trim().replace(/^Add new project:\s*/i, "");
   const sections = splitIssueBodyIntoSections(issue.body);
   for (const section of sections) {
     if (section.title === "Home page") {
@@ -86,6 +87,12 @@ if (what.match(/^\d+$/)) {
 } else {
   // Retrieve project information from the given filename
   project = loadProject(what);
+  if (!project.id) {
+    const match = what.match(/([^/]+)\.yml$/);
+    if (match) {
+      project.id = match[1];
+    }
+  }
 }
 
 // Make sure that we have the minimum amount of information that we need
@@ -96,6 +103,9 @@ if (!project.name) {
 if (!project.homepage) {
   console.log("Missing required home page for the project.");
   process.exit(1);
+}
+if (!project.id) {
+  project.id = project.name.toLowerCase().replace(/\s+/g, "-");
 }
 
 const partialErrors = validatePartialProjectData(project);
@@ -114,6 +124,7 @@ if (partialErrors) {
 
 const validationErrors = validateProjectData(project);
 if (validationErrors) {
+  // TODO: pretty print ajv validation errors
   console.log("Not enough information. Schema validation errors follow.");
   console.log();
   console.log("```json");

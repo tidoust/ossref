@@ -10,6 +10,10 @@
       "description": "An open-source project data entry",
       "type": "object",
       "properties": {
+        "id": {
+          "description": "Project ID",
+          "$ref": "#/definitions/NonEmptyString"
+        },
         "name": {
           "description": "Project name",
           "$ref": "#/definitions/NonEmptyString"
