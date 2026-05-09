@@ -1,3 +1,7 @@
+/**
+ * Utility functions to convert Markdown text to raw text and HTML
+ */
+
 import { toString as hastTreeToString } from "hast-util-to-string";
 import rehypeParse from "rehype-parse";
 import rehypeStringify from "rehype-stringify";
