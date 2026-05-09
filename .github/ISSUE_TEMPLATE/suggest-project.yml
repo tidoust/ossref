@@ -1,0 +1,39 @@
+name: New project
+description: Use this issue template to suggest that a new open-source project be added to the list.
+labels: ["new project", "review"]
+title: "Add new project: <title>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!Note]
+        Thank you for proposing a new project! Spec suggestions use a structured issue so that we can semi-automate the process. A bot will check the suggestion after creation, and report on missing properties or other problems to help us review and progress the suggestion. You may **ignore the bot's outcome**.
+
+  - type: input
+    id: homepage
+    attributes:
+      label: Home page
+      description: |
+        The project's home page.
+      value: "https://"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: |
+        Please explain in a few words why the project should be added to the list. The list only contains open-source projects that are developed at W3C or that are commonly used within W3C's operations.
+    validations:
+      required: false
+
+  - type: textarea
+    id: custom
+    attributes:
+      label: Additional properties
+      description: |
+        A YAML field with additional project properties when these cannot be determined automatically. Please **ignore this field** unless you know what you're doing. We will check and set properties as needed afterwards.
+      render: yaml
+    validations:
+      required: false
