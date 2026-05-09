@@ -12,7 +12,7 @@ function filterRequiredErrors(errors) {
   if (!errors) {
     return [];
   }
-  return errors.filter(err => err.keyword !== 'required');
+  return errors.filter((err) => err.keyword !== "required");
 }
 
 describe("Individual YAML files", async function () {

@@ -4,11 +4,12 @@
  */
 
 import fs from "node:fs";
-import { loadProjects } from "./load-projects.ts";
-import { convertMarkdown } from "./text.ts";
+import { loadProjects } from "./load-projects";
+import { convertMarkdown } from "./text";
+import { ProjectsData } from "./types";
 
 function convert() {
-  const projects = loadProjects();
+  const projects: ProjectsData = loadProjects();
   for (const project of Object.values(projects)) {
     if (project.description) {
       const { text, html } = convertMarkdown(project.description);
@@ -17,11 +18,7 @@ function convert() {
     }
   }
 
-  fs.writeFileSync(
-    "index.json",
-    JSON.stringify(projects),
-    "utf8"
-  );
+  fs.writeFileSync("index.json", JSON.stringify(projects), "utf8");
 }
 
 convert();

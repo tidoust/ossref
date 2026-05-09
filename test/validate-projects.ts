@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { loadProjects } from "../scripts/load-projects.ts";
+import { loadProjects } from "../scripts/load-projects";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
 

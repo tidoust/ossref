@@ -18,7 +18,8 @@
     "format": "prettier --write .",
     "test:format": "prettier --check .",
     "test:yaml": "tsx --test test/validate-yaml.ts",
-    "test": "tsx --test && npm run test:format"
+    "test:types": "tsc",
+    "test": "tsx --test && npm run test:types && npm run test:format"
   },
   "devDependencies": {
     "ajv": "^8.20.0",
