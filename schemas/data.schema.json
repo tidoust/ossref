@@ -45,37 +45,16 @@
         "purposes": {
           "description": "Main purposes that the project addresses",
           "type": "array",
-          "items": {
-            "description": "Project purpose",
-            "type": "string",
-            "enum": [
-              "authoring",
-              "data",
-              "library",
-              "meeting tool",
-              "backend",
-              "frontend",
-              "test suite",
-              "validation"
-            ]
-          },
+          "items": { "$ref": "#/definitions/Purpose" },
           "minItems": 1
         },
         "categories": {
           "description": "Main categories for the project within W3C",
           "type": "array",
-          "items": {
-            "description": "Project category within W3C",
-            "type": "string",
-            "enum": ["adoption", "implementation", "incubation", "tool"]
-          },
+          "items": { "$ref": "#/definitions/Category" },
           "minItems": 1
         },
-        "status": {
-          "description": "Some indication of the activity level",
-          "type": "string",
-          "enum": ["active", "maintained", "dormant"]
-        }
+        "status": { "$ref": "#/definitions/Status" }
       },
       "required": [
         "name",
@@ -90,9 +69,32 @@
       ],
       "additionalProperties": false
     },
+    "Category": {
+      "description": "Project category within W3C",
+      "type": "string",
+      "enum": ["adoption", "implementation", "incubation", "tool"]
+    },
     "NonEmptyString": {
       "type": "string",
       "minLength": 1
+    },
+    "Purpose": {
+      "description": "Project purpose",
+      "type": "string",
+      "enum": [
+        "authoring",
+        "data",
+        "library",
+        "meeting tool",
+        "backend",
+        "frontend",
+        "test suite",
+        "validation"
+      ]
+    },
+    "Status": {
+      "type": "string",
+      "enum": ["active", "maintained", "dormant"]
     },
     "Strings": {
       "type": "array",

@@ -14,9 +14,10 @@
   "scripts": {
     "schematypes": "sh -c \"npx quicktype --lang='typescript' --src-lang schema --src ./schemas/data.schema.json --just-types --prefer-unions --prefer-const-values --top-level=ProjectData | prettier --stdin-filepath ./scripts/types.quicktype.ts\"",
     "schematypes:write": "npm run --silent schematypes > ./scripts/types.quicktype.ts",
-    "dist": "tsx scripts/dist.ts && prettier --write dist/data.json",
+    "build": "tsx scripts/build.ts && prettier --write index.json",
     "format": "prettier --write .",
     "test:format": "prettier --check .",
+    "test:yaml": "tsx --test test/validate-yaml.ts",
     "test": "tsx --test && npm run test:format"
   },
   "devDependencies": {

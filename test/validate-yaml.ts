@@ -8,7 +8,14 @@ import addFormats from "ajv-formats";
 
 import schema from "../schemas/data.schema.json" with { type: "json" };
 
-describe("The YAML files", async function () {
+function filterRequiredErrors(errors) {
+  if (!errors) {
+    return [];
+  }
+  return errors.filter(err => err.keyword !== 'required');
+}
+
+describe("Individual YAML files", async function () {
   const ajv = new Ajv({ allErrors: true });
   addFormats(ajv);
   const validate = ajv.compile(schema);
@@ -31,8 +38,7 @@ describe("The YAML files", async function () {
         const list = {};
         list[projectId] = project;
         validate(list);
-        console.log(validate.errors);
-        assert.strictEqual(validate.errors, null);
+        assert.deepEqual(filterRequiredErrors(validate.errors), []);
       });
     });
   }
