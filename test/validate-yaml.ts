@@ -23,7 +23,7 @@ describe("Individual YAML files", async function () {
   const yamlFiles = [];
   const files = await fs.readdir("projects");
   for (const file of files) {
-    if (file.endsWith(".yaml")) {
+    if (file.endsWith(".yml")) {
       const text = await fs.readFile(path.join("projects", file), "utf8");
       yamlFiles.push({ file, text });
     }
@@ -32,7 +32,7 @@ describe("Individual YAML files", async function () {
   for (const yamlFile of yamlFiles) {
     describe(`The ${yamlFile.file} file`, function () {
       it("follows the schema", function () {
-        const projectId = yamlFile.file.replace(/\.yaml$/, "");
+        const projectId = yamlFile.file.replace(/\.yml$/, "");
         const project = YAML.parse(yamlFile.text);
         // Note: the schema is for an indexed object of project entries
         const list = {};

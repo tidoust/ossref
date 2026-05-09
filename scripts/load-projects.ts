@@ -8,8 +8,8 @@ export function loadProjects(): ProjectsData {
   const projects = {};
   const files = fs.readdirSync("projects");
   for (const file of files) {
-    if (file.endsWith(".yaml") && !file.endsWith(".auto.yaml")) {
-      const projectId = file.replace(/\.yaml$/, "");
+    if (file.endsWith(".yml") && !file.endsWith(".auto.yml")) {
+      const projectId = file.replace(/\.yml$/, "");
       projects[projectId] = loadProject(projectId);
     }
   }
@@ -17,12 +17,12 @@ export function loadProjects(): ProjectsData {
 }
 
 export function loadProject(id): ProjectData {
-  const contents = fs.readFileSync(path.join("projects", `${id}.yaml`), "utf8");
+  const contents = fs.readFileSync(path.join("projects", `${id}.yml`), "utf8");
   const project: ProjectData = YAML.parse(contents);
 
   try {
     const autoContents = fs.readFileSync(
-      path.join("projects", `${id}.auto.yaml`),
+      path.join("projects", `${id}.auto.yml`),
       "utf8",
     );
     const autoData: ProjectData = YAML.parse(autoContents);
