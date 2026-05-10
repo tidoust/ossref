@@ -1,6 +1,6 @@
 /**
  * A couple of utility functions to load project entries from the YAML files in
- * the `projects` folder
+ * the `projects` folder.
  */
 
 import fs from "node:fs";
@@ -9,24 +9,33 @@ import YAML from "yaml";
 
 import type { ProjectsData, ProjectData } from "./types";
 
-export function loadProjects(): ProjectsData {
+export function loadProjects(options?: {
+  excludeAuto?: boolean;
+}): ProjectsData {
   const projects = {};
   const files = fs.readdirSync("projects");
   for (const file of files) {
     if (file.endsWith(".yml") && !file.endsWith(".auto.yml")) {
       const projectId = file.replace(/\.yml$/, "");
-      projects[projectId] = loadProject(projectId);
+      projects[projectId] = loadProject(projectId, options);
     }
   }
   return projects;
 }
 
-export function loadProject(id: string): ProjectData {
+export function loadProject(
+  id: string,
+  options?: { excludeAuto?: boolean },
+): ProjectData {
   const filename = id.match(/\.yml$/) ? id : path.join("projects", `${id}.yml`);
   const pathMatch = id.match(/([^/]+)\.yml$/);
   const projectId = pathMatch ? pathMatch[1] : id;
   const contents = fs.readFileSync(filename, "utf8");
   const project: ProjectData = YAML.parse(contents);
+
+  if (options?.excludeAuto) {
+    return project;
+  }
 
   try {
     const autoContents = fs.readFileSync(
