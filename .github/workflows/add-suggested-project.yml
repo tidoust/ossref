@@ -1,0 +1,52 @@
+name: Create a PR to add the suggested project
+
+on:
+  issue_comment:
+    # Details for types below can be found at:
+    # https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads?actionType=edited#issues
+    types:
+      # Job triggered when an issue comment is created (or edited)
+      - created
+      - edited
+
+jobs:
+  prepare:
+    name: Create pull request if needed
+    runs-on: ubuntu-latest
+    # TODO: Check comment user permissions more thoroughly, for instance using
+    # the REST API (see link below). This is going to be needed if we decide to
+    # remove the PR step and have the bot merge directly to the `main` branch.
+    # https://docs.github.com/en/rest/collaborators/collaborators?apiVersion=2022-11-28#get-repository-permissions-for-a-user
+    if: ${{ github.event.comment.author_association == 'MEMBER' && contains(github.event.comment.body, '@browser-specs-bot ') }}
+    steps:
+      - name: Setup node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check suggested project
+        run: npx tsx scripts/check-suggested-project.ts $NUMBER --add > res.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event_name == 'workflow_dispatch' && inputs.issueNumber || github.event.issue.number }}
+
+      - name: Commit updates
+        run: |
+          git config user.name "add-suggested-project bot"
+          git config user.email "<>"
+          git add projects
+          git commit -F res.md
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main

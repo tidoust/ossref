@@ -1,0 +1,67 @@
+name: Check suggested project
+
+on:
+  issues:
+    # Details for types below can be found at:
+    # https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads?actionType=edited#issues
+    types:
+      # Job triggered when an issue is created or re-opened
+      - opened
+      - reopened
+
+      # or gets "edited" (title or body updated)
+      - edited
+  workflow_dispatch:
+    inputs:
+      issueNumber:
+        description: "Issue number"
+        required: true
+        type: string
+
+jobs:
+  check-project:
+    name: Check suggested project
+    runs-on: ubuntu-latest
+    # We're only interested in "new project" issues
+    if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.issue.labels.*.name, 'new project') }}
+    steps:
+      - name: Setup node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check suggested project
+        run: npx tsx scripts/check-suggested-project.ts $NUMBER > res.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+          NUMBER: ${{ github.event_name == 'workflow_dispatch' && inputs.issueNumber || github.event.issue.number }}
+
+      # Report the result within a comment, using the `gh` command.
+      # Unfortunately, the `--edit-last` option does not create a comment if
+      # none exists. Ideally, we would check whether we created a comment first
+      # and set/reset the option accordingly. To avoid creating more logic,
+      # we'll just try the command with the option, and then without if that
+      # fails. Note the nuance between "conclusion" and "outcome" in:
+      # https://docs.github.com/en/actions/learn-github-actions/contexts#steps-context
+      - name: Update last comment with result (if possible)
+        id: update
+        continue-on-error: true
+        run: gh issue comment "$NUMBER" --body-file res.md --edit-last
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+          NUMBER: ${{ github.event_name == 'workflow_dispatch' && inputs.issueNumber || github.event.issue.number }}
+
+      - name: Add new comment with result (if none existed)
+        if: ${{ steps.update.outcome == 'failure' }}
+        run: gh issue comment "$NUMBER" --body-file res.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+          NUMBER: ${{ github.event_name == 'workflow_dispatch' && inputs.issueNumber || github.event.issue.number }}

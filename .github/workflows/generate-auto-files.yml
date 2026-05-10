@@ -1,0 +1,43 @@
+name: Generate auto files
+
+on:
+  schedule:
+    # Every 12 hours every day
+    - cron: "20 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Setup node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: "npm"
+
+      - name: Setup environment
+        run: npm ci
+
+      - name: Generate auto files
+        run: npm run generate-auto-files
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check YAML files
+        run: npm run test:yaml
+
+      - name: Commit updates
+        run: |
+          git config user.name "generate-auto-files bot"
+          git config user.email "<>"
+          git commit -m "Update auto files" -a || true
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main

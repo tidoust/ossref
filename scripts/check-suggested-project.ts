@@ -16,6 +16,7 @@ import { execSync } from "node:child_process";
 import { loadProject } from "./load-projects";
 import splitIssueBodyIntoSections from "./split-issue-body";
 import { validateProjectData, validatePartialProjectData } from "./validate";
+import { compileProjectInfo } from "./compile-project-info";
 import YAML from "yaml";
 
 import type { ProjectData } from "./types";
@@ -129,10 +130,37 @@ if (partialErrors) {
   process.exit(1);
 }
 
-// TODO: fetch automatic information to complete information
+const autoInfo = await compileProjectInfo(project);
+if (process.argv[3] !== "--add") {
+  console.log("Information that can be computed automatically:");
+  console.log("```yaml");
+  console.log(YAML.stringify(autoInfo));
+  console.log("```");
+  console.log();
+}
+
+const info = {};
+let canBeSimplified = false;
+for (const [key, value] of Object.entries(autoInfo)) {
+  if (key === "id") {
+    continue;
+  }
+  if (project[key]) {
+    if (project[key].trim() === value) {
+      console.log(
+        `- Drop key \`${key}\`, as it can be computed automatically.`,
+      );
+      canBeSimplified = true;
+    }
+  } else {
+    info[key] = value;
+  }
+}
+
 // TODO: handle project ID somehow (not part of the schema for now)
 
-const validationErrors = validateProjectData(project);
+const fullProject = Object.assign({}, autoInfo, project);
+const validationErrors = validateProjectData(fullProject);
 if (validationErrors) {
   // TODO: pretty print ajv validation errors
   console.log("Not enough information. Schema validation errors follow.");
@@ -141,4 +169,26 @@ if (validationErrors) {
   console.log(JSON.stringify(validationErrors, null, 2));
   console.log("```");
   process.exit(1);
+}
+if (canBeSimplified) {
+  process.exit(1);
+}
+
+if (process.argv[3] === "--add") {
+  const id = project.id;
+  delete project.id;
+  fs.writeFileSync(
+    path.join("projects", `${id}.yml`),
+    YAML.stringify(project),
+    "utf8",
+  );
+  console.log(`Add project ${project.name}`);
+  console.log();
+  console.log(`This adds "${project.name}" with ID ${id} to the list.`);
+  if (what.match(/^\d+$/)) {
+    console.log();
+    console.log(`Close #${what}`);
+  }
+} else {
+  console.log("That all looks good to me!");
 }
