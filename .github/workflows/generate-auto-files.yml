@@ -24,8 +24,8 @@ jobs:
 
       - name: Generate auto files
         run: npm run generate-auto-files
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check YAML files
         run: npm run test:yaml

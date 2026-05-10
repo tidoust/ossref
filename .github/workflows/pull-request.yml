@@ -24,8 +24,8 @@ jobs:
 
       - name: Generate auto files (to understand impact of changes)
         run: npm run generate-auto-files
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run tests
         run: npm run test
