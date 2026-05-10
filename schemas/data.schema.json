@@ -38,7 +38,7 @@
           "description": "URL of the project's home page",
           "$ref": "#/definitions/Url"
         },
-        "source": {
+        "repository": {
           "description": "URL of the repository that contains the source code",
           "$ref": "#/definitions/Url"
         },
@@ -65,7 +65,7 @@
         "description",
         "owner",
         "homepage",
-        "source",
+        "repository",
         "license",
         "purposes",
         "categories",
@@ -92,7 +92,7 @@
         "meeting tool",
         "backend",
         "frontend",
-        "test suite",
+        "tests",
         "validation"
       ]
     },

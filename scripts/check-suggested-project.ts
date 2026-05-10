@@ -53,7 +53,15 @@ if (what.match(/^\d+$/)) {
   const sections = splitIssueBodyIntoSections(issue.body);
   for (const section of sections) {
     if (section.title === "Home page") {
-      project.homepage = section.value.trim();
+      // Consider that the "home page" is the repository URL if it is a GitHub
+      // URL. It may be that we'll use that URL for the home page as well, but
+      // that's fine.
+      const url = section.value.trim();
+      if (url.match(/^https:\/\/github\.com\//)) {
+        project.repository = url;
+      } else {
+        project.homepage = url;
+      }
     } else if (section.title === "Additional properties") {
       try {
         const yaml = section.value
@@ -100,8 +108,10 @@ if (!project.name) {
   console.log("Missing required project name.");
   process.exit(1);
 }
-if (!project.homepage) {
-  console.log("Missing required home page for the project.");
+if (!project.homepage && !project.repository) {
+  console.log(
+    "Missing required home page (or link to repository) for the project.",
+  );
   process.exit(1);
 }
 if (!project.id) {

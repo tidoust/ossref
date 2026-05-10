@@ -4,7 +4,7 @@
     "description": "This project exports a curated list of technical Web specifications. The list is used in a variety of ways, including:\n\nTo crawl specification with Reffy to generate machine-readable extracts in Webref, which is then used by tools such as ReSpec and Bikeshed to create terminology and reference links between Web specifications.\nTo validate specification URLs in the browser-compat-data (BCD) and web-features projects.\nTo complete the list of specifications in the Specref database.\nTo create reports on test coverage, Web IDL and specification quality in analyzing tools.\n",
     "homepage": "https://github.com/w3c/browser-specs",
     "owner": "W3C",
-    "source": "https://github.com/w3c/browser-specs",
+    "repository": "https://github.com/w3c/browser-specs",
     "license": "MIT,CC0",
     "purposes": ["data"],
     "categories": ["tool"],

@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "lib": ["ES2023"],
+    "lib": ["DOM", "ES2023"],
     "types": ["node"],
     "strict": false
   }

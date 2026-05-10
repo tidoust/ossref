@@ -8,7 +8,7 @@ description: |
   - To create reports on test coverage, Web IDL and specification quality in analyzing tools.
 homepage: https://github.com/w3c/browser-specs
 owner: W3C
-source: https://github.com/w3c/browser-specs
+repository: https://github.com/w3c/browser-specs
 license: MIT,CC0
 purposes:
   - data

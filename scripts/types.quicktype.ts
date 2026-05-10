@@ -49,7 +49,7 @@ export interface ProjectData {
   /**
    * URL of the repository that contains the source code
    */
-  source: string;
+  repository: string;
   status: Status;
 }
 
@@ -68,7 +68,7 @@ export type Purpose =
   | "meeting tool"
   | "backend"
   | "frontend"
-  | "test suite"
+  | "tests"
   | "validation";
 
 export type Status = "active" | "maintained" | "dormant";
