@@ -66,24 +66,26 @@ if (what.match(/^\d+$/)) {
     } else if (section.title === "Additional properties") {
       try {
         const yaml = section.value
-          .replace(/^```yaml\s+/, "{")
-          .replace(/\s+```$/, "}")
+          .replace(/^```yaml\s*/, "")
+          .replace(/\s*```$/, "")
           .trim();
-        const suggestion = YAML.parse(yaml);
-        for (const [key, value] of suggestion) {
-          if (key === "name") {
-            console.log(
-              'The "Additional properties" section must not have a `name` field. That field is extracted from the issue title.',
-            );
-            process.exit(0);
+        if (yaml) {
+          const suggestion = YAML.parse(yaml);
+          for (const [key, value] of Object.entries(suggestion)) {
+            if (key === "name") {
+              console.log(
+                'The "Additional properties" section must not have a `name` field. That field is extracted from the issue title.',
+              );
+              process.exit(0);
+            }
+            if (key === "homepage") {
+              console.log(
+                'The "Additional properties" section must not have a `homepage` field. That URL must be given in the "Home page" section.',
+              );
+              process.exit(0);
+            }
+            project[key] = value;
           }
-          if (key === "homepage") {
-            console.log(
-              'The "Additional properties" section must not have a `homepage` field. That URL must be given in the "Home page" section.',
-            );
-            process.exit(0);
-          }
-          project[key] = value;
         }
       } catch {
         console.log(
