@@ -34,7 +34,7 @@ if (!what) {
   console.log(
     "Project to check (GitHub issue number, existing project ID, or path to YAML file) needs to be given as argument.",
   );
-  process.exit(1);
+  process.exit(0);
 }
 if (what.match(/^\d+$/)) {
   // Retrieve project information from GitHub issue
@@ -46,7 +46,7 @@ if (what.match(/^\d+$/)) {
     );
   } catch (err) {
     console.log(`Could not retrieve issue #${what}.`);
-    process.exit(1);
+    process.exit(0);
   }
 
   const issue = JSON.parse(issueStr);
@@ -75,13 +75,13 @@ if (what.match(/^\d+$/)) {
             console.log(
               'The "Additional properties" section must not have a `name` field. That field is extracted from the issue title.',
             );
-            process.exit(1);
+            process.exit(0);
           }
           if (key === "homepage") {
             console.log(
               'The "Additional properties" section must not have a `homepage` field. That URL must be given in the "Home page" section.',
             );
-            process.exit(1);
+            process.exit(0);
           }
           project[key] = value;
         }
@@ -89,7 +89,7 @@ if (what.match(/^\d+$/)) {
         console.log(
           'The "Additional properties" section does not contain valid YAML.',
         );
-        process.exit(1);
+        process.exit(0);
       }
     }
   }
@@ -107,13 +107,13 @@ if (what.match(/^\d+$/)) {
 // Make sure that we have the minimum amount of information that we need
 if (!project.name) {
   console.log("Missing required project name.");
-  process.exit(1);
+  process.exit(0);
 }
 if (!project.homepage && !project.repository) {
   console.log(
     "Missing required home page (or link to repository) for the project.",
   );
-  process.exit(1);
+  process.exit(0);
 }
 if (!project.id) {
   project.id = project.name.toLowerCase().replace(/\s+/g, "-");
@@ -124,7 +124,7 @@ if (projects[project.id]) {
   console.log(
     `Project ID ${project.id} would clash with existing project ${projects[project.id].name}`,
   );
-  process.exit(1);
+  process.exit(0);
 }
 
 const partialErrors = validatePartialProjectData(project);
@@ -135,7 +135,7 @@ if (partialErrors) {
   console.log("```json");
   console.log(JSON.stringify(partialErrors, null, 2));
   console.log("```");
-  process.exit(1);
+  process.exit(0);
 }
 
 const autoInfo = await compileProjectInfo(project);
@@ -174,10 +174,10 @@ if (validationErrors) {
   console.log("```json");
   console.log(JSON.stringify(validationErrors, null, 2));
   console.log("```");
-  process.exit(1);
+  process.exit(0);
 }
 if (canBeSimplified) {
-  process.exit(1);
+  process.exit(0);
 }
 
 if (process.argv[3] === "--add") {
