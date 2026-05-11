@@ -13,7 +13,7 @@ import path from "node:path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
-import { loadProject } from "./load-projects";
+import { loadProject, loadProjects } from "./load-projects";
 import splitIssueBodyIntoSections from "./split-issue-body";
 import { validateProjectData, validatePartialProjectData } from "./validate";
 import { compileProjectInfo } from "./compile-project-info";
@@ -119,6 +119,14 @@ if (!project.id) {
   project.id = project.name.toLowerCase().replace(/\s+/g, "-");
 }
 
+const projects = loadProjects();
+if (projects[project.id]) {
+  console.log(
+    `Project ID ${project.id} would clash with existing project ${projects[project.id].name}`,
+  );
+  process.exit(1);
+}
+
 const partialErrors = validatePartialProjectData(project);
 if (partialErrors) {
   // TODO: pretty print ajv validation errors
@@ -156,8 +164,6 @@ for (const [key, value] of Object.entries(autoInfo)) {
     info[key] = value;
   }
 }
-
-// TODO: handle project ID somehow (not part of the schema for now)
 
 const fullProject = Object.assign({}, autoInfo, project);
 const validationErrors = validateProjectData(fullProject);

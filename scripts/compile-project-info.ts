@@ -8,6 +8,8 @@ import type { ProjectData } from "./types";
 
 let report;
 
+const w3cGitHubOrganizations = ["w3c"];
+
 export async function compileProjectInfo(
   project: Partial<ProjectData>,
 ): Promise<Partial<ProjectData>> {
@@ -50,8 +52,9 @@ export async function compileProjectInfo(
     if (repo.description) {
       res.description = repo.description;
     }
-    // TODO: Merge w3c-related organizations under a "W3C" name
-    res.owner = repo.owner.login;
+    res.owner = w3cGitHubOrganizations.includes(repo.owner.login)
+      ? "W3C"
+      : repo.owner.login;
     if (repo.w3c["repo-type"][0] === "tests") {
       res.purposes = ["tests"];
     }
