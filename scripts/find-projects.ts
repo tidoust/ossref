@@ -302,15 +302,20 @@ Examples:
 `,
   )
   .action(async (options) => {
-    const candidates = await findProjects();
+    let candidates = await findProjects();
     if (candidates.length === 0) {
       console.log("No candidate projects found");
       return;
     }
 
-    const candidatesInfo = await Promise.all(
-      candidates.map(compileProjectInfo),
-    );
+    if (options.max > 0) {
+      candidates = candidates.slice(0, options.max);
+    }
+
+    const candidatesInfo = [];
+    for (const candidate of candidates) {
+      candidatesInfo.push(await compileProjectInfo(candidate));
+    }
 
     console.log(
       `${candidates.length} candidate projects that may be worth adding:`,
@@ -331,7 +336,6 @@ Examples:
     if (options.github && candidates.length > 0) {
       console.log();
       console.log("Report updates to GitHub:");
-      let reported = 0;
       for (let idx = 0; idx < candidates.length; idx++) {
         const candidate = candidates[idx];
         const autoInfo = candidatesInfo[idx];
@@ -375,10 +379,6 @@ ${comments.join("\n")}
           `- created issue #${createdIssue.trim()} for ${candidate.name ?? candidate.id}`,
         );
         await fs.rm(bodyFile, { force: true });
-        reported++;
-        if (options.max > 0 && reported > options.max) {
-          break;
-        }
       }
     }
   });

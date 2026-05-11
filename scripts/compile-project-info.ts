@@ -18,7 +18,6 @@ export async function compileProjectInfo(
   if (!report) {
     report = await fetchJSON(
       "https://w3c.github.io/validate-repos/report.json",
-      {},
     );
   }
   const repo = report.repos.find(

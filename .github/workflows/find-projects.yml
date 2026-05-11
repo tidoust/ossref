@@ -29,7 +29,7 @@ jobs:
         run: npm ci
 
       - name: Find new candidate specs
-        run: npx tsx scripts/find-projects.ts --github --max $MAX
+        run: npx tsx scripts/find-projects.ts --github --max=$MAX
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
           MAX: ${{ github.event_name == 'workflow_dispatch' && inputs.max || '5' }}
