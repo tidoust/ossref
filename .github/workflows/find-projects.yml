@@ -1,0 +1,35 @@
+name: Suggest new projects
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+    inputs:
+      max:
+        description: "Maximum number of projects to suggest"
+        required: true
+        type: string
+        default: 5
+
+jobs:
+  find-projects:
+    name: Find candidate projects
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest version of release script
+        uses: actions/checkout@v6
+
+      - name: Setup node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Find new candidate specs
+        run: npx tsx scripts/find-projects.ts --github --max $MAX
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+          MAX: ${{ github.event_name == 'workflow_dispatch' && inputs.max || '5' }}

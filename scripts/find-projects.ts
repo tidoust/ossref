@@ -3,7 +3,7 @@
  * projects that may be worth including in the list.
  *
  * Command usage:
- * tsx src/find-project.ts --help
+ * tsx scripts/find-project.ts --help
  *
  * Sources include known repositories that W3C tracks in the w3c/validate-repos
  * project and the https://www.w3.org/Status page.

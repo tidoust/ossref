@@ -3,7 +3,7 @@
  * `projects` folder.
  *
  * Command usage:
- * tsx src/generate-auto-files.ts [projectId]
+ * tsx scripts/generate-auto-files.ts [projectId]
  *
  * ... where projectId is optional and asks to generate the auto file for a
  * specific project file.
