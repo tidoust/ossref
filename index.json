@@ -1,7 +1,7 @@
 {
   "browser-specs": {
     "name": "Browser-specs",
-    "description": "This project exports a curated list of technical Web specifications. The list is used in a variety of ways, including:\n\nTo crawl specification with Reffy to generate machine-readable extracts in Webref, which is then used by tools such as ReSpec and Bikeshed to create terminology and reference links between Web specifications.\nTo validate specification URLs in the browser-compat-data (BCD) and web-features projects.\nTo complete the list of specifications in the Specref database.\nTo create reports on test coverage, Web IDL and specification quality in analyzing tools.\n",
+    "description": "This project exports a curated list of technical Web specifications. The list is used in a variety of ways, including:\n\nTo crawl specifications with Reffy to generate machine-readable extracts in Webref, which is then used by tools such as ReSpec and Bikeshed to create terminology and reference links between Web specifications.\nTo validate specification URLs in the browser-compat-data (BCD) and web-features projects.\nTo complete the list of specifications in the Specref database.\nTo create reports on test coverage, Web IDL and specification quality in analyzing tools.\n",
     "homepage": "https://github.com/w3c/browser-specs",
     "owner": "W3C",
     "repository": "https://github.com/w3c/browser-specs",
@@ -9,6 +9,6 @@
     "purposes": ["data"],
     "categories": ["tool"],
     "status": "active",
-    "description_html": "<p>This project exports a curated list of technical Web specifications. The list is used in a variety of ways, including:</p>\n<ul>\n<li>To crawl specification with Reffy to generate machine-readable extracts in Webref, which is then used by tools such as ReSpec and Bikeshed to create terminology and reference links between Web specifications.</li>\n<li>To validate specification URLs in the browser-compat-data (BCD) and web-features projects.</li>\n<li>To complete the list of specifications in the Specref database.</li>\n<li>To create reports on test coverage, Web IDL and specification quality in analyzing tools.</li>\n</ul>"
+    "description_html": "<p>This project exports a curated list of technical Web specifications. The list is used in a variety of ways, including:</p>\n<ul>\n<li>To crawl specifications with Reffy to generate machine-readable extracts in Webref, which is then used by tools such as ReSpec and Bikeshed to create terminology and reference links between Web specifications.</li>\n<li>To validate specification URLs in the browser-compat-data (BCD) and web-features projects.</li>\n<li>To complete the list of specifications in the Specref database.</li>\n<li>To create reports on test coverage, Web IDL and specification quality in analyzing tools.</li>\n</ul>"
   }
 }
