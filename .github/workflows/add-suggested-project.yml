@@ -10,14 +10,22 @@ on:
       - edited
 
 jobs:
+  check:
+    name: Check user permission
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${steps.checkUser.outputs.user-permission}
+    steps:
+      - id: checkUser
+        name: Check user permission
+        uses: actions-cool/check-user-permission@v2.3.0
+
   prepare:
     name: Create pull request if needed
     runs-on: ubuntu-latest
-    # TODO: Check comment user permissions more thoroughly, for instance using
-    # the REST API (see link below). This is needed given that the bot makes the
-    # change directly to the `main` branch:
-    # https://docs.github.com/en/rest/collaborators/collaborators?apiVersion=2022-11-28#get-repository-permissions-for-a-user
-    if: ${{ github.event.comment.author_association == 'MEMBER' && contains(github.event.comment.body, '@browser-specs-bot ') }}
+    needs: check
+    # TODO: Consider allowing 'write' permissions as well
+    if: ${{ needs.check.outputs.status == 'admin' && (contains(github.event.comment.body, '@hubert-bonisseur-de-le-bot pr') || (contains(github.event.comment.body, '@hubert-bonisseur-de-le-bot ') && contains(github.event.comment.body, 'polish')))}}
     steps:
       - name: Setup node.js
         uses: actions/setup-node@v6
@@ -45,8 +53,8 @@ jobs:
           git add projects
           git commit -F res.md
 
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@v1.1.0
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: main
+      - name: Push changes
+        uses: ad-m/github-push-action@v1.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
