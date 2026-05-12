@@ -160,7 +160,7 @@ if (what.match(/^\d+$/)) {
   if (project.name === autoInfo.name) {
     log(`- Project name (${project.name}) would be computed automatically.`);
     delete project.name;
-  } else if (project.name.match(/^[^\/]+\/[^\/]+$/)) {
+  } else if (project.name.match(/^[^\/\s]+\/[^\/\s]+$/)) {
     if (autoInfo.name) {
       log(
         `- The project name computed automatically (${autoInfo.name}) would be used as it seems better than the suggested one ("${project.name}")`,
