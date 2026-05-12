@@ -140,6 +140,8 @@ if (partialErrors) {
   log("```");
   reportLogAndExit();
 }
+log("Data looks valid.");
+log();
 
 const autoInfo = await compileProjectInfo(project);
 log("### Information that can be computed automatically");
