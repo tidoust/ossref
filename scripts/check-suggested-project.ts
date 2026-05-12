@@ -28,13 +28,22 @@ const scriptPath = path.dirname(fileURLToPath(import.meta.url));
  */
 const execParams = { cwd: path.join(scriptPath, "..") };
 
+let pendingLog = "";
+function log(msg?: string) {
+  pendingLog += (msg ?? "") + "\n";
+}
+function reportLogAndExit() {
+  console.log(pendingLog);
+  process.exit(0);
+}
+
 let project: Partial<ProjectData> = {};
 const what = process.argv[2];
 if (!what) {
-  console.log(
+  log(
     "Project to check (GitHub issue number, existing project ID, or path to YAML file) needs to be given as argument.",
   );
-  process.exit(0);
+  reportLogAndExit();
 }
 if (what.match(/^\d+$/)) {
   // Retrieve project information from GitHub issue
@@ -45,10 +54,12 @@ if (what.match(/^\d+$/)) {
       execParams,
     );
   } catch (err) {
-    console.log(`Could not retrieve issue #${what}.`);
-    process.exit(0);
+    log(`Could not retrieve issue #${what}.`);
+    reportLogAndExit();
   }
 
+  log("### Validation of the suggested data");
+  log();
   const issue = JSON.parse(issueStr);
   project.name = issue.title.trim().replace(/^Add new project:\s*/i, "");
   const sections = splitIssueBodyIntoSections(issue.body);
@@ -77,19 +88,17 @@ if (what.match(/^\d+$/)) {
           const suggestion = YAML.parse(yaml);
           for (const [key, value] of Object.entries(suggestion)) {
             if (key === "name") {
-              console.log(
+              log(
                 'The "Additional properties" section must not have a `name` field. Specify the name in the issue title instead.',
               );
-              process.exit(0);
+              reportLogAndExit();
             }
             project[key] = value;
           }
         }
       } catch {
-        console.log(
-          'The "Additional properties" section does not contain valid YAML.',
-        );
-        process.exit(0);
+        log('The "Additional properties" section does not contain valid YAML.');
+        reportLogAndExit();
       }
     }
   }
@@ -105,13 +114,9 @@ if (what.match(/^\d+$/)) {
 }
 
 // Make sure that we have the minimum amount of information that we need
-if (!project.name) {
-  console.log("Missing required project name.");
-  process.exit(0);
-}
 if (!project.homepage && !project.repository) {
-  console.log("Missing required URL for the project.");
-  process.exit(0);
+  log("Missing required URL for the project.");
+  reportLogAndExit();
 }
 if (!project.id) {
   project.id = project.name.toLowerCase().replace(/\s+/g, "-");
@@ -119,30 +124,52 @@ if (!project.id) {
 
 const projects = loadProjects();
 if (projects[project.id]) {
-  console.log(
+  log(
     `Project ID ${project.id} would clash with existing project ${projects[project.id].name}`,
   );
-  process.exit(0);
+  reportLogAndExit();
 }
 
 const partialErrors = validatePartialProjectData(project);
 if (partialErrors) {
   // TODO: pretty print ajv validation errors
-  console.log("Invalid information found. Schema validation errors follow.");
-  console.log();
-  console.log("```json");
-  console.log(JSON.stringify(partialErrors, null, 2));
-  console.log("```");
-  process.exit(0);
+  log("Data is invalid. Schema validation errors follow.");
+  log();
+  log("```json");
+  log(JSON.stringify(partialErrors, null, 2));
+  log("```");
+  reportLogAndExit();
 }
 
 const autoInfo = await compileProjectInfo(project);
-if (process.argv[3] !== "--add") {
-  console.log("Information that can be computed automatically:");
-  console.log("```yaml");
-  console.log(YAML.stringify(autoInfo));
-  console.log("```");
-  console.log();
+log("### Information that can be computed automatically");
+log();
+log("```yaml");
+log(YAML.stringify(autoInfo));
+log("```");
+log();
+
+// In the case of a GitHub issue, suggestion includes a project name. If that
+// name matches the one we manage to compute, we don't need to keep the
+// suggestion. Similarly, if the suggested project name looks like
+// `[owner]/[name]`, we probably want to drop the suggested name as well if we
+// can find a better name.
+if (what.match(/^\d+$/)) {
+  if (project.name === autoInfo.name) {
+    log(`- Project name (${project.name}) would be computed automatically.`);
+    delete project.name;
+  } else if (project.name.match(/^[^\/]+\/[^\/]+$/)) {
+    if (autoInfo.name) {
+      log(
+        `- The project name computed automatically (${autoInfo.name}) would be used as it seems better than the suggested one ("${project.name}")`,
+      );
+      delete project.name;
+    } else {
+      log(
+        `- The suggested project name (${project.name}) seems so-so but no better name could be found. Consider providing one.`,
+      );
+    }
+  }
 }
 
 const info = {};
@@ -153,46 +180,53 @@ for (const [key, value] of Object.entries(autoInfo)) {
   }
   if (project[key]) {
     if (project[key].trim() === value) {
-      console.log(
-        `- Drop key \`${key}\`, as it can be computed automatically.`,
-      );
       canBeSimplified = true;
+      log(`- Drop key \`${key}\` since it can be computed automatically.`);
     }
   } else {
     info[key] = value;
   }
 }
 
-const fullProject = Object.assign({}, autoInfo, project);
+const fullProject = Object.assign({}, info, project);
 const validationErrors = validateProjectData(fullProject);
+log("### Project validation");
+log();
 if (validationErrors) {
   // TODO: pretty print ajv validation errors
-  console.log("Not enough information. Schema validation errors follow.");
-  console.log();
-  console.log("```json");
-  console.log(JSON.stringify(validationErrors, null, 2));
-  console.log("```");
-  process.exit(0);
+  log(
+    "Not enough information to add the project as-is. Schema validation errors follow.",
+  );
+  log();
+  log("```json");
+  log(JSON.stringify(validationErrors, null, 2));
+  log("```");
+} else if (canBeSimplified) {
+  log("See above, drop data that can be computed automatically.");
 }
-if (canBeSimplified) {
-  process.exit(0);
+if (validationErrors || canBeSimplified) {
+  reportLogAndExit();
+} else if (process.argv[3] !== "--add") {
+  log("The suggested project looks good! 😎");
+  reportLogAndExit();
 }
 
-if (process.argv[3] === "--add") {
-  const id = project.id;
-  delete project.id;
-  fs.writeFileSync(
-    path.join("projects", `${id}.yml`),
-    YAML.stringify(project),
-    "utf8",
-  );
-  console.log(`Add project ${project.name}`);
+// Still running? That means the suggested project looks good and the request
+// is to create a YAML file under the "projects" folder for it, and report a
+// possible commit message.
+const id = project.id;
+delete project.id;
+fs.writeFileSync(
+  path.join("projects", `${id}.yml`),
+  YAML.stringify(project),
+  "utf8",
+);
+console.log(`Add project ${fullProject.name}`);
+console.log();
+console.log(
+  `This adds the project "${fullProject.name}" with ID ${id} to the list.`,
+);
+if (what.match(/^\d+$/)) {
   console.log();
-  console.log(`This adds "${project.name}" with ID ${id} to the list.`);
-  if (what.match(/^\d+$/)) {
-    console.log();
-    console.log(`Close #${what}`);
-  }
-} else {
-  console.log("That all looks good to me!");
+  console.log(`Close #${what}`);
 }
