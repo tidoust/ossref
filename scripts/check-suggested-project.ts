@@ -53,15 +53,19 @@ if (what.match(/^\d+$/)) {
   project.name = issue.title.trim().replace(/^Add new project:\s*/i, "");
   const sections = splitIssueBodyIntoSections(issue.body);
   for (const section of sections) {
-    if (section.title === "Home page") {
-      // Consider that the "home page" is the repository URL if it is a GitHub
-      // URL. It may be that we'll use that URL for the home page as well, but
+    if (section.title === "URL") {
+      // Consider that the URL is the repository URL if it is a GitHub URL.
+      // It may be that we'll use that URL for the home page as well, but
       // that's fine.
       const url = section.value.trim();
       if (url.match(/^https:\/\/github\.com\//)) {
         project.repository = url;
       } else {
         project.homepage = url;
+        const match = url.match(/^https:\/\/([^\.]+)\.github\.io\/([^\/]+)/);
+        if (match) {
+          project.repository = `https://github.com/${match[1]}/${match[2]}`;
+        }
       }
     } else if (section.title === "Additional properties") {
       try {
@@ -74,13 +78,7 @@ if (what.match(/^\d+$/)) {
           for (const [key, value] of Object.entries(suggestion)) {
             if (key === "name") {
               console.log(
-                'The "Additional properties" section must not have a `name` field. That field is extracted from the issue title.',
-              );
-              process.exit(0);
-            }
-            if (key === "homepage") {
-              console.log(
-                'The "Additional properties" section must not have a `homepage` field. That URL must be given in the "Home page" section.',
+                'The "Additional properties" section must not have a `name` field. Specify the name in the issue title instead.',
               );
               process.exit(0);
             }
@@ -112,9 +110,7 @@ if (!project.name) {
   process.exit(0);
 }
 if (!project.homepage && !project.repository) {
-  console.log(
-    "Missing required home page (or link to repository) for the project.",
-  );
+  console.log("Missing required URL for the project.");
   process.exit(0);
 }
 if (!project.id) {

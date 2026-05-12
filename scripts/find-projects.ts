@@ -86,8 +86,8 @@ function findProjectInTheList(project: Partial<ProjectData>): ProjectData {
     const lurl = trimSlash(url.toLowerCase());
     const known = Object.values(projects).find(
       (project) =>
-        trimSlash(project.homepage.toLowerCase()) === lurl ||
-        trimSlash(project.repository.toLowerCase()) === lurl,
+        trimSlash(project.repository.toLowerCase()) === lurl ||
+        trimSlash(project.homepage.toLowerCase()) === lurl,
     );
     if (known) {
       return known;
@@ -208,15 +208,13 @@ async function fetchKnownCandidates(): Promise<Partial<ProjectData>[]> {
   return list
     .map((issue) => {
       const sections = splitIssueBodyIntoSections(issue.body);
-      const urlSection = sections.find(
-        (section) => section.title === "Home page",
-      );
+      const urlSection = sections.find((section) => section.title === "URL");
       if (!urlSection) {
         // Issue does not follow the expected format
         return null;
       }
       const project = {
-        homepage: urlSection.value.trim(),
+        repository: urlSection.value.trim(),
       };
 
       return project;
@@ -324,12 +322,11 @@ Examples:
       const candidate = candidates[idx];
       const autoInfo = candidatesInfo[idx];
       const project = Object.assign({}, autoInfo, candidate);
-      if (!project.homepage) {
-        project.homepage = project.repository;
-      }
-      const repoStr = project.repository ? ` from ${project.repository}` : "";
+      const homepageStr = project.homepage
+        ? `, home page: ${project.homepage}`
+        : "";
       console.log(
-        `- [${project.name}](${project.homepage}) (would-be ID: ${project.id})${repoStr}`,
+        `- [${project.name}](${project.repository}) (would-be ID: ${project.id})${homepageStr}`,
       );
     }
 
@@ -347,15 +344,15 @@ Examples:
         const bodyFile = path.join(scriptPath, "..", "__issue.md");
         const comments = [
           project.id ? `- Would-be ID: \`${project.id}\`` : null,
-          project.repository && project.repository !== project.homepage
-            ? `- Repository: ${project.repository}`
+          project.homepage && project.homepage !== project.repository
+            ? `- Home page: ${project.homepage}`
             : null,
         ].filter((comment) => !!comment);
         await fs.writeFile(
           bodyFile,
-          `### Home page
+          `### URL
 
-${project.homepage || project.repository}
+${project.repository || project.homepage}
 
 ### Rationale
 

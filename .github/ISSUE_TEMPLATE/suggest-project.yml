@@ -10,11 +10,11 @@ body:
         Thank you for proposing a new project! Spec suggestions use a structured issue so that we can semi-automate the process. A bot will check the suggestion after creation, and report on missing properties or other problems to help us review and progress the suggestion. You may **ignore the bot's outcome**.
 
   - type: input
-    id: homepage
+    id: url
     attributes:
-      label: Home page
+      label: URL
       description: |
-        The project's home page.
+        Main URL for the project. If the project is hosted in a repository, this should be the URL of that repository. If not, this should be the project's home page.
       value: "https://"
     validations:
       required: true
