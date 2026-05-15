@@ -5,6 +5,11 @@ on:
     # Every 12 hours every day
     - cron: "20 */12 * * *"
   workflow_dispatch:
+    inputs:
+      projectid:
+        description: "Project ID"
+        required: false
+        type: string
 
 jobs:
   generate:
@@ -23,9 +28,10 @@ jobs:
         run: npm ci
 
       - name: Generate auto files
-        run: npm run generate-auto-files
+        run: npx tsx scripts/generate-auto-files.ts $PROJECTID
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROJECTID: ${{ github.event_name == 'workflow_dispatch' && inputs.projectid || '' }}
 
       - name: Check YAML files
         run: npm run test:yaml
