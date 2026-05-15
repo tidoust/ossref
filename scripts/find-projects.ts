@@ -238,7 +238,7 @@ async function findProjects(): Promise<Partial<ProjectData>[]> {
     .map((project) => {
       // Entry may already have been reported in an issue
       let known = knownCandidates.find((k) =>
-        [project.homepage, project.repository].includes(k.homepage),
+        [project.homepage, project.repository].includes(k.repository),
       );
       if (known) {
         return null;
