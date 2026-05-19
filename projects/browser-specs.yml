@@ -7,7 +7,6 @@ description: |
   - To complete the list of specifications in the Specref database.
   - To create reports on test coverage, Web IDL and specification quality in analyzing tools.
 homepage: https://github.com/w3c/browser-specs
-owner: W3C
 repository: https://github.com/w3c/browser-specs
 licenses:
   - MIT
