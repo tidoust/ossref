@@ -5,7 +5,7 @@
     "homepage": "https://github.com/w3c/browser-specs",
     "owner": "W3C",
     "repository": "https://github.com/w3c/browser-specs",
-    "license": "MIT,CC0",
+    "licenses": ["MIT", "CC0"],
     "purposes": ["data"],
     "categories": ["tool"],
     "status": "active",
@@ -13,7 +13,7 @@
   },
   "webgpu-conformance-test-suite": {
     "repository": "https://github.com/gpuweb/cts",
-    "license": "BSD-3-Clause",
+    "licenses": ["BSD-3-Clause"],
     "categories": ["adoption"],
     "status": "active",
     "name": "WebGPU Conformance Test Suite",

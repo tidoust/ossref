@@ -9,7 +9,9 @@ description: |
 homepage: https://github.com/w3c/browser-specs
 owner: W3C
 repository: https://github.com/w3c/browser-specs
-license: MIT,CC0
+licenses:
+  - MIT
+  - CC0
 purposes:
   - data
 categories:

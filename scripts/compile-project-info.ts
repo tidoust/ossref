@@ -57,6 +57,8 @@ export async function compileProjectInfo(
     if (repo.w3c["repo-type"][0] === "tests") {
       res.purposes = ["tests"];
     }
+  } else if (project.repository.match(/^https:\/\/github\.com\//)) {
+    // Gather information from the repository itself
   }
 
   return res;

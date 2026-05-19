@@ -42,9 +42,9 @@
           "description": "URL of the repository that contains the source code",
           "$ref": "#/definitions/Url"
         },
-        "license": {
-          "description": "Open-source license for the project, using an SPDX license ID. Use an SPDX license expression syntax version 2.0 string if the project is licensed under multiple common licenses. Use \"SEE LICENSE IN <url>\" if the project uses a custom license.",
-          "$ref": "#/definitions/NonEmptyString"
+        "licenses": {
+          "description": "Open-source licenses for the project, using an SPDX license ID. Use \"SEE LICENSE IN <url>\" if the project uses a custom license.",
+          "$ref": "#/definitions/Strings"
         },
         "purposes": {
           "description": "Main purposes that the project addresses",
@@ -66,7 +66,7 @@
         "owner",
         "homepage",
         "repository",
-        "license",
+        "licenses",
         "purposes",
         "categories",
         "status"
@@ -92,6 +92,7 @@
         "meeting tool",
         "backend",
         "frontend",
+        "samples",
         "tests",
         "validation"
       ]

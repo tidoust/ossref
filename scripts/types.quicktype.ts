@@ -23,11 +23,10 @@ export interface ProjectData {
    */
   id?: string;
   /**
-   * Open-source license for the project, using an SPDX license ID. Use an SPDX license
-   * expression syntax version 2.0 string if the project is licensed under multiple common
-   * licenses. Use "SEE LICENSE IN <url>" if the project uses a custom license.
+   * Open-source licenses for the project, using an SPDX license ID. Use "SEE LICENSE IN
+   * <url>" if the project uses a custom license.
    */
-  license: string;
+  licenses: string[];
   /**
    * URL of the project's logo, when one exists
    */
@@ -68,6 +67,7 @@ export type Purpose =
   | "meeting tool"
   | "backend"
   | "frontend"
+  | "samples"
   | "tests"
   | "validation";
 
