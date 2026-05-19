@@ -2,13 +2,26 @@
  * Compile information about the project that can be determined automatically.
  */
 
+import { execSync } from "node:child_process";
 import fetchJSON from "./fetch-json";
 import { convertMarkdown } from "./text";
 import type { ProjectData } from "./types";
 
-let report;
-
 const w3cGitHubOrganizations = ["w3c"];
+
+/**
+ * For some reason, GitHub returns license keys in lowercase. Let's use
+ * better-looking SPDX IDs for common licenses.
+ */
+const license2Spdx = {
+  "apache-2.0": "Apache-2.0",
+  "bsd-2-clause": "BSD-2-Clause",
+  "bsd-3-clause": "BSD-3-Clause",
+  "cc0-1.0": "CC0-1.0",
+  mit: "MIT",
+};
+
+let report;
 
 export async function compileProjectInfo(
   project: Partial<ProjectData>,
@@ -57,8 +70,57 @@ export async function compileProjectInfo(
     if (repo.w3c["repo-type"][0] === "tests") {
       res.purposes = ["tests"];
     }
-  } else if (project.repository.match(/^https:\/\/github\.com\//)) {
-    // Gather information from the repository itself
+    if (repo.isArchived) {
+      res.status = "dormant";
+    }
+  }
+
+  if (project.repository.match(/^https:\/\/github\.com\//)) {
+    // Gather information about the GitHub repository from the GH CLI tool
+    const repoCmd = [
+      "gh repo view",
+      "--json",
+      [
+        "description",
+        "homepageUrl",
+        "isArchived",
+        "licenseInfo",
+        "owner",
+        "nameWithOwner",
+      ].join(","),
+      project.repository,
+    ].join(" ");
+    const ghRepo = JSON.parse(execSync(repoCmd, { encoding: "utf-8" }));
+
+    if (!res.name) {
+      res.name = ghRepo.nameWithOwner;
+      if (!res.id) {
+        res.id = (project.name ?? res.name).toLowerCase().replace(/\s+/g, "-");
+      }
+    }
+    if (ghRepo.homepageUrl && !res.homepage) {
+      res.homepage = ghRepo.homepageUrl;
+    }
+    if (ghRepo.description && !res.description) {
+      res.description = ghRepo.description;
+    }
+    if (!res.owner) {
+      res.owner = w3cGitHubOrganizations.includes(repo.owner.login)
+        ? "W3C"
+        : repo.owner.login;
+    }
+    if (ghRepo.licenseInfo && (!res.licenses || !res.licenses.length)) {
+      const key = ghRepo.licenseInfo.key;
+      res.licenses = [license2Spdx[key] ?? key];
+    }
+    if (ghRepo.isArchived) {
+      res.status = "dormant";
+    }
+  }
+
+  // Projects are active by default
+  if (!res.status) {
+    res.status = "active";
   }
 
   return res;

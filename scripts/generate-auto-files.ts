@@ -26,7 +26,14 @@ for (const [id, project] of Object.entries(projects)) {
   const info = {};
   for (const [key, value] of Object.entries(autoInfo)) {
     if (project[key]) {
-      if (project[key].trim() === value) {
+      if (Array.isArray(project[key])) {
+        if (
+          project[key].length === value.length &&
+          project[key].every((v, i) => value[i] === v)
+        ) {
+          console.warn(`- Key ${key} could be dropped from ${id}.yml`);
+        }
+      } else if (project[key].trim() === value) {
         console.warn(`- Key ${key} could be dropped from ${id}.yml`);
       }
     } else if (key !== "id") {

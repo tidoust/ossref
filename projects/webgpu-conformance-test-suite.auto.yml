@@ -7,3 +7,6 @@ description: WebGPU Conformance Test Suite
 owner: gpuweb
 purposes:
   - tests
+licenses:
+  - BSD-3-Clause
+status: active

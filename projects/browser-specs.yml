@@ -6,13 +6,11 @@ description: |
   - To validate specification URLs in the browser-compat-data (BCD) and web-features projects.
   - To complete the list of specifications in the Specref database.
   - To create reports on test coverage, Web IDL and specification quality in analyzing tools.
-homepage: https://github.com/w3c/browser-specs
 repository: https://github.com/w3c/browser-specs
 licenses:
   - MIT
-  - CC0
+  - CC0-1.0
 purposes:
   - data
 categories:
   - tool
-status: active
