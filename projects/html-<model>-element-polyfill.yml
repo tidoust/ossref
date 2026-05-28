@@ -1,0 +1,6 @@
+name: HTML <model> element polyfill
+repository: https://github.com/immersive-web/model-element-polyfill
+purposes:
+  - library
+categories:
+  - implementation
