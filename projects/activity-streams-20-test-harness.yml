@@ -1,0 +1,4 @@
+name: Activity Streams 2.0 Test Harness
+repository: https://github.com/w3c/activitystreams-testing
+categories:
+  - tool
