@@ -1,4 +1,40 @@
 {
+  "activity-streams-20-test-harness": {
+    "name": "Activity Streams 2.0 Test Harness",
+    "description": "W3C Activity Streams 2.0 Conformance Tests",
+    "description_html": "W3C Activity Streams 2.0 Conformance Tests",
+    "homepage": "https://github.com/w3c/activitystreams-testing",
+    "repository": "https://github.com/w3c/activitystreams-testing",
+    "owner": "W3C",
+    "licenses": ["Apache-2.0"],
+    "status": "active",
+    "purposes": ["tests"],
+    "categories": ["tool"]
+  },
+  "apiary": {
+    "name": "Apiary",
+    "description": "Simple JS library to use the W3C API in a declarative way",
+    "description_html": "Simple JS library to use the W3C API in a declarative way",
+    "homepage": "https://github.com/w3c/apiary",
+    "repository": "https://github.com/w3c/apiary",
+    "owner": "W3C",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["library"],
+    "categories": ["tool"]
+  },
+  "ash-nazg": {
+    "name": "Repository Manager (Ash-Nazg)",
+    "description": "One interface to find all group contributors and in IPR bind them",
+    "description_html": "One interface to find all group contributors and in IPR bind them",
+    "homepage": "https://labs.w3.org/repo-manager/",
+    "repository": "https://github.com/w3c/ash-nazg",
+    "owner": "W3C",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["group tool"],
+    "categories": ["tool"]
+  },
   "browser-specs": {
     "name": "Browser-specs",
     "description": "This project exports a curated list of technical Web specifications. The list is used in a variety of ways, including:\n\nTo crawl specifications with Reffy to generate machine-readable extracts in Webref, which is then used by tools such as ReSpec and Bikeshed to create terminology and reference links between Web specifications.\nTo validate specification URLs in the browser-compat-data (BCD) and web-features projects.\nTo complete the list of specifications in the Specref database.\nTo create reports on test coverage, Web IDL and specification quality in analyzing tools.\n",
@@ -11,6 +47,30 @@
     "purposes": ["data"],
     "categories": ["tool"]
   },
+  "html-model-element-polyfill": {
+    "name": "HTML <model> element polyfill",
+    "description": "A polyfill for the HTML Model Element",
+    "description_html": "A polyfill for the HTML Model Element",
+    "homepage": "https://github.com/immersive-web/model-element-polyfill",
+    "repository": "https://github.com/immersive-web/model-element-polyfill",
+    "owner": "immersive-web",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["library"],
+    "categories": ["implementation"]
+  },
+  "html-model-element-samples": {
+    "name": "HTML <model> element samples",
+    "description": "Working model-element samples",
+    "description_html": "Working model-element samples",
+    "homepage": "https://github.com/immersive-web/model-element-samples",
+    "repository": "https://github.com/immersive-web/model-element-samples",
+    "owner": "immersive-web",
+    "licenses": ["W3C-20150513"],
+    "status": "active",
+    "purposes": ["samples"],
+    "categories": ["adoption"]
+  },
   "webgpu-conformance-test-suite": {
     "name": "WebGPU Conformance Test Suite",
     "description": "WebGPU Conformance Test Suite",
@@ -22,5 +82,41 @@
     "status": "active",
     "purposes": ["tests"],
     "categories": ["adoption"]
+  },
+  "webxr-device-api-samples": {
+    "name": "WebXR Device API samples",
+    "description": "Samples to demonstrate use of the WebXR Device API",
+    "description_html": "Samples to demonstrate use of the WebXR Device API",
+    "homepage": "https://immersive-web.github.io/webxr-samples/",
+    "repository": "https://github.com/immersive-web/webxr-samples",
+    "owner": "immersive-web",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["samples"],
+    "categories": ["adoption"]
+  },
+  "webxr-input-profiles": {
+    "name": "WebXR Input Profiles",
+    "description": "WebXR Gamepad assets, source library, and schema",
+    "description_html": "WebXR Gamepad assets, source library, and schema",
+    "homepage": "https://immersive-web.github.io/webxr-input-profiles",
+    "repository": "https://github.com/immersive-web/webxr-input-profiles",
+    "owner": "immersive-web",
+    "licenses": ["other"],
+    "status": "active",
+    "purposes": ["library"],
+    "categories": ["adoption", "implementation"]
+  },
+  "webxr-layers-polyfill": {
+    "name": "WebXR Layers polyfill library",
+    "description": "A Javascript implementation of the WebXR Layers API, which renders layers in WebGL.",
+    "description_html": "A Javascript implementation of the <a href=\"https://www.w3.org/TR/webxrlayers-1/\">WebXR Layers API</a>, which renders layers in WebGL.",
+    "homepage": "https://github.com/immersive-web/webxr-layers-polyfill",
+    "repository": "https://github.com/immersive-web/webxr-layers-polyfill",
+    "owner": "immersive-web",
+    "licenses": ["Apache-2.0"],
+    "status": "active",
+    "purposes": ["library"],
+    "categories": ["implementation"]
   }
 }
