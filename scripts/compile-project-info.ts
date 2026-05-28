@@ -51,7 +51,9 @@ export async function compileProjectInfo(
       );
       if (title) {
         res.name = convertMarkdown(title).text.trim();
-        res.id = res.name.toLowerCase().replace(/\s+/g, "-");
+        res.id = res.name.toLowerCase()
+          .replace(/\s+/g, "-")
+          .replace(/[\W+\-]+/gi, "");
       }
     }
     if (!res.name) {
