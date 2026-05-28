@@ -53,7 +53,7 @@ export async function compileProjectInfo(
         res.name = convertMarkdown(title).text.trim();
         res.id = res.name.toLowerCase()
           .replace(/\s+/g, "-")
-          .replace(/[\W+\-]+/gi, "");
+          .replace(/[^\w\-]+/g, "");
       }
     }
     if (!res.name) {
