@@ -19,7 +19,7 @@ const license2Spdx = {
   "bsd-3-clause": "BSD-3-Clause",
   "cc0-1.0": "CC0-1.0",
   mit: "MIT",
-  w3c: "W3C-20150513"
+  w3c: "W3C-20150513",
 };
 
 function convertNameToID(name) {
@@ -44,8 +44,8 @@ export async function compileProjectInfo(
   }
   const repo = report.repos.find(
     (repo) =>
-      project.repository ===
-      `https://github.com/${repo.owner.login}/${repo.name}`,
+      `https://github.com/${repo.owner.login}/${repo.name}` ===
+      project.repository,
   );
 
   if (repo) {
@@ -59,14 +59,11 @@ export async function compileProjectInfo(
       );
       if (title) {
         res.name = convertMarkdown(title).text.trim();
-        res.id = convertNameToID(res.name);
       }
     }
     if (!res.name) {
       res.name = `${repo.owner.login}/${repo.name}`;
     }
-    res.id =
-      res.id ?? convertNameToID(project.name ?? res.name);
     if (repo.homepageUrl?.trim()) {
       res.homepage = repo.homepageUrl.trim();
     }
@@ -103,9 +100,6 @@ export async function compileProjectInfo(
 
     if (!res.name) {
       res.name = ghRepo.nameWithOwner;
-      if (!res.id) {
-        res.id = convertNameToID(project.name ?? res.name);
-      }
     }
     if (ghRepo.homepageUrl?.trim() && !res.homepage) {
       res.homepage = ghRepo.homepageUrl.trim();
@@ -127,6 +121,9 @@ export async function compileProjectInfo(
     }
   }
 
+  // Compute ID from the name
+  res.id = convertNameToID(res.name);
+
   // Projects are active by default
   if (!res.status) {
     res.status = "active";
@@ -134,7 +131,7 @@ export async function compileProjectInfo(
 
   // Still no homepage? We'll use the repository URL
   if (!res.homepage) {
-    res.homepage = project.repository
+    res.homepage = project.repository;
   }
 
   return res;

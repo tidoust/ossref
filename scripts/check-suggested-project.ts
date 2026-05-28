@@ -37,6 +37,14 @@ function reportLogAndExit() {
   process.exit(0);
 }
 
+function convertNameToID(name) {
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "");
+}
+
 let project: Partial<ProjectData> = {};
 const what = process.argv[2];
 if (!what) {
@@ -133,7 +141,7 @@ log("Data looks valid.");
 log();
 
 const autoInfo = await compileProjectInfo(project);
-log("### Information that can be computed automatically");
+log("### Information that would be computed automatically");
 log();
 log("```yaml");
 log(YAML.stringify(autoInfo));
@@ -141,7 +149,7 @@ log("```");
 log();
 
 if (!project.id) {
-  project.id = autoInfo.id;
+  project.id = project.name ? convertNameToID(project.name) : autoInfo.id;
 }
 
 const projects = loadProjects();
@@ -190,8 +198,7 @@ for (const [key, value] of Object.entries(autoInfo)) {
         canBeSimplified = true;
         log(`- Drop key \`${key}\` since it can be computed automatically.`);
       }
-    }
-    else if (project[key].trim() === value) {
+    } else if (project[key].trim() === value) {
       canBeSimplified = true;
       log(`- Drop key \`${key}\` since it can be computed automatically.`);
     }
@@ -201,8 +208,16 @@ for (const [key, value] of Object.entries(autoInfo)) {
 }
 
 const fullProject = Object.assign({}, info, project);
+
+log("### How the full project would look like");
+log();
+log("```yaml");
+log(YAML.stringify(fullProject));
+log("```");
+log();
+
 const validationErrors = validateProjectData(fullProject);
-log("### Project validation");
+log("### Validation of the full project");
 log();
 if (validationErrors) {
   // TODO: pretty print ajv validation errors
