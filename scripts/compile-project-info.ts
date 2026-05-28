@@ -58,11 +58,11 @@ export async function compileProjectInfo(
     }
     res.id =
       res.id ?? (project.name ?? res.name).toLowerCase().replace(/\s+/g, "-");
-    if (repo.homepageUrl) {
-      res.homepage = repo.homepageUrl;
+    if (repo.homepageUrl?.trim()) {
+      res.homepage = repo.homepageUrl.trim();
     }
-    if (repo.description) {
-      res.description = repo.description;
+    if (repo.description?.trim()) {
+      res.description = repo.description.trim();
     }
     res.owner = w3cGitHubOrganizations.includes(repo.owner.login)
       ? "W3C"
@@ -98,11 +98,11 @@ export async function compileProjectInfo(
         res.id = (project.name ?? res.name).toLowerCase().replace(/\s+/g, "-");
       }
     }
-    if (ghRepo.homepageUrl && !res.homepage) {
-      res.homepage = ghRepo.homepageUrl;
+    if (ghRepo.homepageUrl?.trim() && !res.homepage) {
+      res.homepage = ghRepo.homepageUrl.trim();
     }
-    if (ghRepo.description && !res.description) {
-      res.description = ghRepo.description;
+    if (ghRepo.description?.trim() && !res.description) {
+      res.description = ghRepo.description.trim();
     }
     if (!res.owner) {
       res.owner = w3cGitHubOrganizations.includes(repo.owner.login)
