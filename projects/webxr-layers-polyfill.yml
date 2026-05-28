@@ -1,0 +1,8 @@
+name: WebXR Layers polyfill library
+repository: https://github.com/immersive-web/webxr-layers-polyfill
+description: A Javascript implementation of the [WebXR Layers
+  API](https://www.w3.org/TR/webxrlayers-1/), which renders layers in WebGL.
+categories:
+  - implementation
+purposes:
+  - library
