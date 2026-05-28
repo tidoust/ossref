@@ -1,0 +1,6 @@
+name: WebXR Device API samples
+repository: https://github.com/immersive-web/webxr-samples
+categories:
+  - adoption
+purposes:
+  - samples
