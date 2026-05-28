@@ -1,0 +1,6 @@
+repository: https://github.com/immersive-web/webxr-input-profiles
+categories:
+  - adoption
+  - implementation
+purposes:
+  - library
