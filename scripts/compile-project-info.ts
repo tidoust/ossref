@@ -123,5 +123,10 @@ export async function compileProjectInfo(
     res.status = "active";
   }
 
+  // Still no homepage? We'll use the repository URL
+  if (!res.homepage) {
+    res.homepage = project.repository
+  }
+
   return res;
 }
