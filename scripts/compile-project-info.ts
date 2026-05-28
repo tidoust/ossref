@@ -19,6 +19,7 @@ const license2Spdx = {
   "bsd-3-clause": "BSD-3-Clause",
   "cc0-1.0": "CC0-1.0",
   mit: "MIT",
+  w3c: "W3C-20150513"
 };
 
 let report;

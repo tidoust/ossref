@@ -181,7 +181,16 @@ for (const [key, value] of Object.entries(autoInfo)) {
     continue;
   }
   if (project[key]) {
-    if (project[key].trim() === value) {
+    if (Array.isArray(project[key])) {
+      if (
+        project[key].length === value.length &&
+        project[key].every((v, i) => value[i] === v)
+      ) {
+        canBeSimplified = true;
+        log(`- Drop key \`${key}\` since it can be computed automatically.`);
+      }
+    }
+    else if (project[key].trim() === value) {
       canBeSimplified = true;
       log(`- Drop key \`${key}\` since it can be computed automatically.`);
     }
