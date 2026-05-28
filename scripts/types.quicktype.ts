@@ -64,7 +64,7 @@ export type Purpose =
   | "authoring"
   | "data"
   | "library"
-  | "meeting tool"
+  | "group tool"
   | "backend"
   | "frontend"
   | "samples"
