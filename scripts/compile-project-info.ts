@@ -22,6 +22,14 @@ const license2Spdx = {
   w3c: "W3C-20150513"
 };
 
+function convertNameToID(name) {
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "");
+}
+
 let report;
 
 export async function compileProjectInfo(
@@ -51,16 +59,14 @@ export async function compileProjectInfo(
       );
       if (title) {
         res.name = convertMarkdown(title).text.trim();
-        res.id = res.name.toLowerCase()
-          .replace(/\s+/g, "-")
-          .replace(/[^\w\-]+/g, "");
+        res.id = convertNameToID(res.name);
       }
     }
     if (!res.name) {
       res.name = `${repo.owner.login}/${repo.name}`;
     }
     res.id =
-      res.id ?? (project.name ?? res.name).toLowerCase().replace(/\s+/g, "-");
+      res.id ?? convertNameToID(project.name ?? res.name);
     if (repo.homepageUrl?.trim()) {
       res.homepage = repo.homepageUrl.trim();
     }
@@ -98,7 +104,7 @@ export async function compileProjectInfo(
     if (!res.name) {
       res.name = ghRepo.nameWithOwner;
       if (!res.id) {
-        res.id = (project.name ?? res.name).toLowerCase().replace(/\s+/g, "-");
+        res.id = convertNameToID(project.name ?? res.name);
       }
     }
     if (ghRepo.homepageUrl?.trim() && !res.homepage) {

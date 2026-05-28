@@ -118,17 +118,6 @@ if (!project.homepage && !project.repository) {
   log("Missing required URL for the project.");
   reportLogAndExit();
 }
-if (!project.id) {
-  project.id = project.name.toLowerCase().replace(/\s+/g, "-");
-}
-
-const projects = loadProjects();
-if (projects[project.id]) {
-  log(
-    `Project ID ${project.id} would clash with existing project ${projects[project.id].name}`,
-  );
-  reportLogAndExit();
-}
 
 const partialErrors = validatePartialProjectData(project);
 if (partialErrors) {
@@ -150,6 +139,18 @@ log("```yaml");
 log(YAML.stringify(autoInfo));
 log("```");
 log();
+
+if (!project.id) {
+  project.id = autoInfo.id;
+}
+
+const projects = loadProjects();
+if (projects[project.id]) {
+  log(
+    `Project ID ${project.id} would clash with existing project ${projects[project.id].name}`,
+  );
+  reportLogAndExit();
+}
 
 // In the case of a GitHub issue, suggestion includes a project name. If that
 // name matches the one we manage to compute, we don't need to keep the
