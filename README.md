@@ -40,7 +40,7 @@ Absolute URL of the repository that contains the source code of the project.
 
 ### `licenses`
 
-Open-source licenses for the project, using an [SPDX license ID](https://spdx.org/licenses/). Use \"SEE LICENSE IN <url>\" if the project uses a custom license.
+Open-source licenses for the project, using an [SPDX license ID](https://spdx.org/licenses/). Use \"other\" if the project uses a custom license.
 
 Common SPDX License IDs used in W3C projects include:
 

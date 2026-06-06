@@ -23,8 +23,8 @@ export interface ProjectData {
    */
   id?: string;
   /**
-   * Open-source licenses for the project, using an SPDX license ID. Use "SEE LICENSE IN
-   * <url>" if the project uses a custom license.
+   * Open-source licenses for the project, using an SPDX license ID. Use "other" if the
+   * project uses a custom license.
    */
   licenses: string[];
   /**

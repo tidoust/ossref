@@ -43,7 +43,7 @@
           "$ref": "#/definitions/Url"
         },
         "licenses": {
-          "description": "Open-source licenses for the project, using an SPDX license ID. Use \"SEE LICENSE IN <url>\" if the project uses a custom license.",
+          "description": "Open-source licenses for the project, using an SPDX license ID. Use \"other\" if the project uses a custom license.",
           "$ref": "#/definitions/Strings"
         },
         "purposes": {
