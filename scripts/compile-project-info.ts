@@ -112,7 +112,11 @@ export async function compileProjectInfo(
         ? "W3C"
         : repo.owner.login;
     }
-    if (ghRepo.licenseInfo && (!res.licenses || !res.licenses.length)) {
+    if (
+      ghRepo.licenseInfo &&
+      ghRepo.licenseInfo.key !== "other" &&
+      (!res.licenses || !res.licenses.length)
+    ) {
       const key = ghRepo.licenseInfo.key;
       res.licenses = [license2Spdx[key] ?? key];
     }
