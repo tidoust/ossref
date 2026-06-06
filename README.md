@@ -4,7 +4,6 @@ This repository contains a machine-readable list of open-source software (OSS) d
 
 The list is an object where keys are project IDs and values are [OSS objects](#oss-object).
 
-
 ## OSS object
 
 Each open-source software entry in the list comes with the following properties. Unless otherwise specified below, these properties are always set.
@@ -50,7 +49,7 @@ Common SPDX License IDs used in W3C projects include:
 - `"CC0-1.0"` for the [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 - `"MIT"` for the [MIT License](https://mit-license.org/).
 - `"W3C-20150513"` for the [W3C Software Notice and Document License](https://www.w3.org/copyright/software-license-2023/). Despite the date, this SPDX license ID also targets the 1 January 2023 version.
-- `"W3C-Test-Suite` for the [W3C test suite license](https://www.w3.org/copyright/test-suite-license-2023/). Note that this is not an official SPDX license ID (this license is not an open-source license since it purposedly does not grant rights to  create modifications or derivatives. It may appear in the list because test suites at W3C are usually also licensed under the terms of a BSD 3-Clause license).
+- `"W3C-Test-Suite"` for the [W3C test suite license](https://www.w3.org/copyright/test-suite-license-2023/). Note that this is not an official SPDX license ID (this license is not an open-source license since it purposedly does not grant rights to create modifications or derivatives. It may appear in the list because test suites at W3C are usually also licensed under the terms of a BSD 3-Clause license).
 
 ### `purposes`
 
@@ -87,11 +86,9 @@ Project status. Value may be one of:
 
 A project may transition between statuses at any time. For example, a dormant project may become active again.
 
-
 ## License
 
 This software, associated documentation, and the list (the `index.json` file) are licensed under the terms of the [CC0 License](LICENSE.txt).
-
 
 ## Guarantees
 
