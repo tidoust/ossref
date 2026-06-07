@@ -1,0 +1,8 @@
+name: W3C-customized feed validator
+repository: https://github.com/w3c/feedvalidator
+licenses:
+  - MIT
+purposes:
+  - validation
+categories:
+  - tool
