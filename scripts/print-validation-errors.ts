@@ -33,7 +33,7 @@ for (const section of sections) {
   propertiesDoc[match[1]] = section.value;
 }
 
-export function printValidationErrors(errors, project) {
+export function printValidationErrors(errors) {
   let report = "";
   function log(msg?: string) {
     report += (msg ?? "") + "\n";
