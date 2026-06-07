@@ -1,0 +1,6 @@
+repository: https://github.com/w3c/exi-testsuite
+licenses:
+  - W3C-20150513
+categories:
+  - adoption
+status: maintained
