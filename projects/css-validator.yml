@@ -1,0 +1,8 @@
+repository: https://github.com/w3c/css-validator
+licenses:
+  - W3C-20150513
+purposes:
+  - validation
+categories:
+  - adoption
+  - tool
