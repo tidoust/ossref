@@ -1,0 +1,6 @@
+name: EPUB 3 test suite
+repository: https://github.com/w3c/epub-tests
+licenses:
+  - W3C-20150513
+categories:
+  - adoption
