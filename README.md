@@ -47,7 +47,7 @@ Open-source licenses for the project, using an [SPDX license ID](https://spdx.or
 Common SPDX License IDs used in W3C projects include:
 
 - `"Apache-2.0"` for the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-- `"BSD-3-Clause` for the [BSD 3-Clause "New" or "Revised" License](https://opensource.org/license/BSD-3-Clause).
+- `"BSD-3-Clause"` for the [BSD 3-Clause "New" or "Revised" License](https://opensource.org/license/BSD-3-Clause).
 - `"CC0-1.0"` for the [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 - `"MIT"` for the [MIT License](https://mit-license.org/).
 - `"W3C-20150513"` for the [W3C Software Notice and Document License](https://www.w3.org/copyright/software-license-2023/). Despite the date, this SPDX license ID also targets the 1 January 2023 version.
