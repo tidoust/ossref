@@ -59,6 +59,30 @@
     "purposes": ["validation"],
     "categories": ["adoption", "tool"]
   },
+  "dapt-tests": {
+    "name": "dapt-tests",
+    "description": "Tests for Dubbing and Audio description Profiles of TTML2",
+    "description_html": "Tests for Dubbing and Audio description Profiles of TTML2",
+    "homepage": "https://github.com/w3c/dapt-tests",
+    "repository": "https://github.com/w3c/dapt-tests",
+    "owner": "W3C",
+    "licenses": ["BSD-3-Clause", "W3C-Test-Suite"],
+    "status": "active",
+    "purposes": ["tests"],
+    "categories": ["adoption"]
+  },
+  "errata-github-issues": {
+    "name": "Errata management using GitHub issues",
+    "description": "Using Github issues to handle errata in Recommendations",
+    "description_html": "Using Github issues to handle errata in Recommendations",
+    "homepage": "https://github.com/w3c/display_errata",
+    "repository": "https://github.com/w3c/display_errata",
+    "owner": "W3C",
+    "licenses": ["W3C-20150513"],
+    "status": "active",
+    "purposes": ["group tool"],
+    "categories": ["tool"]
+  },
   "html-model-element-polyfill": {
     "name": "HTML <model> element polyfill",
     "description": "A polyfill for the HTML Model Element",
