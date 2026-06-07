@@ -1,0 +1,8 @@
+name: GHURLBot
+repository: https://github.com/w3c/GHURLBot
+licenses:
+  - W3C-Test-Suite
+purposes:
+  - group tool
+categories:
+  - tool
