@@ -1,4 +1,6 @@
 repository: https://github.com/immersive-web/webxr-input-profiles
+licenses:
+  - W3C-20150513
 categories:
   - adoption
   - implementation
