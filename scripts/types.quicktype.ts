@@ -62,6 +62,7 @@ export type Category = "adoption" | "implementation" | "incubation" | "tool";
  */
 export type Purpose =
   | "authoring"
+  | "dashboard"
   | "data"
   | "library"
   | "group tool"

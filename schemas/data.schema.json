@@ -87,6 +87,7 @@
       "type": "string",
       "enum": [
         "authoring",
+        "dashboard",
         "data",
         "library",
         "group tool",

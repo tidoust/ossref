@@ -58,6 +58,7 @@ Common SPDX License IDs used in W3C projects include:
 Main purposes that the project addresses. Possible individual values are:
 
 - `"authoring"`: An authoring tool. For example, a spec authoring tool or a slides authoring tool.
+- `"dashboard"`: A dashboard. Often used in combination with `"data"` when the project also exports the data in a machine-readable way.
 - `"data"`: Machine-readable data. For example, the OSSref project exposes a list of open-source projects in a JSON file.
 - `"library"`: Library that other projects may depend on.
 - `"group tool"`: Tooling for W3C groups. For example, a meeting helper tool, an IRC bot that eases tracking of group discussions.
