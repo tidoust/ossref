@@ -47,6 +47,18 @@
     "purposes": ["data"],
     "categories": ["tool"]
   },
+  "css-validator": {
+    "name": "CSS Validator Project",
+    "description": "W3C CSS Validation Service",
+    "description_html": "W3C CSS Validation Service",
+    "homepage": "https://jigsaw.w3.org/css-validator/",
+    "repository": "https://github.com/w3c/css-validator",
+    "owner": "W3C",
+    "licenses": ["W3C-20150513"],
+    "status": "active",
+    "purposes": ["validation"],
+    "categories": ["adoption", "tool"]
+  },
   "html-model-element-polyfill": {
     "name": "HTML <model> element polyfill",
     "description": "A polyfill for the HTML Model Element",
@@ -102,7 +114,7 @@
     "homepage": "https://immersive-web.github.io/webxr-input-profiles",
     "repository": "https://github.com/immersive-web/webxr-input-profiles",
     "owner": "immersive-web",
-    "licenses": ["other"],
+    "licenses": ["W3C-20150513"],
     "status": "active",
     "purposes": ["library"],
     "categories": ["adoption", "implementation"]
