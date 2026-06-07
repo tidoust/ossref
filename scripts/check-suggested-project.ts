@@ -13,10 +13,11 @@ import path from "node:path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
-import { loadProject, loadProjects } from "./load-projects";
-import splitIssueBodyIntoSections from "./split-issue-body";
-import { validateProjectData, validatePartialProjectData } from "./validate";
-import { compileProjectInfo } from "./compile-project-info";
+import { loadProject, loadProjects } from "./load-projects.ts";
+import splitIssueBodyIntoSections from "./split-issue-body.ts";
+import { validateProjectData, validatePartialProjectData } from "./validate.ts";
+import { compileProjectInfo } from "./compile-project-info.ts";
+import { printValidationErrors } from "./print-validation-errors.ts";
 import YAML from "yaml";
 
 import type { ProjectData } from "./types";
@@ -129,12 +130,9 @@ if (!project.homepage && !project.repository) {
 
 const partialErrors = validatePartialProjectData(project);
 if (partialErrors) {
-  // TODO: pretty print ajv validation errors
   log("Data is invalid. Schema validation errors follow.");
   log();
-  log("```json");
-  log(JSON.stringify(partialErrors, null, 2));
-  log("```");
+  log(printValidationErrors(partialErrors));
   reportLogAndExit();
 }
 log("Data looks valid.");
@@ -220,14 +218,11 @@ const validationErrors = validateProjectData(fullProject);
 log("### Validation of the full project");
 log();
 if (validationErrors) {
-  // TODO: pretty print ajv validation errors
   log(
     "Not enough information to add the project as-is. Schema validation errors follow.",
   );
   log();
-  log("```json");
-  log(JSON.stringify(validationErrors, null, 2));
-  log("```");
+  log(printValidationErrors(validationErrors));
 } else if (canBeSimplified) {
   log("See above, drop data that can be computed automatically.");
 }

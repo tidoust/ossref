@@ -3,7 +3,7 @@
  * indexed list. Let's add it.
  */
 
-import type { ProjectData } from "./types.quicktype";
+import type { ProjectData } from "./types.quicktype.ts";
 export type { ProjectData };
 
 export interface ProjectsData {

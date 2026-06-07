@@ -11,8 +11,8 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { loadProjects } from "./load-projects";
-import { compileProjectInfo } from "./compile-project-info";
+import { loadProjects } from "./load-projects.ts";
+import { compileProjectInfo } from "./compile-project-info.ts";
 import YAML from "yaml";
 
 const projectId = process.argv[2] ? process.argv[2] : null;

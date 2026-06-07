@@ -1,4 +1,4 @@
-import ThrottledQueue from "./throttled-queue";
+import ThrottledQueue from "./throttled-queue.ts";
 
 // Make sure we remain "friendly" with servers
 // In particular, we're going to have to fetch a number of w3c.json files from

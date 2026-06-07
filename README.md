@@ -8,6 +8,8 @@ The list is an object where keys are project IDs and values are [OSS objects](#o
 
 Each open-source software entry in the list comes with the following properties. Unless otherwise specified below, these properties are always set.
 
+<!-- SCHEMA: start -->
+
 ### `name`
 
 The project's name, as a plain text string. The name should remain short. It is intended for use as a heading, or in a sentence in prose.
@@ -81,10 +83,12 @@ Main categories for the project within W3C. Possible individual values are:
 Project status. Value may be one of:
 
 - `"active"`: The project is actively being developed.
-- `"maintenance"`: The project is stable or no longer actively being developed, but the code is maintained.
+- `"maintained"`: The project is stable or no longer actively being developed, but the code is maintained.
 - `"dormant"`: The project is no longer being developed and the code is not maintained.
 
 A project may transition between statuses at any time. For example, a dormant project may become active again.
+
+<!-- SCHEMA: end -->
 
 ## License
 

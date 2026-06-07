@@ -3,9 +3,9 @@
  */
 
 import { execSync } from "node:child_process";
-import fetchJSON from "./fetch-json";
-import { convertMarkdown } from "./text";
-import type { ProjectData } from "./types";
+import fetchJSON from "./fetch-json.ts";
+import { convertMarkdown } from "./text.ts";
+import type { ProjectData } from "./types.ts";
 
 const w3cGitHubOrganizations = ["w3c"];
 

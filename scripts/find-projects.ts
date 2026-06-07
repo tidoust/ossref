@@ -22,14 +22,14 @@ import { execSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { Command } from "commander";
 
-import loadJSON from "./load-json";
-import fetchJSON from "./fetch-json";
-import sendGraphQLQuery from "./graphql";
-import splitIssueBodyIntoSections from "./split-issue-body";
-import ThrottledQueue from "./throttled-queue";
-import { compileProjectInfo } from "./compile-project-info";
+import loadJSON from "./load-json.ts";
+import fetchJSON from "./fetch-json.ts";
+import sendGraphQLQuery from "./graphql.ts";
+import splitIssueBodyIntoSections from "./split-issue-body.ts";
+import ThrottledQueue from "./throttled-queue.ts";
+import { compileProjectInfo } from "./compile-project-info.ts";
 
-import type { ProjectData, ProjectsData } from "./types";
+import type { ProjectData, ProjectsData } from "./types.ts";
 
 import packageContents from "../package.json" with { type: "json" };
 const { version } = packageContents;
