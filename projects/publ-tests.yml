@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/publ-tests
+licenses:
+  - W3C-20150513
+categories:
+  - adoption
