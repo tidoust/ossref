@@ -1,0 +1,9 @@
+repository: https://github.com/w3c/ift-client-tests
+description: Test suite for clients which claim to conform to the W3C
+  [Incremental Font Transfer
+  specification](https://w3c.github.io/IFT/Overview.html), developed by the [W3C
+  Web Fonts working group](https://www.w3.org/Fonts/WG/).
+licenses:
+  - W3C-20150513
+categories:
+  - adoption
