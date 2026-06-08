@@ -1,0 +1,7 @@
+description: This reel is is for IMSC 1.1 Image based subtitle testing. The
+  items that are tested are all pertinent to subtitles produced for production
+  content. This has been built to help manufacturers with their IMSC 1.1 Image
+  implementations by providing them with a reference IMSC package.
+repository: https://github.com/w3c/IMSC-1.1_Image_TestContent
+categories:
+  - adoption
