@@ -1,0 +1,6 @@
+name: Normative references checker
+repository: https://github.com/w3c/normative-references-checker
+purposes:
+  - validation
+categories:
+  - tool
