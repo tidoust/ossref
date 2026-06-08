@@ -29,7 +29,7 @@ import splitIssueBodyIntoSections from "./split-issue-body.ts";
 import ThrottledQueue from "./throttled-queue.ts";
 import { compileProjectInfo } from "./compile-project-info.ts";
 
-import type { ProjectData, ProjectsData } from "./types.ts";
+import type { ProjectData, ProjectsIndex } from "./types.ts";
 
 import packageContents from "../package.json" with { type: "json" };
 const { version } = packageContents;
@@ -43,11 +43,12 @@ const execParams = {
   encoding: "utf8" as BufferEncoding,
 };
 
-const projects = JSON.parse(
+const index = JSON.parse(
   await fs.readFile(path.join(scriptPath, "..", "index.json"), {
     encoding: "utf-8",
   }),
-) as ProjectsData;
+) as ProjectsIndex;
+const projects = index.projects;
 
 /**
  * The list of projects that are already known is derived from open and closed

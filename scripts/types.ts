@@ -9,3 +9,7 @@ export type { ProjectData };
 export interface ProjectsData {
   [key: string]: ProjectData;
 }
+
+export interface ProjectsIndex {
+  projects: ProjectsData;
+}

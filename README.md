@@ -2,7 +2,7 @@
 
 This repository contains a machine-readable list of open-source software (OSS) developed at W3C, or commonly used by the W3C community to progress incubation and standardization work.
 
-The list is an object where keys are project IDs and values are [OSS objects](#oss-object).
+The list is an object with a `projects` key that contains an index of projects. Index keys are project IDs and values are [OSS objects](#oss-object).
 
 ## OSS object
 

@@ -56,14 +56,14 @@ function convert() {
   // instead of going through entries and semi-serializing things on our own,
   // but it works.
   const res =
-    "{" +
+    '{ "projects": {' +
     Object.entries(projects)
       .map(
         ([id, project]) =>
           JSON.stringify(id) + ": " + JSON.stringify(project, keyOrder),
       )
       .join(",") +
-    "}";
+    "}}";
   fs.writeFileSync("index.json", res, "utf8");
 }
 
