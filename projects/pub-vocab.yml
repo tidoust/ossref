@@ -1,0 +1,7 @@
+repository: https://github.com/w3c/pub-vocab
+licenses:
+  - W3C-20150513
+purposes:
+  - data
+categories:
+  - adoption
