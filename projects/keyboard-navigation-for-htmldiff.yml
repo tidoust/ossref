@@ -1,0 +1,6 @@
+name: Keyboard navigation for htmldiff
+repository: https://github.com/w3c/htmldiff-nav
+purposes:
+  - library
+categories:
+  - tool
