@@ -1,0 +1,12 @@
+name: Internationalization (i18n) checker
+repository: https://github.com/w3c/i18n-checker
+description: This checker performs various tests on a Web Page to determine its
+  level of internationalization-friendliness. It also summarises key
+  internationalization information about a page, such as character encoding and
+  language declarations, etc.
+licenses:
+  - W3C-20150513
+purposes:
+  - validation
+categories:
+  - adoption
