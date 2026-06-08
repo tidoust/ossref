@@ -1,0 +1,6 @@
+name: JS client for the W3C API
+repository: https://github.com/w3c/node-w3capi
+purposes:
+  - library
+categories:
+  - tool
