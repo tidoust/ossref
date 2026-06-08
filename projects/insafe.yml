@@ -1,0 +1,6 @@
+name: Insafe
+repository: https://github.com/w3c/insafe
+purposes:
+  - library
+categories:
+  - tool
