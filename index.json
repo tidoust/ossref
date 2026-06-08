@@ -312,6 +312,18 @@
       "purposes": ["library"],
       "categories": ["implementation"]
     },
+    "ift-server-tests": {
+      "name": "IFT Server Tests",
+      "description": "Test suite for servers which claim to conform to the W3C Incremental Font Transfer specification, developed by the W3C Web Fonts working group.",
+      "description_html": "Test suite for servers which claim to conform to the W3C <a href=\"https://w3c.github.io/IFT/Overview.html\">Incremental Font Transfer specification</a>, developed by the <a href=\"https://www.w3.org/Fonts/WG/\">W3C Web Fonts working group</a>.",
+      "homepage": "https://github.com/w3c/ift-server-tests",
+      "repository": "https://github.com/w3c/ift-server-tests",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
     "keyboard-navigation-for-htmldiff": {
       "name": "Keyboard navigation for htmldiff",
       "description": "Keyboard navigation script for htmldiff.",
@@ -324,6 +336,66 @@
       "purposes": ["library"],
       "categories": ["tool"]
     },
+    "ttml-imsc-hrm-tests": {
+      "name": "IMSC-HRM Test Suite",
+      "description": "IMSC-HRM tests",
+      "description_html": "IMSC-HRM tests",
+      "homepage": "https://github.com/w3c/imsc-hrm-tests",
+      "repository": "https://github.com/w3c/imsc-hrm-tests",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause", "W3C-Test-Suite"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
+    "ttml-imsc-tests": {
+      "name": "TTML IMSC Test suite",
+      "description": "IMSC test suites",
+      "description_html": "IMSC test suites",
+      "homepage": "https://w3c.github.io/imsc-tests/",
+      "repository": "https://github.com/w3c/imsc-tests",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause", "W3C-20150513"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
+    "ttml-imsc1.0.1-text-testcontent": {
+      "name": "IMSC-1.0.1_Text_TestContent",
+      "description": "This reel was created to address early IMSC decoding issues by providing manufacturers with a reference IMSC 1.0/1.0.1 text implementation. The included tests are all pertinent to subtitles produced for production content.",
+      "description_html": "This reel was created to address early IMSC decoding issues by providing manufacturers with a reference IMSC 1.0/1.0.1 text implementation. The included tests are all pertinent to subtitles produced for production content.",
+      "homepage": "https://github.com/w3c/IMSC-1.0.1_Text_TestContent",
+      "repository": "https://github.com/w3c/IMSC-1.0.1_Text_TestContent",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
+    "ttml-imsc1.1-image-testcontent": {
+      "name": "IMSC-1.1_Image_TestContent",
+      "description": "This reel is is for IMSC 1.1 Image based subtitle testing. The items that are tested are all pertinent to subtitles produced for production content. This has been built to help manufacturers with their IMSC 1.1 Image implementations by providing them with a reference IMSC package.",
+      "description_html": "This reel is is for IMSC 1.1 Image based subtitle testing. The items that are tested are all pertinent to subtitles produced for production content. This has been built to help manufacturers with their IMSC 1.1 Image implementations by providing them with a reference IMSC package.",
+      "homepage": "https://github.com/w3c/IMSC-1.1_Image_TestContent",
+      "repository": "https://github.com/w3c/IMSC-1.1_Image_TestContent",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
+    "ttml-imsc1.1-text-testcontent": {
+      "name": "IMSC-1.1_Text_TestContent",
+      "description": "This reel is a continuation of the IMSC-1.0.1_Text_TestContent assets. This reel was created with the same scope as the original reel, where the items that are tested are all pertinent to subtitles produced for production content. This version adds numerous additional tests that focus on foreign language rendering, color compositing to different color spaces, and some new IMSC 1.1 attributes. Like the original reel, this has been built to help manufacturers with their IMSC 1.1 Text implementations by providing them with a reference IMSC package.",
+      "description_html": "This reel is a continuation of the IMSC-1.0.1_Text_TestContent assets. This reel was created with the same scope as the original reel, where the items that are tested are all pertinent to subtitles produced for production content. This version adds numerous additional tests that focus on foreign language rendering, color compositing to different color spaces, and some new IMSC 1.1 attributes. Like the original reel, this has been built to help manufacturers with their IMSC 1.1 Text implementations by providing them with a reference IMSC package.",
+      "homepage": "https://github.com/w3c/IMSC-1.1_Text_TestContent",
+      "repository": "https://github.com/w3c/IMSC-1.1_Text_TestContent",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
     "w3c-customized-feed-validator": {
       "name": "W3C-customized feed validator",
       "description": "W3C-customized version of the feedvalidator (forked from https://github.com/rubys/feedvalidator/)",
@@ -334,6 +406,18 @@
       "licenses": ["MIT"],
       "status": "active",
       "purposes": ["validation"],
+      "categories": ["tool"]
+    },
+    "w3c-infobot": {
+      "name": "W3C's own infobot",
+      "description": "IRC bot",
+      "description_html": "IRC bot",
+      "homepage": "https://github.com/w3c/infobot",
+      "repository": "https://github.com/w3c/infobot",
+      "owner": "W3C",
+      "licenses": ["Artistic-2.0"],
+      "status": "maintained",
+      "purposes": ["group tool"],
       "categories": ["tool"]
     },
     "webgpu-conformance-test-suite": {
