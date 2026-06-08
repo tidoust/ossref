@@ -2,9 +2,16 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "description": "Indexed list of open-source projects",
   "type": "object",
-  "additionalProperties": {
-    "$ref": "#/definitions/ProjectData"
+  "properties": {
+    "projects": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/ProjectData"
+      }
+    }
   },
+  "required": ["projects"],
+  "additionalProperties": false,
   "definitions": {
     "ProjectData": {
       "description": "An open-source project data entry",

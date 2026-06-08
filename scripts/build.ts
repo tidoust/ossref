@@ -4,9 +4,10 @@
  */
 
 import fs from "node:fs";
-import { loadProjects } from "./load-projects";
-import { convertMarkdown } from "./text";
-import { ProjectsData } from "./types";
+import { loadProjects } from "./load-projects.ts";
+import { convertMarkdown } from "./text.ts";
+import { ProjectsData } from "./types.ts";
+import { KeyOrder } from "./key-order.ts";
 
 import schema from "../schemas/data.schema.json" with { type: "json" };
 
@@ -20,32 +21,16 @@ function convert() {
     }
   }
 
-  // To ease updates and reduce arbitrary diffs, we're going to impose the
-  // order of the keys in the index.json file. This order needs to be
-  // revisited when a new key is created and when a key is removed.
-  let keyOrder = [
-    "name",
-    "description",
-    "description_html",
-    "homepage",
-    "repository",
-    "logo",
-    "owner",
-    "licenses",
-    "status",
-    "purposes",
-    "categories",
-  ];
   const allKeys = Object.keys(schema.definitions.ProjectData.properties).filter(
     (k) => k !== "id",
   );
-  const missingKeys = allKeys.filter((k) => !keyOrder.includes(k));
+  const missingKeys = allKeys.filter((k) => !KeyOrder.includes(k));
   if (missingKeys.length) {
     throw new Error(
       `Add ${missingKeys.join(", ")} to key order in build script`,
     );
   }
-  const droppedKeys = keyOrder.filter((k) => !allKeys.includes(k));
+  const droppedKeys = KeyOrder.filter((k) => !allKeys.includes(k));
   if (droppedKeys.length) {
     throw new Error(
       `Drop ${droppedKeys.join(", ")} from key order in build script`,
@@ -60,7 +45,7 @@ function convert() {
     Object.entries(projects)
       .map(
         ([id, project]) =>
-          JSON.stringify(id) + ": " + JSON.stringify(project, keyOrder),
+          JSON.stringify(id) + ": " + JSON.stringify(project, KeyOrder),
       )
       .join(",") +
     "}}";

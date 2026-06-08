@@ -12,7 +12,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "schematypes": "sh -c \"npx quicktype --lang='typescript' --src-lang schema --src ./schemas/data.schema.json --just-types --prefer-unions --prefer-const-values --top-level=ProjectData | prettier --stdin-filepath ./scripts/types.quicktype.ts\"",
+    "schematypes": "sh -c \"npx quicktype --lang='typescript' --src-lang schema --src ./schemas/data.schema.json --just-types --prefer-unions --prefer-const-values --top-level=ProjectsIndex | prettier --stdin-filepath ./scripts/types.quicktype.ts\"",
     "schematypes:write": "npm run --silent schematypes > ./scripts/types.quicktype.ts",
     "build": "tsx scripts/build.ts && prettier --write index.json",
     "generate-auto-files": "tsx scripts/generate-auto-files.ts",

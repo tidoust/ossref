@@ -18,6 +18,7 @@ import splitIssueBodyIntoSections from "./split-issue-body.ts";
 import { validateProjectData, validatePartialProjectData } from "./validate.ts";
 import { compileProjectInfo } from "./compile-project-info.ts";
 import { printValidationErrors } from "./print-validation-errors.ts";
+import { KeyOrder } from "./key-order.ts";
 import YAML from "yaml";
 
 import type { ProjectData } from "./types";
@@ -142,7 +143,7 @@ const autoInfo = await compileProjectInfo(project);
 log("### Information that would be computed automatically");
 log();
 log("```yaml");
-log(YAML.stringify(autoInfo));
+log(YAML.stringify(autoInfo, KeyOrder));
 log("```");
 log();
 
@@ -210,7 +211,7 @@ const fullProject = Object.assign({}, info, project);
 log("### How the full project would look like");
 log();
 log("```yaml");
-log(YAML.stringify(fullProject));
+log(YAML.stringify(fullProject, KeyOrder));
 log("```");
 log();
 
@@ -240,7 +241,7 @@ const id = project.id;
 delete project.id;
 fs.writeFileSync(
   path.join("projects", `${id}.yml`),
-  YAML.stringify(project),
+  YAML.stringify(project, KeyOrder),
   "utf8",
 );
 console.log(`Add project ${fullProject.name}`);

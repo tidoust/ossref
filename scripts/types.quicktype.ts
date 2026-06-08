@@ -1,4 +1,11 @@
 /**
+ * Indexed list of open-source projects
+ */
+export interface ProjectsIndex {
+  projects: { [key: string]: ProjectData };
+}
+
+/**
  * An open-source project data entry
  */
 export interface ProjectData {

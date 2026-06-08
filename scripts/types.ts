@@ -3,13 +3,9 @@
  * indexed list. Let's add it.
  */
 
-import type { ProjectData } from "./types.quicktype.ts";
-export type { ProjectData };
+import type { ProjectData, ProjectsIndex } from "./types.quicktype.ts";
+export type { ProjectData, ProjectsIndex };
 
 export interface ProjectsData {
   [key: string]: ProjectData;
-}
-
-export interface ProjectsIndex {
-  projects: ProjectsData;
 }
