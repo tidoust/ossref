@@ -1,0 +1,9 @@
+description: This is the [Internationalization Tag Set (ITS)
+  2.0](http://www.w3.org/TR/its20/) test suite. ITS 2.0 and this test suite have
+  been developed by participants of the [W3C MultilingualWeb-LT Working
+  Group](http://www.w3.org/International/multilingualweb/lt/).
+repository: https://github.com/w3c/its-2.0-testsuite
+licenses:
+  - W3C-Test-Suite
+categories:
+  - adoption
