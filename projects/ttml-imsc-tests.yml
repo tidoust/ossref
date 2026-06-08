@@ -1,0 +1,7 @@
+name: TTML IMSC Test suite
+repository: https://github.com/w3c/imsc-tests
+licenses:
+  - BSD-3-Clause
+  - W3C-20150513
+categories:
+  - adoption
