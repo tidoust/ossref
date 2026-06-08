@@ -3,8 +3,8 @@
 
 name: dapt-tests
 description: Tests for Dubbing and Audio description Profiles of TTML2
+homepage: https://github.com/w3c/dapt-tests
 owner: W3C
+status: active
 purposes:
   - tests
-status: active
-homepage: https://github.com/w3c/dapt-tests

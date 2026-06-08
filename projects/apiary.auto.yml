@@ -3,8 +3,8 @@
 
 name: Apiary
 description: Simple JS library to use the W3C API in a declarative way
+homepage: https://github.com/w3c/apiary
 owner: W3C
 licenses:
   - MIT
 status: active
-homepage: https://github.com/w3c/apiary

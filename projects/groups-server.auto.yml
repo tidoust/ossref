@@ -4,8 +4,8 @@
 name: groups-server
 description: A server to refresh group repositories in
   github.com/w3c/groups/repositories.json
+homepage: https://github.com/w3c/groups-server
 owner: W3C
 licenses:
   - MIT
 status: active
-homepage: https://github.com/w3c/groups-server

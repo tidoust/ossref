@@ -3,7 +3,7 @@
 
 name: exi-testsuite
 description: EXI WG test suite
+homepage: https://github.com/w3c/exi-testsuite
 owner: W3C
 purposes:
   - tests
-homepage: https://github.com/w3c/exi-testsuite

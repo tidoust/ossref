@@ -4,6 +4,6 @@
 name: Harvest epubcheck for the EPUB 3.3. CR report
 homepage: https://w3c.github.io/epub-structural-tests/
 owner: W3C
+status: active
 purposes:
   - tests
-status: active

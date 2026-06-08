@@ -3,6 +3,6 @@
 
 description: IRC bot that provides full URLs when GitHub issues (‘#123’) or
   users (‘@yyyy’) are mentioned
+homepage: https://github.com/w3c/GHURLBot
 owner: W3C
 status: active
-homepage: https://github.com/w3c/GHURLBot

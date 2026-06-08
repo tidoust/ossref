@@ -3,8 +3,8 @@
 
 name: Gargantua
 description: API to gather W3C information
+homepage: https://github.com/w3c/gargantua
 owner: W3C
 licenses:
   - MIT
 status: active
-homepage: https://github.com/w3c/gargantua

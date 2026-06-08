@@ -3,6 +3,6 @@
 
 name: Incremental Font Transfer Encoder
 description: A web fonts IFT encoder implementation
+homepage: https://github.com/w3c/ift-encoder
 owner: W3C
 status: active
-homepage: https://github.com/w3c/ift-encoder

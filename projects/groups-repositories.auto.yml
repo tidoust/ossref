@@ -3,8 +3,8 @@
 
 name: Group repositories for /groups
 description: Complement to https://www.w3.org/groups/
+homepage: https://github.com/w3c/groups
 owner: W3C
 licenses:
   - MIT
 status: active
-homepage: https://github.com/w3c/groups
