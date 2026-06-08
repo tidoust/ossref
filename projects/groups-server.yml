@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/groups-server
+purposes:
+  - backend
+categories:
+  - tool
