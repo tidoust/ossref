@@ -179,6 +179,54 @@
     "purposes": ["group tool"],
     "categories": ["tool"]
   },
+  "github-cache": {
+    "name": "GitHub cache",
+    "description": "A simple cache for GitHub",
+    "description_html": "A simple cache for GitHub",
+    "homepage": "https://github.com/w3c/github-cache",
+    "repository": "https://github.com/w3c/github-cache",
+    "owner": "W3C",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["data"],
+    "categories": ["tool"]
+  },
+  "group-repositories": {
+    "name": "Group repositories for /groups",
+    "description": "Complement to https://www.w3.org/groups/",
+    "description_html": "Complement to https://www.w3.org/groups/",
+    "homepage": "https://github.com/w3c/groups",
+    "repository": "https://github.com/w3c/groups",
+    "owner": "W3C",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["data"],
+    "categories": ["tool"]
+  },
+  "groups-server": {
+    "name": "groups-server",
+    "description": "A server to refresh group repositories in github.com/w3c/groups/repositories.json",
+    "description_html": "A server to refresh group repositories in github.com/w3c/groups/repositories.json",
+    "homepage": "https://github.com/w3c/groups-server",
+    "repository": "https://github.com/w3c/groups-server",
+    "owner": "W3C",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["backend"],
+    "categories": ["tool"]
+  },
+  "horizontal-issue-tracker": {
+    "name": "Horizontal Review Tracker",
+    "description": "Tools and pages to track horizontal issues",
+    "description_html": "Tools and pages to track horizontal issues",
+    "homepage": "https://www.w3.org/PM/horizontal/",
+    "repository": "https://github.com/w3c/horizontal-issue-tracker",
+    "owner": "W3C",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["dashboard"],
+    "categories": ["tool"]
+  },
   "html-model-element-polyfill": {
     "name": "HTML <model> element polyfill",
     "description": "A polyfill for the HTML Model Element",
@@ -202,6 +250,30 @@
     "status": "active",
     "purposes": ["samples"],
     "categories": ["adoption"]
+  },
+  "htmldiff-ui": {
+    "name": "Online htmldiff service",
+    "description": "Python-based HTML user interface wrapper around Shane McCarron’s htmldiff Perl script.",
+    "description_html": "Python-based HTML user interface wrapper around Shane McCarron’s htmldiff Perl script.",
+    "homepage": "https://github.com/w3c/htmldiff-ui",
+    "repository": "https://github.com/w3c/htmldiff-ui",
+    "owner": "W3C",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["backend"],
+    "categories": ["tool"]
+  },
+  "keyboard-navigation-for-htmldiff": {
+    "name": "Keyboard navigation for htmldiff",
+    "description": "Keyboard navigation script for htmldiff.",
+    "description_html": "Keyboard navigation script for htmldiff.",
+    "homepage": "https://github.com/w3c/htmldiff-nav",
+    "repository": "https://github.com/w3c/htmldiff-nav",
+    "owner": "W3C",
+    "licenses": ["Apache-2.0"],
+    "status": "active",
+    "purposes": ["library"],
+    "categories": ["tool"]
   },
   "w3c-customized-feed-validator": {
     "name": "W3C-customized feed validator",
