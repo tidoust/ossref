@@ -1,0 +1,9 @@
+repository: https://github.com/w3c/epub-structural-tests
+description: Tool to combine the information extracted from the test feature
+  files of epubcheck with the EPUB 3.3 specification, and to produce a test
+  report that lists the available tests and their relationships to the
+  specification.
+licenses:
+  - W3C-20150513
+categories:
+  - tool
