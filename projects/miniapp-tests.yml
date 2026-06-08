@@ -1,0 +1,6 @@
+repository: https://github.com/w3c/miniapp-tests
+licenses:
+  - W3C-20150513
+status: maintained
+categories:
+  - adoption
