@@ -1,0 +1,8 @@
+name: Ack section generator for W3C specs
+repository: https://github.com/w3c/publ_ack
+licenses:
+  - W3C-20150513
+purposes:
+  - group tool
+categories:
+  - tool
