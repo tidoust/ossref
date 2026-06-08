@@ -83,6 +83,18 @@
     "purposes": ["group tool"],
     "categories": ["tool"]
   },
+  "epub-structural-tests": {
+    "name": "Harvest epubcheck for the EPUB 3.3. CR report",
+    "description": "Tool to combine the information extracted from the test feature files of epubcheck with the EPUB 3.3 specification, and to produce a test report that lists the available tests and their relationships to the specification.",
+    "description_html": "Tool to combine the information extracted from the test feature files of epubcheck with the EPUB 3.3 specification, and to produce a test report that lists the available tests and their relationships to the specification.",
+    "homepage": "https://w3c.github.io/epub-structural-tests/",
+    "repository": "https://github.com/w3c/epub-structural-tests",
+    "owner": "W3C",
+    "licenses": ["W3C-20150513"],
+    "status": "active",
+    "purposes": ["tests"],
+    "categories": ["tool"]
+  },
   "epub-tests": {
     "name": "EPUB 3 test suite",
     "description": "Test repository for EPUB3, maintained by the EPUB3 WG",
@@ -142,6 +154,18 @@
     "status": "active",
     "purposes": ["data", "library"],
     "categories": ["tool"]
+  },
+  "generic-sensor-demos": {
+    "name": "Demos for Generic Sensor API",
+    "description": "Demos for Generic Sensor API",
+    "description_html": "Demos for Generic Sensor API",
+    "homepage": "https://w3c.github.io/generic-sensor-demos/",
+    "repository": "https://github.com/w3c/generic-sensor-demos",
+    "owner": "W3C",
+    "licenses": ["BSD-3-Clause"],
+    "status": "active",
+    "purposes": ["samples"],
+    "categories": ["adoption"]
   },
   "ghurlbot": {
     "name": "GHURLBot",
