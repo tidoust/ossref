@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/reffy
+purposes:
+  - library
+categories:
+  - tool
