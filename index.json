@@ -191,7 +191,7 @@
     "purposes": ["data"],
     "categories": ["tool"]
   },
-  "group-repositories": {
+  "groups-repositories": {
     "name": "Group repositories for /groups",
     "description": "Complement to https://www.w3.org/groups/",
     "description_html": "Complement to https://www.w3.org/groups/",
@@ -262,6 +262,54 @@
     "status": "active",
     "purposes": ["backend"],
     "categories": ["tool"]
+  },
+  "i-slide": {
+    "name": "The <i-slide> Web component",
+    "description": "Web component to display inline slides",
+    "description_html": "Web component to display inline slides",
+    "homepage": "https://w3c.github.io/i-slide/",
+    "repository": "https://github.com/w3c/i-slide",
+    "owner": "W3C",
+    "licenses": ["MIT"],
+    "status": "active",
+    "purposes": ["library"],
+    "categories": ["tool"]
+  },
+  "i18n-checker": {
+    "name": "Internationalization (i18n) checker",
+    "description": "This checker performs various tests on a Web Page to determine its level of internationalization-friendliness. It also summarises key internationalization information about a page, such as character encoding and language declarations, etc.",
+    "description_html": "This checker performs various tests on a Web Page to determine its level of internationalization-friendliness. It also summarises key internationalization information about a page, such as character encoding and language declarations, etc.",
+    "homepage": "https://validator.w3.org/i18n-checker/",
+    "repository": "https://github.com/w3c/i18n-checker",
+    "owner": "W3C",
+    "licenses": ["W3C-20150513"],
+    "status": "active",
+    "purposes": ["validation"],
+    "categories": ["adoption"]
+  },
+  "ift-client-tests": {
+    "name": "IFT Client Tests",
+    "description": "Test suite for clients which claim to conform to the W3C Incremental Font Transfer specification, developed by the W3C Web Fonts working group.",
+    "description_html": "Test suite for clients which claim to conform to the W3C <a href=\"https://w3c.github.io/IFT/Overview.html\">Incremental Font Transfer specification</a>, developed by the <a href=\"https://www.w3.org/Fonts/WG/\">W3C Web Fonts working group</a>.",
+    "homepage": "https://github.com/w3c/ift-client-tests",
+    "repository": "https://github.com/w3c/ift-client-tests",
+    "owner": "W3C",
+    "licenses": ["W3C-20150513"],
+    "status": "active",
+    "purposes": ["tests"],
+    "categories": ["adoption"]
+  },
+  "ift-encoder": {
+    "name": "Incremental Font Transfer Encoder",
+    "description": "A web fonts IFT encoder implementation",
+    "description_html": "A web fonts IFT encoder implementation",
+    "homepage": "https://github.com/w3c/ift-encoder",
+    "repository": "https://github.com/w3c/ift-encoder",
+    "owner": "W3C",
+    "licenses": ["W3C-20150513"],
+    "status": "active",
+    "purposes": ["library"],
+    "categories": ["implementation"]
   },
   "keyboard-navigation-for-htmldiff": {
     "name": "Keyboard navigation for htmldiff",
