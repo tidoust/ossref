@@ -1,0 +1,7 @@
+repository: https://github.com/w3c/infobot
+licenses:
+  - Artistic-2.0
+purposes:
+  - group tool
+categories:
+  - tool
