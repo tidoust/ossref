@@ -1,0 +1,10 @@
+name: Online htmldiff service
+repository: https://github.com/w3c/htmldiff-ui
+description: Python-based HTML user interface wrapper around Shane McCarron’s
+  htmldiff Perl script.
+licenses:
+  - MIT
+purposes:
+  - backend
+categories:
+  - tool
