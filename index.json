@@ -324,6 +324,30 @@
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
+    "insafe": {
+      "name": "Insafe",
+      "description": "Insafe is a Node.js package which resolves and checks that an URL is well-formed.",
+      "description_html": "Insafe is a Node.js package which resolves and checks that an URL is well-formed.",
+      "homepage": "https://github.com/w3c/insafe",
+      "repository": "https://github.com/w3c/insafe",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "its-2.0-tests": {
+      "name": "Internationalization Tag Set (ITS) 2.0 Test Suite",
+      "description": "This is the Internationalization Tag Set (ITS) 2.0 test suite. ITS 2.0 and this test suite have been developed by participants of the W3C MultilingualWeb-LT Working Group.",
+      "description_html": "This is the <a href=\"http://www.w3.org/TR/its20/\">Internationalization Tag Set (ITS) 2.0</a> test suite. ITS 2.0 and this test suite have been developed by participants of the <a href=\"http://www.w3.org/International/multilingualweb/lt/\">W3C MultilingualWeb-LT Working Group</a>.",
+      "homepage": "https://github.com/w3c/its-2.0-testsuite",
+      "repository": "https://github.com/w3c/its-2.0-testsuite",
+      "owner": "W3C",
+      "licenses": ["W3C-Test-Suite"],
+      "status": "maintained",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
     "keyboard-navigation-for-htmldiff": {
       "name": "Keyboard navigation for htmldiff",
       "description": "Keyboard navigation script for htmldiff.",
