@@ -1,0 +1,6 @@
+name: GitHub cache
+repository: https://github.com/w3c/github-cache
+purposes:
+  - data
+categories:
+  - tool
