@@ -360,6 +360,42 @@
       "purposes": ["library"],
       "categories": ["tool"]
     },
+    "link-checker": {
+      "name": "W3C Link Checker",
+      "description": "Check links and anchors in Web pages or full Web sites.",
+      "description_html": "Check links and anchors in Web pages or full Web sites.",
+      "homepage": "https://validator.w3.org/checklink",
+      "repository": "https://github.com/w3c/link-checker",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["adoption"]
+    },
+    "markup-validator": {
+      "name": "W3C Markup Validator",
+      "description": "The Markup Validator is a free service by W3C that helps check the validity of Web documents. Most Web documents are written using markup languages, such as HTML or XHTML. These languages are defined by technical specifications, which usually include a machine-readable formal grammar (and vocabulary). The act of checking a document against these constraints is called validation, and this is what the Markup Validator does.",
+      "description_html": "The Markup Validator is a free service by W3C that helps check the validity of Web documents. Most Web documents are written using markup languages, such as HTML or XHTML. These languages are defined by technical specifications, which usually include a machine-readable formal grammar (and vocabulary). The act of checking a document against these constraints is called validation, and this is what the Markup Validator does.",
+      "homepage": "https://validator.w3.org/",
+      "repository": "https://github.com/w3c/markup-validator",
+      "owner": "W3C",
+      "licenses": ["W3C-20021231"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["adoption"]
+    },
+    "miniapp-tests": {
+      "name": "Test repository for the MiniApp specifications",
+      "description": "Test suites for MiniApp specs",
+      "description_html": "Test suites for MiniApp specs",
+      "homepage": "https://github.com/w3c/miniapp-tests",
+      "repository": "https://github.com/w3c/miniapp-tests",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "maintained",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
     "ttml-imsc-hrm-tests": {
       "name": "IMSC-HRM Test Suite",
       "description": "IMSC-HRM tests",
