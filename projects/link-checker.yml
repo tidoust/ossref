@@ -1,0 +1,8 @@
+name: W3C Link Checker
+repository: https://github.com/w3c/link-checker
+licenses:
+  - W3C-20150513
+purposes:
+  - validation
+categories:
+  - adoption
