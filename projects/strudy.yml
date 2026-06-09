@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/strudy
+purposes:
+  - validation
+categories:
+  - tool
