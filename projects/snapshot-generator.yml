@@ -1,0 +1,8 @@
+description: This app monitors the
+  [push](https://developer.github.com/v3/activity/events/types/#pushevent) event
+  of a repository and generate snapshots for the spec in the repository.
+repository: https://github.com/w3c/snapshot-generator
+purposes:
+  - library
+categories:
+  - tool
