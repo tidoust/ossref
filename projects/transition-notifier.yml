@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/transition-notifier
+purposes:
+  - backend
+categories:
+  - tool
