@@ -528,6 +528,54 @@
       "purposes": ["library"],
       "categories": ["tool"]
     },
+    "respec-vc": {
+      "name": "Verifiable Credentials for ReSpec",
+      "description": "Verifiable Credential extensions to ReSpec",
+      "description_html": "Verifiable Credential extensions to ReSpec",
+      "homepage": "https://github.com/w3c/respec-vc",
+      "repository": "https://github.com/w3c/respec-vc",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "scribe": {
+      "name": "scribe.perl",
+      "description": "Converts IRC minutes to HTML",
+      "description_html": "Converts IRC minutes to HTML",
+      "homepage": "https://github.com/w3c/scribe",
+      "repository": "https://github.com/w3c/scribe",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "maintained",
+      "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
+    "scribe2": {
+      "name": "scribe.perl (v2)",
+      "description": "Converts IRC minutes to HTML",
+      "description_html": "Converts IRC minutes to HTML",
+      "homepage": "https://github.com/w3c/scribe2",
+      "repository": "https://github.com/w3c/scribe2",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
+    "shacl-resources": {
+      "name": "SHACL Resources",
+      "description": "This repository contains Shapes Constraints Language (SHACL) resources to exemplify it and support its use.",
+      "description_html": "This repository contains Shapes Constraints Language (SHACL) resources to exemplify it and support its use.",
+      "homepage": "https://github.com/w3c/shacl-resources",
+      "repository": "https://github.com/w3c/shacl-resources",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["data", "samples"],
+      "categories": ["adoption"]
+    },
     "ttml-imsc-hrm-tests": {
       "name": "IMSC-HRM Test Suite",
       "description": "IMSC-HRM tests",
