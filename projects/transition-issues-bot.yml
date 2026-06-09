@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/transition-issues-bot
+purposes:
+  - library
+categories:
+  - tool
