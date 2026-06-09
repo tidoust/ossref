@@ -1,0 +1,10 @@
+description: This repository contains Shapes Constraints Language (SHACL)
+  resources to exemplify it and support its use.
+repository: https://github.com/w3c/shacl-resources
+licenses:
+  - W3C-20150513
+purposes:
+  - data
+  - samples
+categories:
+  - adoption
