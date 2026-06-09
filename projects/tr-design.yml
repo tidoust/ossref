@@ -1,0 +1,7 @@
+repository: https://github.com/w3c/tr-design
+licenses:
+  - W3C-20150513
+purposes:
+  - library
+categories:
+  - tool
