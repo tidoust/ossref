@@ -1,5 +1,17 @@
 {
   "projects": {
+    "ack-section-generator": {
+      "name": "Ack section generator for W3C specs",
+      "description": "Script to generate the acknowledgement section of documents, based on the group's current membership",
+      "description_html": "Script to generate the acknowledgement section of documents, based on the group's current membership",
+      "homepage": "https://github.com/w3c/publ_ack",
+      "repository": "https://github.com/w3c/publ_ack",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
     "activity-streams-20-test-harness": {
       "name": "Activity Streams 2.0 Test Harness",
       "description": "W3C Activity Streams 2.0 Conformance Tests",
@@ -395,6 +407,126 @@
       "status": "maintained",
       "purposes": ["tests"],
       "categories": ["adoption"]
+    },
+    "node-w3capi": {
+      "name": "JS client for the W3C API",
+      "description": "A JavaScript client for the W3C API",
+      "description_html": "A JavaScript client for the W3C API",
+      "homepage": "https://github.com/w3c/node-w3capi",
+      "repository": "https://github.com/w3c/node-w3capi",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "normative-references-checker": {
+      "name": "Normative references checker",
+      "description": "Normative references checker",
+      "description_html": "Normative references checker",
+      "homepage": "https://labs.w3.org/normative-references/",
+      "repository": "https://github.com/w3c/normative-references-checker",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["tool"]
+    },
+    "onboarding": {
+      "name": "Group onboarding tool",
+      "description": "A tool to send the facility map to newcomers in a group",
+      "description_html": "A tool to send the facility map to newcomers in a group",
+      "homepage": "https://github.com/w3c/onboarding",
+      "repository": "https://github.com/w3c/onboarding",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
+    "pfe-analysis": {
+      "name": "PFE-analysis",
+      "description": "Code repository for tools for the the testing and analysis of potential Progressive Font Enrichment (PFE) solutions.",
+      "description_html": "Code repository for tools for the the testing and analysis of potential Progressive Font Enrichment (PFE) solutions.",
+      "homepage": "https://github.com/w3c/PFE-analysis",
+      "repository": "https://github.com/w3c/PFE-analysis",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "pheme": {
+      "name": "Pheme",
+      "description": "Unified streams of information for W3C activities",
+      "description_html": "Unified streams of information for W3C activities",
+      "homepage": "https://github.com/w3c/pheme",
+      "repository": "https://github.com/w3c/pheme",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "pub-vocab": {
+      "name": "Vocabulary for the Publications Manifest",
+      "description": "Vocabulary and context for the Web Publication Manifest",
+      "description_html": "Vocabulary and context for the Web Publication Manifest",
+      "homepage": "https://w3c.github.io/pub-vocab/",
+      "repository": "https://github.com/w3c/pub-vocab",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["data"],
+      "categories": ["adoption"]
+    },
+    "publ-tests": {
+      "name": "Test suites for the Publishing@W3C activity",
+      "description": "Test repository for the Publishing@W3C activity",
+      "description_html": "Test repository for the Publishing@W3C activity",
+      "homepage": "https://w3c.github.io/publ-tests",
+      "repository": "https://github.com/w3c/publ-tests",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
+    "rdfvalidator-ng": {
+      "name": "RDFValidator-NG",
+      "description": "A simple Servlet to validate RDF files",
+      "description_html": "A simple Servlet to validate RDF files",
+      "homepage": "https://github.com/w3c/rdfvalidator-ng",
+      "repository": "https://github.com/w3c/rdfvalidator-ng",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["adoption"]
+    },
+    "reffy": {
+      "name": "Reffy",
+      "description": "Reffy is a Web spec crawler and analyzer tool. It is notably used to update Webref",
+      "description_html": "Reffy is a Web spec crawler and analyzer tool. It is notably used to update Webref",
+      "homepage": "https://github.com/w3c/reffy",
+      "repository": "https://github.com/w3c/reffy",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "respec-mermaid": {
+      "name": "Mermaid.js for ReSpec",
+      "description": "A mermaid.js diagram renderer for ReSpec.",
+      "description_html": "A mermaid.js diagram renderer for ReSpec.",
+      "homepage": "https://github.com/w3c/respec-mermaid",
+      "repository": "https://github.com/w3c/respec-mermaid",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
     },
     "ttml-imsc-hrm-tests": {
       "name": "IMSC-HRM Test Suite",
