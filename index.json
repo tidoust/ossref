@@ -576,6 +576,42 @@
       "purposes": ["data", "samples"],
       "categories": ["adoption"]
     },
+    "snapshot-generator": {
+      "name": "w3c/snapshot-generator",
+      "description": "This app monitors the push event of a repository and generate snapshots for the spec in the repository.",
+      "description_html": "This app monitors the <a href=\"https://developer.github.com/v3/activity/events/types/#pushevent\">push</a> event of a repository and generate snapshots for the spec in the repository.",
+      "homepage": "https://github.com/w3c/snapshot-generator",
+      "repository": "https://github.com/w3c/snapshot-generator",
+      "owner": "W3C",
+      "licenses": ["Apache-2.0"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "spec-generator": {
+      "name": "Spec Generator",
+      "description": "Service to automatically generate specs from various source formats",
+      "description_html": "Service to automatically generate specs from various source formats",
+      "homepage": "https://www.w3.org/publications/spec-generator/",
+      "repository": "https://github.com/w3c/spec-generator",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
+    "specberus": {
+      "name": "Specberus",
+      "description": "Checker used at W3C to validate the compliance of Technical Reports with publication rules",
+      "description_html": "Checker used at W3C to validate the compliance of Technical Reports with publication rules",
+      "homepage": "https://www.w3.org/pubrules/",
+      "repository": "https://github.com/w3c/specberus",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["tool"]
+    },
     "ttml-imsc-hrm-tests": {
       "name": "IMSC-HRM Test Suite",
       "description": "IMSC-HRM tests",
