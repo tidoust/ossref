@@ -1,0 +1,7 @@
+repository: https://github.com/w3c/respec-vc
+licenses:
+  - BSD-3-Clause
+purposes:
+  - library
+categories:
+  - tool
