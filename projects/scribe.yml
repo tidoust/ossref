@@ -1,0 +1,9 @@
+name: scribe.perl
+repository: https://github.com/w3c/scribe
+licenses:
+  - W3C-20150513
+status: maintained
+purposes:
+  - group tool
+categories:
+  - tool
