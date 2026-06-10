@@ -1,0 +1,7 @@
+repository: https://github.com/w3c/validate-repos
+licenses:
+  - MIT
+purposes:
+  - validation
+categories:
+  - tool
