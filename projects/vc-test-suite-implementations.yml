@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/vc-test-suite-implementations
+purposes:
+  - data
+categories:
+  - adoption
