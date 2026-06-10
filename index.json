@@ -612,6 +612,54 @@
       "purposes": ["validation"],
       "categories": ["tool"]
     },
+    "strudy": {
+      "name": "Strudy",
+      "description": "Strudy is an analysis tool for Web spec crawl reports created by Reffy",
+      "description_html": "Strudy is an analysis tool for Web spec crawl reports created by Reffy",
+      "homepage": "https://github.com/w3c/strudy",
+      "repository": "https://github.com/w3c/strudy",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["tool"]
+    },
+    "tr-design": {
+      "name": "W3C Technical Reports Design Project",
+      "description": "CSS used by W3C specs (this repo is not about the w3.org/TR index page)",
+      "description_html": "CSS used by W3C specs (this repo is not about the w3.org/TR index page)",
+      "homepage": "https://w3c.github.io/tr-design/src/README",
+      "repository": "https://github.com/w3c/tr-design",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "transition-issues-bot": {
+      "name": "transition-issues-bot",
+      "description": "Track issues in w3c/transitions and acts on them.",
+      "description_html": "Track issues in w3c/transitions and acts on them.",
+      "homepage": "https://github.com/w3c/transition-issues-bot",
+      "repository": "https://github.com/w3c/transition-issues-bot",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "transition-notifier": {
+      "name": "transition-notifier",
+      "description": "A quick 'n dirty publication notifier",
+      "description_html": "A quick 'n dirty publication notifier",
+      "homepage": "https://github.com/w3c/transition-notifier",
+      "repository": "https://github.com/w3c/transition-notifier",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
     "ttml-imsc-hrm-tests": {
       "name": "IMSC-HRM Test Suite",
       "description": "IMSC-HRM tests",
