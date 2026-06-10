@@ -22,8 +22,17 @@ const license2Spdx = {
   w3c: "W3C-20150513",
 };
 
-function convertNameToID(name) {
-  return name
+function computeID(project) {
+  if (project.repository) {
+    const match = project.repository.match(
+      /^https:\/\/github\.com\/(.*)\/(.*)\/?$/,
+    );
+    if (match) {
+      return match[2];
+    }
+  }
+
+  return project.name
     .trim()
     .toLowerCase()
     .replace(/\s+/g, "-")
@@ -126,7 +135,7 @@ export async function compileProjectInfo(
   }
 
   // Compute ID from the name
-  res.id = convertNameToID(res.name);
+  res.id = computeID(res);
 
   // Projects are active by default
   if (!res.status) {
