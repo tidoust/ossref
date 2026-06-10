@@ -119,7 +119,7 @@ export async function compileProjectInfo(
   }
 
   // Compute project ID
-  res.id = computeID(res);
+  res.id = computeID({ repository: project.repository, name: res.name });
 
   // Projects are active by default
   if (!res.status) {
