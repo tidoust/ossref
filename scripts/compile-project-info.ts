@@ -6,6 +6,7 @@ import { execSync } from "node:child_process";
 import fetchJSON from "./fetch-json.ts";
 import { convertMarkdown } from "./text.ts";
 import type { ProjectData } from "./types.ts";
+import { computeID } from "./compute-id.ts";
 
 const w3cGitHubOrganizations = ["w3c"];
 
@@ -21,23 +22,6 @@ const license2Spdx = {
   mit: "MIT",
   w3c: "W3C-20150513",
 };
-
-function computeID(project) {
-  if (project.repository) {
-    const match = project.repository.match(
-      /^https:\/\/github\.com\/(.*)\/(.*)\/?$/,
-    );
-    if (match) {
-      return match[2];
-    }
-  }
-
-  return project.name
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w\-]+/g, "");
-}
 
 let report;
 
@@ -134,7 +118,7 @@ export async function compileProjectInfo(
     }
   }
 
-  // Compute ID from the name
+  // Compute project ID
   res.id = computeID(res);
 
   // Projects are active by default

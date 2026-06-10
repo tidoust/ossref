@@ -19,6 +19,7 @@ import { validateProjectData, validatePartialProjectData } from "./validate.ts";
 import { compileProjectInfo } from "./compile-project-info.ts";
 import { printValidationErrors } from "./print-validation-errors.ts";
 import { sortKeys as sortMapEntries } from "./key-order.ts";
+import { computeID } from "./compute-id.ts";
 import YAML from "yaml";
 
 import type { ProjectData } from "./types";
@@ -37,14 +38,6 @@ function log(msg?: string) {
 function reportLogAndExit() {
   console.log(pendingLog);
   process.exit(0);
-}
-
-function convertNameToID(name) {
-  return name
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w\-]+/g, "");
 }
 
 let project: Partial<ProjectData> = {};
@@ -148,7 +141,7 @@ log("```");
 log();
 
 if (!project.id) {
-  project.id = project.name ? convertNameToID(project.name) : autoInfo.id;
+  project.id = computeID(project) ?? autoInfo.id;
 }
 
 const projects = loadProjects();
