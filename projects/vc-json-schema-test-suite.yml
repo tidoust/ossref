@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/vc-json-schema-test-suite
+licenses:
+  - W3C-20150513
+categories:
+  - adoption
