@@ -1,0 +1,6 @@
+repository: https://github.com/w3c/ttml1-tests
+licenses:
+  - BSD-3-Clause
+  - W3C-Test-Suite
+categories:
+  - adoption
