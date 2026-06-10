@@ -1,0 +1,10 @@
+description: This project provides a flexible and extensible test suite runner
+  for validating implementations of the specification for securing [W3C
+  Verifiable Credentials using JSON Object Signing and Encryption (JOSE) and
+  CBOR Object Signing and Encryption
+  (COSE)](https://www.w3.org/TR/vc-jose-cose).
+repository: https://github.com/w3c/vc-jose-cose-test-suite
+licenses:
+  - W3C-20150513
+categories:
+  - adoption
