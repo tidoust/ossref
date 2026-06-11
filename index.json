@@ -1,5 +1,17 @@
 {
   "projects": {
+    "W3CLifecycleEventsBundle": {
+      "name": "lifecycle-events-bundle",
+      "description": "A Symfony bundle to dispatch usable entity lifecycle events (create, update, delete)",
+      "description_html": "A Symfony bundle to dispatch usable entity lifecycle events (create, update, delete)",
+      "homepage": "https://github.com/w3c/W3CLifecycleEventsBundle",
+      "repository": "https://github.com/w3c/W3CLifecycleEventsBundle",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
     "ack-section-generator": {
       "name": "Ack section generator for W3C specs",
       "description": "Script to generate the acknowledgement section of documents, based on the group's current membership",
@@ -900,6 +912,30 @@
       "purposes": ["backend"],
       "categories": ["tool"]
     },
+    "wai-atag-report-tool": {
+      "name": "ATAG Report Tool (ART)",
+      "description": "With this tool, people can report on how accessible their authoring tool is. It guides them through the Success Criteria of the Authoring Tool Accessibility Guidelines 2.0 (ATAG 2.0), allowing to record a result and observation for each.",
+      "description_html": "With this tool, people can report on how accessible their <a href=\"https://www.w3.org/TR/ATAG20/#def-Authoring-Tool\">authoring tool</a> is. It guides them through the Success Criteria of the <a href=\"https://www.w3.org/TR/ATAG20/\">Authoring Tool Accessibility Guidelines 2.0</a> (ATAG 2.0), allowing to record a result and observation for each.",
+      "homepage": "https://www.w3.org/WAI/atag/report-tool/",
+      "repository": "https://github.com/w3c/wai-atag-report-tool",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["adoption"]
+    },
+    "web-annotation-tests": {
+      "name": "Web Annotation Tests",
+      "description": "Tests for the Web Annotation Working Group's deliverables",
+      "description_html": "Tests for the Web Annotation Working Group's deliverables",
+      "homepage": "https://github.com/w3c/web-annotation-tests",
+      "repository": "https://github.com/w3c/web-annotation-tests",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause", "W3C-Test-Suite"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
     "webgpu-conformance-test-suite": {
       "name": "WebGPU Conformance Test Suite",
       "description": "WebGPU Conformance Test Suite",
@@ -923,6 +959,30 @@
       "status": "active",
       "purposes": ["library", "validation"],
       "categories": ["tool"]
+    },
+    "webref": {
+      "name": "Webref",
+      "description": "Machine-readable references of terms defined in web browser specifications",
+      "description_html": "Machine-readable references of terms defined in web browser specifications",
+      "homepage": "https://w3c.github.io/webref/",
+      "repository": "https://github.com/w3c/webref",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["data"],
+      "categories": ["adoption", "tool"]
+    },
+    "webvtt.js": {
+      "name": "WebVTT parser and validator",
+      "description": "WebVTT parser and validator",
+      "description_html": "WebVTT parser and validator",
+      "homepage": "https://w3c.github.io/webvtt.js/parser.html",
+      "repository": "https://github.com/w3c/webvtt.js",
+      "owner": "W3C",
+      "licenses": ["CC0-1.0"],
+      "status": "active",
+      "purposes": ["library", "validation"],
+      "categories": ["implementation"]
     },
     "webxr-device-api-samples": {
       "name": "WebXR Device API samples",
@@ -959,6 +1019,42 @@
       "status": "active",
       "purposes": ["library"],
       "categories": ["implementation"]
+    },
+    "wp-theme-css": {
+      "name": "w3c/wp-theme-css",
+      "description": "Wordpress theme for the CSS WG blog",
+      "description_html": "Wordpress theme for the CSS WG blog",
+      "homepage": "https://www.w3.org/blog/CSS/",
+      "repository": "https://github.com/w3c/wp-theme-css",
+      "owner": "W3C",
+      "licenses": ["gpl-2.0"],
+      "status": "active",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
+    "wp-theme-i18n": {
+      "name": "w3c/wp-theme-i18n",
+      "description": "Wordpress theme for the Internationalization blog",
+      "description_html": "Wordpress theme for the Internationalization blog",
+      "homepage": "https://www.w3.org/blog/International/",
+      "repository": "https://github.com/w3c/wp-theme-i18n",
+      "owner": "W3C",
+      "licenses": ["gpl-2.0"],
+      "status": "active",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
+    "wptreport": {
+      "name": "wptreport",
+      "description": "Report generator for WPT test result sets",
+      "description_html": "Report generator for WPT test result sets",
+      "homepage": "https://github.com/w3c/wptreport",
+      "repository": "https://github.com/w3c/wptreport",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
     }
   }
 }
