@@ -1,0 +1,7 @@
+repository: https://github.com/w3c/zakim-monitor
+licenses:
+  - W3C-20150513
+purposes:
+  - group tool
+categories:
+  - tool
