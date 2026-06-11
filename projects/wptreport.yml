@@ -1,0 +1,6 @@
+name: wptreport
+repository: https://github.com/w3c/wptreport
+purposes:
+  - library
+categories:
+  - tool
