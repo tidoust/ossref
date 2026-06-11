@@ -1,0 +1,6 @@
+description: Wordpress theme for the Internationalization blog
+repository: https://github.com/w3c/wp-theme-i18n
+purposes:
+  - backend
+categories:
+  - tool
