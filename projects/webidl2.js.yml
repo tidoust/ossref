@@ -1,0 +1,6 @@
+repository: https://github.com/w3c/webidl2.js
+purposes:
+  - library
+  - validation
+categories:
+  - tool
