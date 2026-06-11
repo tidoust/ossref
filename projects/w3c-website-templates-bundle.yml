@@ -1,0 +1,7 @@
+repository: https://github.com/w3c/w3c-website-templates-bundle
+licenses:
+  - W3C-20150513
+purposes:
+  - backend
+categories:
+  - tool
