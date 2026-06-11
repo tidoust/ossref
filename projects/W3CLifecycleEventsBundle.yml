@@ -1,0 +1,7 @@
+repository: https://github.com/w3c/W3CLifecycleEventsBundle
+licenses:
+  - W3C-20150513
+purposes:
+  - backend
+categories:
+  - tool
