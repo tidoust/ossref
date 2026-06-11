@@ -888,6 +888,18 @@
       "purposes": ["group tool"],
       "categories": ["tool"]
     },
+    "w3c-website-templates-bundle": {
+      "name": "W3C website template bundle & Design System",
+      "description": "Symfony Bundle containing generic templates for W3C Website",
+      "description_html": "Symfony Bundle containing generic templates for W3C Website",
+      "homepage": "https://github.com/w3c/w3c-website-templates-bundle",
+      "repository": "https://github.com/w3c/w3c-website-templates-bundle",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
     "webgpu-conformance-test-suite": {
       "name": "WebGPU Conformance Test Suite",
       "description": "WebGPU Conformance Test Suite",
@@ -899,6 +911,18 @@
       "status": "active",
       "purposes": ["tests"],
       "categories": ["adoption"]
+    },
+    "webidl2.js": {
+      "name": "webidl2.js",
+      "description": "WebIDL parser",
+      "description_html": "WebIDL parser",
+      "homepage": "https://w3c.github.io/webidl2.js/checker/",
+      "repository": "https://github.com/w3c/webidl2.js",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library", "validation"],
+      "categories": ["tool"]
     },
     "webxr-device-api-samples": {
       "name": "WebXR Device API samples",
