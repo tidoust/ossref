@@ -1,0 +1,8 @@
+name: Generate RDFS vocabulary files from YAML
+repository: https://github.com/w3c/yml2vocab
+licenses:
+  - W3C-20150513
+purposes:
+  - library
+categories:
+  - tool
