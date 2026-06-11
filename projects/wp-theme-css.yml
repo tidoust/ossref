@@ -1,0 +1,6 @@
+description: Wordpress theme for the CSS WG blog
+repository: https://github.com/w3c/wp-theme-css
+purposes:
+  - backend
+categories:
+  - tool
