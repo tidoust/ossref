@@ -1,0 +1,6 @@
+repository: https://github.com/w3c/webvtt.js
+purposes:
+  - library
+  - validation
+categories:
+  - implementation
