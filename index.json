@@ -1055,6 +1055,30 @@
       "status": "active",
       "purposes": ["library"],
       "categories": ["tool"]
+    },
+    "yml2vocab": {
+      "name": "Generate RDFS vocabulary files from YAML",
+      "description": "Generate RDFS vocabulary files from YAML",
+      "description_html": "Generate RDFS vocabulary files from YAML",
+      "homepage": "https://w3c.github.io/yml2vocab",
+      "repository": "https://github.com/w3c/yml2vocab",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "zakim-monitor": {
+      "name": "zakim-monitor",
+      "description": "A program that watches Zakim in an IRC channel and shows a live view of Zakim's current agenda, queue and questions.",
+      "description_html": "A program that watches Zakim in an IRC channel and shows a live view of Zakim's current agenda, queue and questions.",
+      "homepage": "https://github.com/w3c/zakim-monitor",
+      "repository": "https://github.com/w3c/zakim-monitor",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["group tool"],
+      "categories": ["tool"]
     }
   }
 }
