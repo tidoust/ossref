@@ -168,6 +168,18 @@
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
+    "focus-visible": {
+      "name": "Polyfill for :focus-visible",
+      "description": "Polyfill for :focus-visible",
+      "description_html": "Polyfill for <code>:focus-visible</code>",
+      "homepage": "https://wicg.github.io/focus-visible/demo/",
+      "repository": "https://github.com/WICG/focus-visible",
+      "owner": "WICG",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["implementation"]
+    },
     "gargantua": {
       "name": "Gargantua",
       "description": "API to gather W3C information",
@@ -347,6 +359,18 @@
       "status": "active",
       "purposes": ["tests"],
       "categories": ["adoption"]
+    },
+    "inert": {
+      "name": "Polyfill for the inert attribute and property",
+      "description": "Polyfill for the inert attribute and property.",
+      "description_html": "Polyfill for the inert attribute and property.",
+      "homepage": "https://github.com/WICG/inert",
+      "repository": "https://github.com/WICG/inert",
+      "owner": "WICG",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["implementation"]
     },
     "insafe": {
       "name": "Insafe",
