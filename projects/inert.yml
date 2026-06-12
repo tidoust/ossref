@@ -1,0 +1,8 @@
+name: Polyfill for the inert attribute and property
+repository: https://github.com/WICG/inert
+licenses:
+  - W3C-20150513
+purposes:
+  - library
+categories:
+  - implementation
