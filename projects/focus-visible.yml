@@ -1,0 +1,8 @@
+name: Polyfill for :focus-visible
+repository: https://github.com/WICG/focus-visible
+licenses:
+  - W3C-20150513
+purposes:
+  - library
+categories:
+  - implementation
