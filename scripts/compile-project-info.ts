@@ -101,9 +101,9 @@ export async function compileProjectInfo(
       res.description = ghRepo.description.trim();
     }
     if (!res.owner) {
-      res.owner = w3cGitHubOrganizations.includes(repo.owner.login)
+      res.owner = w3cGitHubOrganizations.includes(ghRepo.owner.login)
         ? "W3C"
-        : repo.owner.login;
+        : ghRepo.owner.login;
     }
     if (
       ghRepo.licenseInfo &&

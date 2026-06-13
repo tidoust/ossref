@@ -201,6 +201,7 @@ for (const [key, value] of Object.entries(autoInfo)) {
 
 const fullProject = Object.assign({}, info, project);
 
+log();
 log("### How the full project would look like");
 log();
 log("```yaml");

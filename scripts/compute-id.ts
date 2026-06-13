@@ -4,10 +4,10 @@
 export function computeID(project) {
   if (project.repository) {
     const match = project.repository.match(
-      /^https:\/\/github\.com\/(.*)\/(.*)\/?$/,
+      /^https:\/\/github\.com\/([^\/]*)\/([^\/]*)\/?$/,
     );
     if (match) {
-      return match[2];
+      return match[2].toLowerCase();
     }
   }
 
