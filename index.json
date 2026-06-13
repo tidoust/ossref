@@ -280,7 +280,7 @@
       "name": "HTML <model> element samples",
       "description": "Working model-element samples",
       "description_html": "Working model-element samples",
-      "homepage": "https://github.com/immersive-web/model-element-samples",
+      "homepage": "https://immersive-web.github.io/model-element-samples/",
       "repository": "https://github.com/immersive-web/model-element-samples",
       "owner": "immersive-web",
       "licenses": ["W3C-20150513"],
