@@ -792,6 +792,18 @@
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
+    "unicorn": {
+      "name": "Unicorn",
+      "description": "Unicorn - W3C's Unified Validator",
+      "description_html": "Unicorn - W3C's Unified Validator",
+      "homepage": "https://validator.w3.org/unicorn/",
+      "repository": "https://github.com/w3c/Unicorn/",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["validation"],
+      "categories": ["adoption"]
+    },
     "validate-repos": {
       "name": "Validate W3C repositories",
       "description": "Test whether W3C spec repos match a set of best practices",
