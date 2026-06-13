@@ -1,0 +1,8 @@
+name: Unicorn
+repository: https://github.com/w3c/Unicorn/
+licenses:
+  - W3C-20150513
+purposes:
+  - validation
+categories:
+  - adoption
