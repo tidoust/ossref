@@ -268,7 +268,7 @@
       "name": "HTML <model> element polyfill",
       "description": "A polyfill for the HTML Model Element",
       "description_html": "A polyfill for the HTML Model Element",
-      "homepage": "https://github.com/immersive-web/model-element-polyfill",
+      "homepage": "https://immersive-web.github.io/model-element-polyfill/",
       "repository": "https://github.com/immersive-web/model-element-polyfill",
       "owner": "immersive-web",
       "licenses": ["MIT"],
