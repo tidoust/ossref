@@ -8,3 +8,5 @@ description: The MiniApps Working Group was closed on 26 August 2026. Please
 homepage: https://github.com/w3c/miniapp-tests
 owner: W3C
 status: dormant
+purposes:
+  - tests
