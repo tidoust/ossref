@@ -1,0 +1,12 @@
+description: First released Feb '97, Amaya is not just a browser, but a
+  hypertext editor. It's a test-bed for the design of embedded objects,
+  stylesheets, math, structured graphics, and more.
+homepage: https://www.w3.org/Amaya/
+repository: https://github.com/w3c/Amaya-Editor
+licenses:
+  - W3C-20150513
+purposes:
+  - frontend
+  - validation
+categories:
+  - implementation
