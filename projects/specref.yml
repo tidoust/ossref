@@ -1,0 +1,6 @@
+name: Specref
+repository: https://github.com/specinfra/specref
+purposes:
+  - data
+categories:
+  - tool
