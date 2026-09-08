@@ -1,0 +1,9 @@
+name: RRSAgent
+repository: https://github.com/w3c/rrsagent
+licenses:
+  - GPL-2.0-or-later
+purposes:
+  - backend
+  - group tool
+categories:
+  - tool
