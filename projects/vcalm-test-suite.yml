@@ -1,0 +1,10 @@
+name: Specification 'vcalm-test-suite'
+description: Interoperability tests for implementations of
+  [VCALM](https://www.w3.org/TR/vcalm-1.0/) (Verifiable Credential API for
+  Lifecycle Management).
+repository: https://github.com/w3c/vcalm-test-suite
+licenses:
+  - BSD-3-Clause
+  - W3C-Test-Suite
+categories:
+  - adoption
