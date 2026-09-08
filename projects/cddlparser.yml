@@ -1,0 +1,8 @@
+name: CDDL parsers
+repository: https://github.com/tidoust/cddlparser
+purposes:
+  - library
+  - validation
+categories:
+  - implementation
+  - tool
