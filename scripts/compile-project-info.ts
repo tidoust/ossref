@@ -87,7 +87,7 @@ export async function compileProjectInfo(
     }
   }
 
-  if (project.repository.match(/^https:\/\/github\.com\//)) {
+  if (project.repository?.match(/^https:\/\/github\.com\//)) {
     // Gather information about the GitHub repository from the GH CLI tool
     const repoCmd = [
       "gh repo view",
