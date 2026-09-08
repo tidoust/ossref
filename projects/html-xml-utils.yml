@@ -1,0 +1,11 @@
+name: HTML-XML-utils
+description: A number of simple utilities for manipulating HTML and XML files.
+repository: https://www.w3.org/Tools/HTML-XML-utils/
+owner: W3C
+licenses:
+  - W3C-19980720
+purposes:
+  - library
+categories:
+  - adoption
+  - implementation
