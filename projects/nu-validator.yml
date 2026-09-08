@@ -1,0 +1,6 @@
+name: The Nu Html Checker
+repository: https://github.com/validator/validator/
+purposes:
+  - validation
+categories:
+  - adoption
