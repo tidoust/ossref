@@ -434,13 +434,13 @@
     },
     "miniapp-tests": {
       "name": "Test repository for the MiniApp specifications",
-      "description": "Test suites for MiniApp specs",
-      "description_html": "Test suites for MiniApp specs",
+      "description": "The MiniApps Working Group was closed on 26 August 2026. Please continue these discussions within the WebView Community Group https://www.w3.org/community/webview/.",
+      "description_html": "The MiniApps Working Group was closed on 26 August 2026. Please continue these discussions within the WebView Community Group https://www.w3.org/community/webview/.",
       "homepage": "https://github.com/w3c/miniapp-tests",
       "repository": "https://github.com/w3c/miniapp-tests",
       "owner": "W3C",
       "licenses": ["W3C-20150513"],
-      "status": "maintained",
+      "status": "dormant",
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
