@@ -66,7 +66,10 @@ export async function compileProjectInfo(
     res.owner = w3cGitHubOrganizations.includes(repo.owner.login)
       ? "W3C"
       : repo.owner.login;
-    if (repo.w3c["repo-type"][0] === "tests") {
+    // Note: validate-repos does not parse the w3c.json file in some cases,
+    // (I suspect that's when the GitHub repository is archived, or perhaps
+    // when the group is closed)
+    if (repo.w3c?.["repo-type"]?.[0] === "tests") {
       res.purposes = ["tests"];
     }
     if (repo.isArchived) {
