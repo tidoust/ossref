@@ -1,0 +1,6 @@
+name: Bikeshed
+repository: https://github.com/speced/bikeshed
+purposes:
+  - authoring
+categories:
+  - tool
