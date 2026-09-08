@@ -76,7 +76,6 @@ export async function compileProjectInfo(
         if (w3cFile["repo-type"] && !Array.isArray(w3cFile["repo-type"])) {
           w3cFile["repo-type"] = [w3cFile["repo-type"]];
         }
-        console.log(JSON.stringify(w3cFile, null, 2));
       } catch {}
     }
     if (w3cFile && w3cFile["repo-type"][0] === "tests") {
