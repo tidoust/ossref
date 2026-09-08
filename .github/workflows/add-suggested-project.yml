@@ -18,7 +18,7 @@ jobs:
     steps:
       - id: checkUser
         name: Check user permission
-        uses: actions-cool/check-user-permission@v2.3.0
+        uses: actions-cool/check-user-permission@v2.4.0
 
   prepare:
     name: Create pull request if needed
@@ -28,12 +28,12 @@ jobs:
     if: ${{ needs.check.outputs.status == 'admin' && contains(github.event.comment.body, '@hubert-bonisseur-de-le-bot la blanquette est bonne')}}
     steps:
       - name: Setup node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
 
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: main
 
@@ -54,7 +54,7 @@ jobs:
           git commit -F res.md
 
       - name: Push changes
-        uses: ad-m/github-push-action@v1.1.0
+        uses: ad-m/github-push-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
