@@ -1,0 +1,7 @@
+name: PR Preview
+repository: https://github.com/specinfra/pr-preview
+purposes:
+  - backend
+  - library
+categories:
+  - tool
