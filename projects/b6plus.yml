@@ -1,0 +1,12 @@
+name: b6+
+description: b6plus.js is a script (JavaScript) to show slides in a browser that
+  does not have a paged mode.
+homepage: https://www.w3.org/Talks/Tools/b6plus/
+repository: https://www.w3.org/Talks/Tools/b6plus/b6plus.js
+owner: w3c
+licenses:
+  - W3C-20150513
+purposes:
+  - authoring
+categories:
+  - tool
