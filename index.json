@@ -36,6 +36,18 @@
       "purposes": ["tests"],
       "categories": ["tool"]
     },
+    "amaya-editor": {
+      "name": "Amaya",
+      "description": "First released Feb '97, Amaya is not just a browser, but a hypertext editor. It's a test-bed for the design of embedded objects, stylesheets, math, structured graphics, and more.",
+      "description_html": "First released Feb '97, Amaya is not just a browser, but a hypertext editor. It's a test-bed for the design of embedded objects, stylesheets, math, structured graphics, and more.",
+      "homepage": "https://www.w3.org/Amaya/",
+      "repository": "https://github.com/w3c/Amaya-Editor",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["frontend", "validation"],
+      "categories": ["implementation"]
+    },
     "apiary": {
       "name": "Apiary",
       "description": "Simple JS library to use the W3C API in a declarative way",
@@ -58,6 +70,18 @@
       "licenses": ["MIT"],
       "status": "active",
       "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
+    "b6plus": {
+      "name": "b6+",
+      "description": "b6plus.js is a script (JavaScript) to show slides in a browser that does not have a paged mode.",
+      "description_html": "b6plus.js is a script (JavaScript) to show slides in a browser that does not have a paged mode.",
+      "homepage": "https://www.w3.org/Talks/Tools/b6plus/",
+      "repository": "https://www.w3.org/Talks/Tools/b6plus/b6plus.js",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["authoring"],
       "categories": ["tool"]
     },
     "browser-specs": {
@@ -908,6 +932,18 @@
       "repository": "https://github.com/w3c/vc-test-suite",
       "owner": "W3C",
       "licenses": ["BSD-3-Clause"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
+    "vcalm-test-suite": {
+      "name": "Specification 'vcalm-test-suite'",
+      "description": "Interoperability tests for implementations of VCALM (Verifiable Credential API for Lifecycle Management).",
+      "description_html": "Interoperability tests for implementations of <a href=\"https://www.w3.org/TR/vcalm-1.0/\">VCALM</a> (Verifiable Credential API for Lifecycle Management).",
+      "homepage": "https://github.com/w3c/vcalm-test-suite",
+      "repository": "https://github.com/w3c/vcalm-test-suite",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause", "W3C-Test-Suite"],
       "status": "active",
       "purposes": ["tests"],
       "categories": ["adoption"]
