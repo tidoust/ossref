@@ -104,6 +104,12 @@ if (what.match(/^\d+$/)) {
         reportLogAndExit();
       }
     }
+    // If the repository was explicitly set to be the same as the initial URL,
+    // it means we should not interpret the initial URL as the homepage URL,
+    // but rather as the repository URL.
+    if (project.repository === project.homepage) {
+      delete project.homepage;
+    }
   }
 } else {
   // Retrieve project information from the given filename
