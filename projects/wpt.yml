@@ -1,0 +1,8 @@
+name: Web Platform Tests
+repository: https://github.com/web-platform-tests/wpt
+licenses:
+  - BSD-3-Clause
+purposes:
+  - tests
+categories:
+  - adoption
