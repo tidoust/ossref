@@ -1,0 +1,8 @@
+name: ReSpec
+repository: https://github.com/speced/respec
+licenses:
+  - W3C-20150513
+purposes:
+  - authoring
+categories:
+  - tool
