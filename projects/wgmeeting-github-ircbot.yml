@@ -1,0 +1,6 @@
+name: wgmeeting-github-ircbot
+repository: https://github.com/dbaron/wgmeeting-github-ircbot
+purposes:
+  - group tool
+categories:
+  - tool
