@@ -1,10 +1,10 @@
 {
-  "name": "oss-w3c",
+  "name": "ossref",
   "description": "List of open-source software developed by W3C or used for progressing specifications at W3C",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tidoust/oss-w3c.git"
+    "url": "https://github.com/tidoust/ossref.git"
   },
   "type": "module",
   "main": "index.ts",
