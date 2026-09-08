@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: '10:00'
+  cooldown:
+    default-days: 7
+  groups:
+    dependencies:
+      patterns:
+        - "*"
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: daily
+    time: '10:00'
+  groups:
+    actions-dependencies:
+      patterns:
+        - "*"
