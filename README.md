@@ -38,7 +38,7 @@ Absolute URL of the project's home page. The URL may match the [repository URL](
 
 ### `repository`
 
-Absolute URL of the repository that contains the source code of the project.
+Absolute URL of the repository that contains the source code of the project. For many projects, this is the URL of the hosted version of a Git repository, e.g., a GitHub URL. A project may not be any version control system though. In the more general case, the repository provides a public entry point into the source code.
 
 ### `licenses`
 
