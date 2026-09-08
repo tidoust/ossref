@@ -1,0 +1,9 @@
+name: Zakim
+repository: https://github.com/w3c/zakim
+licenses:
+  - GPL-2.0-or-later
+purposes:
+  - backend
+  - group tool
+categories:
+  - tool
