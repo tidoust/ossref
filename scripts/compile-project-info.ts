@@ -69,7 +69,17 @@ export async function compileProjectInfo(
     // Note: validate-repos does not parse the w3c.json file in some cases,
     // (I suspect that's when the GitHub repository is archived, or perhaps
     // when the group is closed)
-    if (repo.w3c?.["repo-type"]?.[0] === "tests") {
+    let w3cFile = repo.w3c;
+    if (!w3cFile && repo.w3cjson?.text) {
+      try {
+        w3cFile = JSON.parse(repo.w3cjson.text);
+        if (w3cFile["repo-type"] && !Array.isArray(w3cFile["repo-type"])) {
+          w3cFile["repo-type"] = [w3cFile["repo-type"]];
+        }
+        console.log(JSON.stringify(w3cFile, null, 2));
+      } catch {}
+    }
+    if (w3cFile && w3cFile["repo-type"][0] === "tests") {
       res.purposes = ["tests"];
     }
     if (repo.isArchived) {
