@@ -1,0 +1,10 @@
+name: WebAssembly Reference Interpreter
+repository: https://github.com/WebAssembly/spec
+licenses:
+  - Apache-2.0
+purposes:
+  - library
+  - frontend
+categories:
+  - implementation
+  - tool
