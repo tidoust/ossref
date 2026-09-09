@@ -612,6 +612,18 @@
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
+    "rdf-tests": {
+      "name": "rdf-tests",
+      "description": "Repository for the RDF Tests Community Group",
+      "description_html": "Repository for the RDF Tests Community Group",
+      "homepage": "https://w3c.github.io/rdf-tests/",
+      "repository": "https://github.com/w3c/rdf-tests",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause", "W3C-Test-Suite"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
+    },
     "rdfvalidator-ng": {
       "name": "RDFValidator-NG",
       "description": "A simple Servlet to validate RDF files",
