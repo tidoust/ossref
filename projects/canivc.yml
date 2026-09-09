@@ -1,0 +1,7 @@
+name: Can I VC
+repository: https://github.com/w3c-oss/canivc/
+purposes:
+  - dashboard
+  - data
+categories:
+  - adoption
