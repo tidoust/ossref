@@ -84,6 +84,18 @@
       "purposes": ["authoring"],
       "categories": ["tool"]
     },
+    "bikeshed": {
+      "name": "Bikeshed",
+      "description": ":bike: A preprocessor for anyone writing specifications that converts source files into actual specs.",
+      "description_html": ":bike: A preprocessor for anyone writing specifications that converts source files into actual specs.",
+      "homepage": "https://speced.github.io/bikeshed",
+      "repository": "https://github.com/speced/bikeshed",
+      "owner": "speced",
+      "licenses": ["CC0-1.0"],
+      "status": "active",
+      "purposes": ["authoring"],
+      "categories": ["tool"]
+    },
     "browser-specs": {
       "name": "Browser-specs",
       "description": "This project exports a curated list of technical Web specifications. The list is used in a variety of ways, including:\n\nTo crawl specifications with Reffy to generate machine-readable extracts in Webref, which is then used by tools such as ReSpec and Bikeshed to create terminology and reference links between Web specifications.\nTo validate specification URLs in the browser-compat-data (BCD) and web-features projects.\nTo complete the list of specifications in the Specref database.\nTo create reports on test coverage, Web IDL and specification quality in analyzing tools.\n",
@@ -95,6 +107,18 @@
       "status": "active",
       "purposes": ["data"],
       "categories": ["tool"]
+    },
+    "cddlparser": {
+      "name": "CDDL parsers",
+      "description": "CDDL parsers in Python and JavaScript",
+      "description_html": "CDDL parsers in Python and JavaScript",
+      "homepage": "https://github.com/tidoust/cddlparser",
+      "repository": "https://github.com/tidoust/cddlparser",
+      "owner": "tidoust",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library", "validation"],
+      "categories": ["implementation", "tool"]
     },
     "css-validator": {
       "name": "CSS Validator Project",
@@ -312,6 +336,18 @@
       "purposes": ["samples"],
       "categories": ["adoption"]
     },
+    "html-xml-utils": {
+      "name": "HTML-XML-utils",
+      "description": "A number of simple utilities for manipulating HTML and XML files.",
+      "description_html": "A number of simple utilities for manipulating HTML and XML files.",
+      "homepage": "https://www.w3.org/Tools/HTML-XML-utils/",
+      "repository": "https://www.w3.org/Tools/HTML-XML-utils/",
+      "owner": "W3C",
+      "licenses": ["W3C-19980720"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["adoption", "implementation"]
+    },
     "htmldiff-ui": {
       "name": "Online htmldiff service",
       "description": "Python-based HTML user interface wrapper around Shane McCarron’s htmldiff Perl script.",
@@ -492,6 +528,18 @@
       "purposes": ["validation"],
       "categories": ["tool"]
     },
+    "nu-validator": {
+      "name": "The Nu Html Checker",
+      "description": "The Nu Html Checker (vnu)",
+      "description_html": "The Nu Html Checker (vnu)",
+      "homepage": "https://validator.github.io/validator/",
+      "repository": "https://github.com/validator/validator/",
+      "owner": "validator",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["adoption"]
+    },
     "onboarding": {
       "name": "Group onboarding tool",
       "description": "A tool to send the facility map to newcomers in a group",
@@ -526,6 +574,18 @@
       "licenses": ["MIT"],
       "status": "active",
       "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "pr-preview": {
+      "name": "PR Preview",
+      "description": "Adds preview and diff to spec pull requests.",
+      "description_html": "Adds preview and diff to spec pull requests.",
+      "homepage": "https://github.com/specinfra/pr-preview",
+      "repository": "https://github.com/specinfra/pr-preview",
+      "owner": "specinfra",
+      "licenses": ["Apache-2.0"],
+      "status": "active",
+      "purposes": ["backend", "library"],
       "categories": ["tool"]
     },
     "pub-vocab": {
@@ -600,6 +660,30 @@
       "purposes": ["library"],
       "categories": ["tool"]
     },
+    "respec": {
+      "name": "ReSpec",
+      "description": "A tool for creating technical documents and web standards",
+      "description_html": "A tool for creating technical documents and web standards",
+      "homepage": "https://respec.org/",
+      "repository": "https://github.com/speced/respec",
+      "owner": "speced",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["authoring"],
+      "categories": ["tool"]
+    },
+    "rrsagent": {
+      "name": "RRSAgent",
+      "description": "RRSAgent IRC bot",
+      "description_html": "RRSAgent IRC bot",
+      "homepage": "https://github.com/w3c/rrsagent",
+      "repository": "https://github.com/w3c/rrsagent",
+      "owner": "W3C",
+      "licenses": ["GPL-2.0-or-later"],
+      "status": "active",
+      "purposes": ["backend", "group tool"],
+      "categories": ["tool"]
+    },
     "scribe": {
       "name": "scribe.perl",
       "description": "Converts IRC minutes to HTML",
@@ -670,6 +754,18 @@
       "licenses": ["MIT"],
       "status": "active",
       "purposes": ["validation"],
+      "categories": ["tool"]
+    },
+    "specref": {
+      "name": "Specref",
+      "description": "An open-source, community-maintained database of Web standards & related references.",
+      "description_html": "An open-source, community-maintained database of Web standards &#x26; related references.",
+      "homepage": "http://www.specref.org/",
+      "repository": "https://github.com/specinfra/specref",
+      "owner": "specinfra",
+      "licenses": ["Apache-2.0"],
+      "status": "active",
+      "purposes": ["data"],
       "categories": ["tool"]
     },
     "strudy": {
@@ -996,6 +1092,18 @@
       "purposes": ["validation"],
       "categories": ["adoption"]
     },
+    "wasm-ref-interpreter": {
+      "name": "WebAssembly Reference Interpreter",
+      "description": "WebAssembly specification, reference interpreter, and test suite.",
+      "description_html": "WebAssembly specification, reference interpreter, and test suite.",
+      "homepage": "https://webassembly.github.io/spec/",
+      "repository": "https://github.com/WebAssembly/spec",
+      "owner": "WebAssembly",
+      "licenses": ["Apache-2.0"],
+      "status": "active",
+      "purposes": ["library", "frontend"],
+      "categories": ["implementation", "tool"]
+    },
     "web-annotation-tests": {
       "name": "Web Annotation Tests",
       "description": "Tests for the Web Annotation Working Group's deliverables",
@@ -1092,6 +1200,18 @@
       "purposes": ["library"],
       "categories": ["implementation"]
     },
+    "wgmeeting-github-ircbot": {
+      "name": "wgmeeting-github-ircbot",
+      "description": "IRC bot to make github comments with relevant sections of Working Group Meeting IRC minutes.  Running as @css-meeting-bot.",
+      "description_html": "IRC bot to make github comments with relevant sections of Working Group Meeting IRC minutes.  Running as @css-meeting-bot.",
+      "homepage": "https://github.com/dbaron/wgmeeting-github-ircbot",
+      "repository": "https://github.com/dbaron/wgmeeting-github-ircbot",
+      "owner": "dbaron",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
     "wp-theme-css": {
       "name": "w3c/wp-theme-css",
       "description": "Wordpress theme for the CSS WG blog",
@@ -1115,6 +1235,18 @@
       "status": "active",
       "purposes": ["backend"],
       "categories": ["tool"]
+    },
+    "wpt": {
+      "name": "Web Platform Tests",
+      "description": "Test suites for Web platform specs — including WHATWG, W3C, and others",
+      "description_html": "Test suites for Web platform specs — including WHATWG, W3C, and others",
+      "homepage": "https://web-platform-tests.org/",
+      "repository": "https://github.com/web-platform-tests/wpt",
+      "owner": "web-platform-tests",
+      "licenses": ["BSD-3-Clause"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["adoption"]
     },
     "wptreport": {
       "name": "wptreport",
@@ -1150,6 +1282,18 @@
       "licenses": ["W3C-20150513"],
       "status": "active",
       "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
+    "zakim": {
+      "name": "Zakim",
+      "description": "Zakim IRC bot",
+      "description_html": "Zakim IRC bot",
+      "homepage": "https://github.com/w3c/zakim",
+      "repository": "https://github.com/w3c/zakim",
+      "owner": "W3C",
+      "licenses": ["GPL-2.0-or-later"],
+      "status": "active",
+      "purposes": ["backend", "group tool"],
       "categories": ["tool"]
     }
   }
