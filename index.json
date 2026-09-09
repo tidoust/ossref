@@ -108,6 +108,18 @@
       "purposes": ["data"],
       "categories": ["tool"]
     },
+    "canivc": {
+      "name": "Can I VC",
+      "description": "Community compatibility dashboard for the Verifiable Credential ecosystem.",
+      "description_html": "Community compatibility dashboard for the Verifiable Credential ecosystem.",
+      "homepage": "https://canivc.com/",
+      "repository": "https://github.com/w3c-oss/canivc/",
+      "owner": "w3c-oss",
+      "licenses": ["BSD-3-Clause"],
+      "status": "active",
+      "purposes": ["dashboard", "data"],
+      "categories": ["adoption"]
+    },
     "cddlparser": {
       "name": "CDDL parsers",
       "description": "CDDL parsers in Python and JavaScript",
