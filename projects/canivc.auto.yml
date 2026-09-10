@@ -5,5 +5,5 @@ description: Community compatibility dashboard for the Verifiable Credential eco
 homepage: https://canivc.com/
 owner: w3c-oss
 licenses:
-  - BSD-3-Clause
+  - Apache-2.0
 status: active
