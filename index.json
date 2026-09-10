@@ -132,6 +132,18 @@
       "purposes": ["library", "validation"],
       "categories": ["implementation", "tool"]
     },
+    "cla-checker": {
+      "name": "CLA checker",
+      "description": "Contributor License Agreement (CLA) checker for W3C's Open Source Program",
+      "description_html": "Contributor License Agreement (CLA) checker for W3C's Open Source Program",
+      "homepage": "https://github.com/w3c-oss/cla-checker",
+      "repository": "https://github.com/w3c-oss/cla-checker",
+      "owner": "w3c-oss",
+      "licenses": ["Apache-2.0"],
+      "status": "active",
+      "purposes": ["validation"],
+      "categories": ["tool"]
+    },
     "css-validator": {
       "name": "CSS Validator Project",
       "description": "W3C CSS Validation Service",
