@@ -115,7 +115,7 @@
       "homepage": "https://canivc.com/",
       "repository": "https://github.com/w3c-oss/canivc/",
       "owner": "w3c-oss",
-      "licenses": ["BSD-3-Clause"],
+      "licenses": ["Apache-2.0"],
       "status": "active",
       "purposes": ["dashboard", "data"],
       "categories": ["adoption"]
