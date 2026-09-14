@@ -1,0 +1,9 @@
+name: HTML Tidy
+repository: https://github.com/htacg/tidy-html5
+licenses:
+  - MIT
+status: dormant
+purposes:
+  - frontend
+categories:
+  - tool
