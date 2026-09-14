@@ -1,0 +1,12 @@
+name: IsaViz
+description: A Visual Authoring Tool for RDF
+homepage: https://www.w3.org/2001/11/IsaViz/
+repository: https://dev.w3.org/cvsweb/java/classes/org/w3c/IsaViz/
+owner: w3c
+licenses:
+  - W3C-20050513
+status: dormant
+purposes:
+  - frontend
+categories:
+  - tool
