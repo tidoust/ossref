@@ -1,0 +1,12 @@
+name: DTD2Schema
+description: A Conversion Tool from DTD to XML Schema.
+homepage: https://www.w3.org/2000/04/schema_hack/
+repository: https://www.w3.org/2000/04/schema_hack/dtd2xsd.pl
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - frontend
+categories:
+  - tool
