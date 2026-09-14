@@ -1,0 +1,11 @@
+name: Recut
+description: recut is like cut, but can also duplicate and reorder fields.
+repository: https://www.w3.org/Tools/recut/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - frontend
+categories:
+  - tool
