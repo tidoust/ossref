@@ -1,0 +1,12 @@
+name: HTML Slidy
+description: Slide Shows in HTML and XHTML
+repository: https://www.w3.org/Talks/Tools/Slidy2/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - frontend
+  - group tool
+categories:
+  - tool
