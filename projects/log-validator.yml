@@ -1,0 +1,14 @@
+name: Log Validator
+description: A free, simple and step-by-step tool to improve dramatically the
+  quality of your website. Find the most popular invalid documents, broken
+  links, etc., and prioritize the work to get them fixed.
+homepage: https://www.w3.org/QA/Tools/LogValidator/
+repository: https://dev.w3.org/cvsweb/perl/modules/W3C/LogValidator/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - frontend
+categories:
+  - tool
