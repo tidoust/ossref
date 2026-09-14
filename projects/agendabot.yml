@@ -1,0 +1,8 @@
+name: AgendaBot
+repository: https://github.com/w3c/AgendaBot
+licenses:
+  - W3C-20150513
+purposes:
+  - group tool
+categories:
+  - tool
