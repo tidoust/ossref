@@ -1,0 +1,13 @@
+name: RDFPic
+description: RDFPic is a tool to embed an RDF description of a picture into the
+  picture itself, as described by [Describing and retrieving photos using RDF
+  and HTTP](http://www.w3.org/TR/photo-rdf/).
+repository: https://jigsaw.w3.org/rdfpic/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - frontend
+categories:
+  - tool
