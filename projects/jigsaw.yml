@@ -1,0 +1,12 @@
+name: Jigsaw
+description: A web server platform implemented in Java, providing a sample HTTP
+  1.1 implementation and a variety of other features
+repository: https://www.w3.org/Jigsaw/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - backend
+categories:
+  - tool
