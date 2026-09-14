@@ -1,0 +1,18 @@
+name: Charlint
+description: Charlint is a character normalization/checking tool written in
+  Perl. Among else, it implements Normalization Form C of [Unicode TR
+  15](http://www.unicode.org/reports/tr15/), as a test platform for [Early
+  Uniform Normalization](https://www.w3.org/TR/charreq/#sec3) in the [W3C
+  Character
+  Model](https://www.w3.org/TR/charmod-norm/#sec-EarlyUniformNormalization).
+homepage: https://www.w3.org/International/charlint/
+repository: https://dev.w3.org/cvsweb/charlint/charlint.pl?only_with_tag=HEAD
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - library
+  - validation
+categories:
+  - tool
