@@ -1,0 +1,14 @@
+name: mobileOK Checker
+description: The W3C mobileOK Checker Java library is a reference implementation
+  of [W3C mobileOK Basic Tests
+  1.0](http://www.w3.org/TR/mobileOK-basic10-tests/).
+repository: https://dev.w3.org/cvsweb/2007/mobileok-ref/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - library
+categories:
+  - implementation
+  - tool
