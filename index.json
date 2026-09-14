@@ -24,6 +24,18 @@
       "purposes": ["tests"],
       "categories": ["tool"]
     },
+    "agendabot": {
+      "name": "AgendaBot",
+      "description": "IRC bot that finds a meeting agenda in the mail archives or on the W3C group calendar and puts it on IRC in Zakim's format",
+      "description_html": "IRC bot that finds a meeting agenda in the mail archives or on the W3C group calendar and puts it on IRC in Zakim's format",
+      "homepage": "https://github.com/w3c/AgendaBot",
+      "repository": "https://github.com/w3c/AgendaBot",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
     "amaya-editor": {
       "name": "Amaya",
       "description": "First released Feb '97, Amaya is not just a browser, but a hypertext editor. It's a test-bed for the design of embedded objects, stylesheets, math, structured graphics, and more.",
@@ -120,6 +132,18 @@
       "purposes": ["library", "validation"],
       "categories": ["implementation", "tool"]
     },
+    "charlint": {
+      "name": "Charlint",
+      "description": "Charlint is a character normalization/checking tool written in Perl. Among else, it implements Normalization Form C of Unicode TR 15, as a test platform for Early Uniform Normalization in the W3C Character Model.",
+      "description_html": "Charlint is a character normalization/checking tool written in Perl. Among else, it implements Normalization Form C of <a href=\"http://www.unicode.org/reports/tr15/\">Unicode TR 15</a>, as a test platform for <a href=\"https://www.w3.org/TR/charreq/#sec3\">Early Uniform Normalization</a> in the <a href=\"https://www.w3.org/TR/charmod-norm/#sec-EarlyUniformNormalization\">W3C Character Model</a>.",
+      "homepage": "https://www.w3.org/International/charlint/",
+      "repository": "https://dev.w3.org/cvsweb/charlint/charlint.pl?only_with_tag=HEAD",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["library", "validation"],
+      "categories": ["tool"]
+    },
     "cla-checker": {
       "name": "CLA checker",
       "description": "Contributor License Agreement (CLA) checker for W3C's Open Source Program",
@@ -144,6 +168,18 @@
       "purposes": ["validation"],
       "categories": ["adoption", "tool"]
     },
+    "cwm": {
+      "name": "Cwm",
+      "description": "Cwm (pronounced coom) is a general-purpose data processor for the semantic web, somewhat like sed, awk, etc. for text files or XSLT for XML.",
+      "description_html": "Cwm (pronounced coom) is a general-purpose data processor for the semantic web, somewhat like sed, awk, etc. for text files or XSLT for XML.",
+      "homepage": "https://www.w3.org/2000/10/swap/doc/cwm.html",
+      "repository": "https://dev.w3.org/cvsweb/2000/10/swap/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
+    },
     "dapt-tests": {
       "name": "dapt-tests",
       "description": "Tests for Dubbing and Audio description Profiles of TTML2",
@@ -156,6 +192,18 @@
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
+    "dtd2schema": {
+      "name": "DTD2Schema",
+      "description": "A Conversion Tool from DTD to XML Schema.",
+      "description_html": "A Conversion Tool from DTD to XML Schema.",
+      "homepage": "https://www.w3.org/2000/04/schema_hack/",
+      "repository": "https://www.w3.org/2000/04/schema_hack/dtd2xsd.pl",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
+    },
     "echidna": {
       "name": "Echidna",
       "description": "New publication workflow at W3C — main component",
@@ -166,6 +214,18 @@
       "licenses": ["MIT"],
       "status": "active",
       "purposes": ["group tool"],
+      "categories": ["tool"]
+    },
+    "eot-utils": {
+      "name": "eot-utils",
+      "description": "The eot-utils are the two programs mkeot and eotinfo. The former creates an EOT (Embedded OpenType) file from an OpenType or TrueType font and the URLs of one or more Web pages. mkeot respects the TrueType embedding bits. The eotinfo program displays the contents of an EOT header in a human-readable way.",
+      "description_html": "The eot-utils are the two programs mkeot and eotinfo. The former creates an EOT (Embedded OpenType) file from an OpenType or TrueType font and the URLs of one or more Web pages. mkeot respects the TrueType embedding bits. The eotinfo program displays the contents of an EOT header in a human-readable way.",
+      "homepage": "https://www.w3.org/Tools/eot-utils/",
+      "repository": "https://www.w3.org/Tools/eot-utils/",
+      "owner": "w3c",
+      "licenses": ["W3C-20021231"],
+      "status": "dormant",
+      "purposes": ["frontend"],
       "categories": ["tool"]
     },
     "epub-structural-tests": {
@@ -264,6 +324,18 @@
       "purposes": ["samples"],
       "categories": ["adoption"]
     },
+    "gf-markdown-awk": {
+      "name": "gf-markdown-awk",
+      "description": "Awk library to convert markdown to HTML or to plain text",
+      "description_html": "Awk library to convert markdown to HTML or to plain text",
+      "homepage": "https://github.com/bert-github/gf-markdown-awk",
+      "repository": "https://github.com/bert-github/gf-markdown-awk",
+      "owner": "bert-github",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
+    },
     "ghurlbot": {
       "name": "GHURLBot",
       "description": "IRC bot that provides full URLs when GitHub issues (‘#123’) or users (‘@yyyy’) are mentioned",
@@ -312,6 +384,18 @@
       "purposes": ["backend"],
       "categories": ["tool"]
     },
+    "hcalproxy": {
+      "name": "HcalProxy",
+      "description": "Hcalproxy is a personal HTTP proxy that converts HTML with hcalendar (microformat) mark-up into icalendar.",
+      "description_html": "Hcalproxy is a personal HTTP proxy that converts HTML with hcalendar (microformat) mark-up into icalendar.",
+      "homepage": "https://www.w3.org/People/Bos/Hcalproxy/",
+      "repository": "https://www.w3.org/People/Bos/Hcalproxy/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
     "horizontal-issue-tracker": {
       "name": "Horizontal Review Tracker",
       "description": "Tools and pages to track horizontal issues",
@@ -347,6 +431,18 @@
       "status": "active",
       "purposes": ["samples"],
       "categories": ["adoption"]
+    },
+    "html-slidy": {
+      "name": "HTML Slidy",
+      "description": "Slide Shows in HTML and XHTML",
+      "description_html": "Slide Shows in HTML and XHTML",
+      "homepage": "https://www.w3.org/Talks/Tools/Slidy2/",
+      "repository": "https://www.w3.org/Talks/Tools/Slidy2/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["frontend", "group tool"],
+      "categories": ["tool"]
     },
     "html-xml-utils": {
       "name": "HTML-XML-utils",
@@ -395,6 +491,18 @@
       "status": "active",
       "purposes": ["validation"],
       "categories": ["adoption"]
+    },
+    "ical2html": {
+      "name": "Ical2html",
+      "description": "Three tools to manipulate iCalendar files.",
+      "description_html": "Three tools to manipulate iCalendar files.",
+      "homepage": "https://www.w3.org/Tools/Ical2html/",
+      "repository": "https://www.w3.org/Tools/Ical2html/",
+      "owner": "w3c",
+      "licenses": ["W3C-20050513"],
+      "status": "maintained",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
     },
     "ift-client-tests": {
       "name": "IFT Client Tests",
@@ -456,6 +564,18 @@
       "purposes": ["library"],
       "categories": ["tool"]
     },
+    "isaviz": {
+      "name": "IsaViz",
+      "description": "A Visual Authoring Tool for RDF",
+      "description_html": "A Visual Authoring Tool for RDF",
+      "homepage": "https://www.w3.org/2001/11/IsaViz/",
+      "repository": "https://dev.w3.org/cvsweb/java/classes/org/w3c/IsaViz/",
+      "owner": "w3c",
+      "licenses": ["W3C-20050513"],
+      "status": "dormant",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
+    },
     "its-2.0-tests": {
       "name": "Internationalization Tag Set (ITS) 2.0 Test Suite",
       "description": "This is the Internationalization Tag Set (ITS) 2.0 test suite. ITS 2.0 and this test suite have been developed by participants of the W3C MultilingualWeb-LT Working Group.",
@@ -468,6 +588,18 @@
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
+    "jigsaw": {
+      "name": "Jigsaw",
+      "description": "A web server platform implemented in Java, providing a sample HTTP 1.1 implementation and a variety of other features",
+      "description_html": "A web server platform implemented in Java, providing a sample HTTP 1.1 implementation and a variety of other features",
+      "homepage": "https://www.w3.org/Jigsaw/",
+      "repository": "https://www.w3.org/Jigsaw/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
     "keyboard-navigation-for-htmldiff": {
       "name": "Keyboard navigation for htmldiff",
       "description": "Keyboard navigation script for htmldiff.",
@@ -479,6 +611,18 @@
       "status": "active",
       "purposes": ["library"],
       "categories": ["tool"]
+    },
+    "libwww": {
+      "name": "Libwww",
+      "description": "Libwww is a highly modular, general-purpose client side Web API written in C for Unix and Windows (Win32).",
+      "description_html": "Libwww is a highly modular, general-purpose client side Web API written in C for <a href=\"https://www.w3.org/Library/User/Platform/\">Unix and Windows (Win32)</a>.",
+      "homepage": "https://www.w3.org/Library/",
+      "repository": "https://dev.w3.org/cvsweb/libwww/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["library"],
+      "categories": ["implementation", "tool"]
     },
     "lifecycle-events-bundle": {
       "name": "lifecycle-events-bundle",
@@ -504,6 +648,18 @@
       "purposes": ["validation"],
       "categories": ["adoption"]
     },
+    "log-validator": {
+      "name": "Log Validator",
+      "description": "A free, simple and step-by-step tool to improve dramatically the quality of your website. Find the most popular invalid documents, broken links, etc., and prioritize the work to get them fixed.",
+      "description_html": "A free, simple and step-by-step tool to improve dramatically the quality of your website. Find the most popular invalid documents, broken links, etc., and prioritize the work to get them fixed.",
+      "homepage": "https://www.w3.org/QA/Tools/LogValidator/",
+      "repository": "https://dev.w3.org/cvsweb/perl/modules/W3C/LogValidator/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
+    },
     "markup-validator": {
       "name": "W3C Markup Validator",
       "description": "The Markup Validator is a free service by W3C that helps check the validity of Web documents. Most Web documents are written using markup languages, such as HTML or XHTML. These languages are defined by technical specifications, which usually include a machine-readable formal grammar (and vocabulary). The act of checking a document against these constraints is called validation, and this is what the Markup Validator does.",
@@ -527,6 +683,18 @@
       "status": "dormant",
       "purposes": ["tests"],
       "categories": ["adoption"]
+    },
+    "mobileok-checker": {
+      "name": "mobileOK Checker",
+      "description": "The W3C mobileOK Checker Java library is a reference implementation of W3C mobileOK Basic Tests 1.0.",
+      "description_html": "The W3C mobileOK Checker Java library is a reference implementation of <a href=\"http://www.w3.org/TR/mobileOK-basic10-tests/\">W3C mobileOK Basic Tests 1.0</a>.",
+      "homepage": "https://dev.w3.org/cvsweb/2007/mobileok-ref/",
+      "repository": "https://dev.w3.org/cvsweb/2007/mobileok-ref/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["library"],
+      "categories": ["implementation", "tool"]
     },
     "node-w3capi": {
       "name": "JS client for the W3C API",
@@ -648,6 +816,18 @@
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
+    "rdfpic": {
+      "name": "RDFPic",
+      "description": "RDFPic is a tool to embed an RDF description of a picture into the picture itself, as described by Describing and retrieving photos using RDF and HTTP.",
+      "description_html": "RDFPic is a tool to embed an RDF description of a picture into the picture itself, as described by <a href=\"http://www.w3.org/TR/photo-rdf/\">Describing and retrieving photos using RDF and HTTP</a>.",
+      "homepage": "https://jigsaw.w3.org/rdfpic/",
+      "repository": "https://jigsaw.w3.org/rdfpic/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
+    },
     "rdfvalidator-ng": {
       "name": "RDFValidator-NG",
       "description": "A simple Servlet to validate RDF files",
@@ -659,6 +839,18 @@
       "status": "active",
       "purposes": ["validation"],
       "categories": ["adoption"]
+    },
+    "recut": {
+      "name": "Recut",
+      "description": "recut is like cut, but can also duplicate and reorder fields.",
+      "description_html": "recut is like cut, but can also duplicate and reorder fields.",
+      "homepage": "https://www.w3.org/Tools/recut/",
+      "repository": "https://www.w3.org/Tools/recut/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
     },
     "reffy": {
       "name": "Reffy",
@@ -814,6 +1006,18 @@
       "licenses": ["MIT"],
       "status": "active",
       "purposes": ["validation"],
+      "categories": ["tool"]
+    },
+    "tidy-html5": {
+      "name": "HTML Tidy",
+      "description": "The granddaddy of HTML tools, with support for modern standards",
+      "description_html": "The granddaddy of HTML tools, with support for modern standards",
+      "homepage": "http://www.html-tidy.org",
+      "repository": "https://github.com/htacg/tidy-html5",
+      "owner": "htacg",
+      "licenses": ["MIT"],
+      "status": "dormant",
+      "purposes": ["frontend"],
       "categories": ["tool"]
     },
     "tr-design": {
