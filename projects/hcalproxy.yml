@@ -1,0 +1,12 @@
+name: HcalProxy
+description: Hcalproxy is a personal HTTP proxy that converts HTML with
+  hcalendar (microformat) mark-up into icalendar.
+repository: https://www.w3.org/People/Bos/Hcalproxy/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - backend
+categories:
+  - tool
