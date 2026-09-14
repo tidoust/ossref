@@ -1,0 +1,11 @@
+name: Ical2html
+description: Three tools to manipulate iCalendar files.
+repository: https://www.w3.org/Tools/Ical2html/
+owner: w3c
+licenses:
+  - W3C-20050513
+status: maintained
+purposes:
+  - frontend
+categories:
+  - tool
