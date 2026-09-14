@@ -1,0 +1,8 @@
+name: gf-markdown-awk
+repository: https://github.com/bert-github/gf-markdown-awk
+licenses:
+  - W3C-20150513
+purposes:
+  - frontend
+categories:
+  - tool
