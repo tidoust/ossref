@@ -1,0 +1,12 @@
+name: mail-transcode
+description: mail-transcode can convert e-mail messages between
+  quoted-printable, base64 and binary encoding.
+repository: https://www.w3.org/Tools/Mail-Transcode/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: maintained
+purposes:
+  - frontend
+categories:
+  - tool
