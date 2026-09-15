@@ -1,0 +1,8 @@
+name: ARIA and Assistive Technologies App
+repository: https://github.com/w3c/aria-at-app
+licenses:
+  - W3C-20150513
+purposes:
+  - tests
+categories:
+  - tool
