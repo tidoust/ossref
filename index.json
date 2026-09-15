@@ -60,6 +60,18 @@
       "purposes": ["library"],
       "categories": ["tool"]
     },
+    "aria-at-app": {
+      "name": "ARIA and Assistive Technologies App",
+      "description": "Test runner and results reporter for ARIA-AT",
+      "description_html": "Test runner and results reporter for ARIA-AT",
+      "homepage": "http://aria-at.w3.org/",
+      "repository": "https://github.com/w3c/aria-at-app",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["tests"],
+      "categories": ["tool"]
+    },
     "ash-nazg": {
       "name": "Repository Manager (Ash-Nazg)",
       "description": "One interface to find all group contributors and in IPR bind them",
@@ -167,6 +179,18 @@
       "status": "active",
       "purposes": ["validation"],
       "categories": ["adoption", "tool"]
+    },
+    "csvtotab--tabtocsv": {
+      "name": "csvtotab & tabtocsv",
+      "description": "csvtotab and tabtocsv convert between comma-separated values (CSV) and tab-separated values.",
+      "description_html": "csvtotab and tabtocsv convert between comma-separated values (CSV) and tab-separated values.",
+      "homepage": "https://www.w3.org/Tools/csvtotab-vv/",
+      "repository": "https://www.w3.org/Tools/csvtotab-vv/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "dormant",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
     },
     "cwm": {
       "name": "Cwm",
@@ -660,6 +684,18 @@
       "purposes": ["frontend"],
       "categories": ["tool"]
     },
+    "mail-transcode": {
+      "name": "mail-transcode",
+      "description": "mail-transcode can convert e-mail messages between quoted-printable, base64 and binary encoding.",
+      "description_html": "mail-transcode can convert e-mail messages between quoted-printable, base64 and binary encoding.",
+      "homepage": "https://www.w3.org/Tools/Mail-Transcode/",
+      "repository": "https://www.w3.org/Tools/Mail-Transcode/",
+      "owner": "w3c",
+      "licenses": ["W3C-20150513"],
+      "status": "maintained",
+      "purposes": ["frontend"],
+      "categories": ["tool"]
+    },
     "markup-validator": {
       "name": "W3C Markup Validator",
       "description": "The Markup Validator is a free service by W3C that helps check the validity of Web documents. Most Web documents are written using markup languages, such as HTML or XHTML. These languages are defined by technical specifications, which usually include a machine-readable formal grammar (and vocabulary). The act of checking a document against these constraints is called validation, and this is what the Markup Validator does.",
@@ -718,6 +754,18 @@
       "licenses": ["MIT"],
       "status": "active",
       "purposes": ["validation"],
+      "categories": ["tool"]
+    },
+    "ns-iana": {
+      "name": "w3.org/ns/iana",
+      "description": "Code to populate https://www.w3.org/ns/iana/",
+      "description_html": "Code to populate https://www.w3.org/ns/iana/",
+      "homepage": "https://github.com/w3c/ns-iana",
+      "repository": "https://github.com/w3c/ns-iana",
+      "owner": "W3C",
+      "licenses": ["BSD-3-Clause"],
+      "status": "active",
+      "purposes": ["data"],
       "categories": ["tool"]
     },
     "nu-validator": {
@@ -972,6 +1020,18 @@
       "purposes": ["backend"],
       "categories": ["tool"]
     },
+    "spec-prod": {
+      "name": "Spec Prod",
+      "description": "GitHub Action to build ReSpec/Bikeshed specs, validate output and publish to GitHub pages or W3C",
+      "description_html": "GitHub Action to build ReSpec/Bikeshed specs, validate output and publish to GitHub pages or W3C",
+      "homepage": "https://w3c.github.io/spec-prod/",
+      "repository": "https://github.com/w3c/spec-prod",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
     "specberus": {
       "name": "Specberus",
       "description": "Checker used at W3C to validate the compliance of Technical Reports with publication rules",
@@ -994,6 +1054,18 @@
       "licenses": ["Apache-2.0"],
       "status": "active",
       "purposes": ["data"],
+      "categories": ["tool"]
+    },
+    "sphinx-to-tr": {
+      "name": "sphinx-to-tr",
+      "description": "transform Sphinx doc (e.g. https://webassembly.github.io/spec/core/index.html) to http://www.w3.org/TR/",
+      "description_html": "transform Sphinx doc (e.g. <a href=\"https://webassembly.github.io/spec/core/index.html\">https://webassembly.github.io/spec/core/index.html</a>) to <a href=\"http://www.w3.org/TR/\">http://www.w3.org/TR/</a>",
+      "homepage": "https://github.com/w3c/sphinx-to-tr",
+      "repository": "https://github.com/w3c/sphinx-to-tr",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["frontend"],
       "categories": ["tool"]
     },
     "strudy": {
@@ -1498,6 +1570,18 @@
       "licenses": ["MIT"],
       "status": "active",
       "purposes": ["library"],
+      "categories": ["tool"]
+    },
+    "xsv": {
+      "name": "XSV",
+      "description": "XSV (XML Schema Validator) is an open source (GPLed) work-in-progress attempt at a conformant schema-aware processor, as defined by XML Schema Part 1: Structures, Second Edition of 28 October 2004",
+      "description_html": "XSV (XML Schema Validator) is an open source (GPLed) work-in-progress attempt at a conformant schema-aware processor, as defined by <a href=\"http://www.w3.org/TR/xmlschema-1/\">XML Schema Part 1: Structures</a>, Second Edition of 28 October 2004",
+      "homepage": "https://www.cogsci.ed.ac.uk/~ht/xsv-status.html",
+      "repository": "https://dev.w3.org/cvsweb/xmlschema/XSV/",
+      "owner": "w3c",
+      "licenses": ["GPL-2"],
+      "status": "dormant",
+      "purposes": ["frontend"],
       "categories": ["tool"]
     },
     "yml2vocab": {
