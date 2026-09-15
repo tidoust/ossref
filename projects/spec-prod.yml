@@ -1,0 +1,6 @@
+name: Spec Prod
+repository: https://github.com/w3c/spec-prod
+purposes:
+  - backend
+categories:
+  - tool
