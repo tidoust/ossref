@@ -1,0 +1,15 @@
+name: XSV
+description: "XSV (XML Schema Validator) is an open source (GPLed)
+  work-in-progress attempt at a conformant schema-aware processor, as defined by
+  [XML Schema Part 1: Structures](http://www.w3.org/TR/xmlschema-1/), Second
+  Edition of 28 October 2004"
+homepage: https://www.cogsci.ed.ac.uk/~ht/xsv-status.html
+repository: https://dev.w3.org/cvsweb/xmlschema/XSV/
+owner: w3c
+licenses:
+  - GPL-2
+status: dormant
+purposes:
+  - frontend
+categories:
+  - tool
