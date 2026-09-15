@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/sphinx-to-tr
+purposes:
+  - frontend
+categories:
+  - tool
