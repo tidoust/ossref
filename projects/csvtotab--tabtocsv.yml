@@ -1,0 +1,12 @@
+name: csvtotab & tabtocsv
+description: csvtotab and tabtocsv convert between comma-separated values (CSV)
+  and tab-separated values.
+repository: https://www.w3.org/Tools/csvtotab-vv/
+owner: w3c
+licenses:
+  - W3C-20150513
+status: dormant
+purposes:
+  - frontend
+categories:
+  - tool
