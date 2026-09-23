@@ -1,0 +1,8 @@
+name: B6+ Slide Editor
+repository: https://github.com/bert-github/b6plus-slide-editor
+licenses:
+  - W3C-20150513
+purposes:
+  - authoring
+categories:
+  - tool
