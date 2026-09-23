@@ -384,6 +384,18 @@
       "purposes": ["data"],
       "categories": ["tool"]
     },
+    "github-notify-ml": {
+      "name": "github-notify-ml",
+      "description": "index.py is a python CGI script that provides a Webhook to be used as a github hook endpoint to send mail to a set of email addresses when specific GitHub events happen",
+      "description_html": "index.py is a python CGI script that provides a Webhook to be used as a github hook endpoint to send mail to a set of email addresses when specific GitHub events happen",
+      "homepage": "https://github.com/dontcallmedom/github-notify-ml",
+      "repository": "https://github.com/dontcallmedom/github-notify-ml",
+      "owner": "dontcallmedom",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["backend", "dashboard"],
+      "categories": ["tool"]
+    },
     "groups-repositories": {
       "name": "Group repositories for /groups",
       "description": "Complement to https://www.w3.org/groups/",
@@ -1044,6 +1056,18 @@
       "purposes": ["validation"],
       "categories": ["tool"]
     },
+    "specdex": {
+      "name": "Specdex",
+      "description": "Reverse index of Web specification references",
+      "description_html": "Reverse index of Web specification references",
+      "homepage": "https://dontcallmedom.github.io/specdex/",
+      "repository": "https://github.com/dontcallmedom/specdex",
+      "owner": "dontcallmedom",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["dashboard"],
+      "categories": ["adoption"]
+    },
     "specref": {
       "name": "Specref",
       "description": "An open-source, community-maintained database of Web standards & related references.",
@@ -1428,6 +1452,18 @@
       "purposes": ["tests"],
       "categories": ["adoption"]
     },
+    "webdex": {
+      "name": "Webdex",
+      "description": "Tool to generate a site collecting the terms defined across Web specifications, with links to where they are defined and which specifications they are linked from",
+      "description_html": "Tool to generate a site collecting the terms defined across Web specifications, with links to where they are defined and which specifications they are linked from",
+      "homepage": "https://dontcallmedom.github.io/webdex/",
+      "repository": "https://github.com/dontcallmedom/webdex",
+      "owner": "dontcallmedom",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["dashboard"],
+      "categories": ["adoption"]
+    },
     "webgpu-conformance-test-suite": {
       "name": "WebGPU Conformance Test Suite",
       "description": "WebGPU Conformance Test Suite",
@@ -1451,6 +1487,18 @@
       "status": "active",
       "purposes": ["library", "validation"],
       "categories": ["tool"]
+    },
+    "webidlpedia": {
+      "name": "WebIDLpedia",
+      "description": "Explorer of WebIDL used across specifications",
+      "description_html": "Explorer of WebIDL used across specifications",
+      "homepage": "https://dontcallmedom.github.io/webidlpedia/",
+      "repository": "https://github.com/dontcallmedom/webidlpedia",
+      "owner": "dontcallmedom",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["dashboard"],
+      "categories": ["adoption"]
     },
     "webref": {
       "name": "Webref",
