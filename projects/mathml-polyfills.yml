@@ -1,0 +1,5 @@
+repository: https://github.com/w3c/mathml-polyfills
+purposes:
+  - library
+categories:
+  - implementation
