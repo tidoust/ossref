@@ -1,0 +1,6 @@
+name: WebIDLpedia
+repository: https://github.com/dontcallmedom/webidlpedia
+purposes:
+  - dashboard
+categories:
+  - adoption
