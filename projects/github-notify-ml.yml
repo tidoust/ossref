@@ -1,0 +1,7 @@
+name: github-notify-ml
+repository: https://github.com/dontcallmedom/github-notify-ml
+purposes:
+  - backend
+  - dashboard
+categories:
+  - tool
