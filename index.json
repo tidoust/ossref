@@ -84,6 +84,18 @@
       "purposes": ["group tool"],
       "categories": ["tool"]
     },
+    "b6plus-slide-editor": {
+      "name": "B6+ Slide Editor",
+      "description": "A WYSIWYG editor for b6+ slides, based on Electron and Squire-rte",
+      "description_html": "A WYSIWYG editor for b6+ slides, based on Electron and Squire-rte",
+      "homepage": "https://www.w3.org/Talks/Tools/b6plus-editor/",
+      "repository": "https://github.com/bert-github/b6plus-slide-editor",
+      "owner": "bert-github",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["authoring"],
+      "categories": ["tool"]
+    },
     "b6plus": {
       "name": "b6+",
       "description": "b6plus.js is a script (JavaScript) to show slides in a browser that does not have a paged mode.",
@@ -719,6 +731,18 @@
       "status": "active",
       "purposes": ["validation"],
       "categories": ["adoption"]
+    },
+    "mathml-polyfills": {
+      "name": "MathML polyfills",
+      "description": "Polyfills for MathML features",
+      "description_html": "Polyfills for MathML features",
+      "homepage": "https://w3c.github.io/mathml-polyfills/",
+      "repository": "https://github.com/w3c/mathml-polyfills",
+      "owner": "W3C",
+      "licenses": ["MIT"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["implementation"]
     },
     "miniapp-tests": {
       "name": "Test repository for the MiniApp specifications",
