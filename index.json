@@ -84,6 +84,18 @@
       "purposes": ["group tool"],
       "categories": ["tool"]
     },
+    "ask-i18n": {
+      "name": "Ask W3C i18n",
+      "description": "AI assistant for W3C Internationalization guidance",
+      "description_html": "AI assistant for W3C Internationalization guidance",
+      "homepage": "https://labs.w3.org/ask-i18n/",
+      "repository": "https://github.com/w3c/ask-i18n",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["backend"],
+      "categories": ["tool"]
+    },
     "b6plus-slide-editor": {
       "name": "B6+ Slide Editor",
       "description": "A WYSIWYG editor for b6+ slides, based on Electron and Squire-rte",
@@ -155,6 +167,18 @@
       "status": "active",
       "purposes": ["library", "validation"],
       "categories": ["implementation", "tool"]
+    },
+    "cg-assets": {
+      "name": "cg-assets",
+      "description": "Assets for Community Groups",
+      "description_html": "Assets for Community Groups",
+      "homepage": "https://github.com/w3c/cg-assets",
+      "repository": "https://github.com/w3c/cg-assets",
+      "owner": "W3C",
+      "licenses": ["W3C-20150513"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["tool"]
     },
     "charlint": {
       "name": "Charlint",
