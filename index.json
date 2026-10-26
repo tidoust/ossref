@@ -1548,6 +1548,18 @@
       "purposes": ["dashboard"],
       "categories": ["adoption"]
     },
+    "webmcp-polyfill": {
+      "name": "WebMCP Polyfill",
+      "description": "WebMCP polyfill",
+      "description_html": "WebMCP polyfill",
+      "homepage": "https://github.com/w3c-oss/webmcp-polyfill",
+      "repository": "https://github.com/w3c-oss/webmcp-polyfill",
+      "owner": "w3c-oss",
+      "licenses": ["Apache-2.0"],
+      "status": "active",
+      "purposes": ["library"],
+      "categories": ["implementation"]
+    },
     "webref": {
       "name": "Webref",
       "description": "Machine-readable references of terms defined in web browser specifications",
