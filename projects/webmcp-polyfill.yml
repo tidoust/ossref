@@ -1,0 +1,6 @@
+name: WebMCP Polyfill
+repository: https://github.com/w3c-oss/webmcp-polyfill
+purposes:
+  - library
+categories:
+  - implementation
